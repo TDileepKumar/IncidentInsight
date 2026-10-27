@@ -1,0 +1,23 @@
+# Virtual environment
+.venv/
+venv/
+
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Secrets - NEVER commit the real .env (only .env.example is tracked)
+.env
+.env.*
+!.env.example
+
+# Generated data (reproducible via `python data_generator.py`)
+data/raw/*.log
+data/processed/*.csv
+data/processed/*.json
+data/*.db
+
+# Keep the empty folder markers
+!data/raw/.gitkeep
+!data/processed/.gitkeep

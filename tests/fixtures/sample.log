@@ -1,0 +1,8 @@
+2026-10-04T06:09:02Z FATAL [req-ba53cce8] [DatabaseService] Database connection pool exhausted, unable to acquire connection to db-primary.internal
+2026-10-05T04:17:56Z ERROR [req-c952199e] [DatabaseService] Failed to establish connection to primary database db-replica-2.internal:5433 after 2 retries
+2026-10-02T14:21:44Z ERROR [req-41c16504] [HttpClient] Client request aborted, connection timed out after 47s
+2026-10-07T09:53:11Z WARNING [req-462b7852] [web-frontend] Invalid input for field 'email': expected an integer, got '12'
+2026-10-02T06:09:26Z WARNING [req-06d64b49] [AuthService] Authentication failed for user user_4821: invalid credentials
+2026-10-04T04:43:15Z ERROR [req-1432bd71] [PostgresClient] NullPointerException at OrderService.java:88 - null reference for user 4821
+this line is not a valid log entry at all
+2026-10-03T10:00:00Z BANANA [req-abc12345] [TestService] unrecognized severity level should be flagged unparsed
