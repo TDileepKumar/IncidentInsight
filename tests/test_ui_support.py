@@ -568,3 +568,66 @@ def test_h16_detail_helpers_agree_with_a_real_pipeline_run(tmp_path):
     # Every row of every selectable cluster is shown exactly once, and nothing else.
     selectable = result.clustered[result.clustered["cluster_id"].isin(options)]
     assert sorted(seen_lines) == sorted(selectable["line_id"].tolist())
+
+
+# A log whose lines mix timestamp spellings and bracket layouts, including one
+# unstructured line. The first two rows mirror the reported cache-service case.
+MIXED_FORMAT_LOG = """\
+2026-10-26 10:07:30 ERROR [cache-service] Redis connection refused to cache-01.internal:6379
+2026-10-26 10:07:34 ERROR [cache-service] Redis connection refused to cache-01.internal:6379
+this line is not a valid log entry at all
+2026-10-26T10:07:40Z WARNING [req-abc123] [AuthService] Authentication failed for user alice
+2026-10-26 10:07:45 ERROR [req-def456] [PaymentService] Payment declined by provider PayPal
+2026-10-26 10:07:50 INFO Request completed in 12ms
+"""
+
+
+def test_h17_cluster_detail_keeps_structured_fields_for_space_timestamp_logs(tmp_path):
+    log = tmp_path / "mixed.log"
+    log.write_text(MIXED_FORMAT_LOG, encoding="utf-8")
+    result = run_pipeline(log_path=str(log))
+
+    clustered = result.clustered.set_index("line_id")
+    # The parser now extracts what the line actually contains ...
+    assert clustered.loc[0, "timestamp"] == "2026-10-26 10:07:30"
+    assert clustered.loc[0, "level"] == "ERROR"
+    assert clustered.loc[0, "service"] == "cache-service"
+    assert pd.isna(clustered.loc[0, "request_id"])            # genuinely absent, not invented
+    assert clustered.loc[0, "message"] == "Redis connection refused to cache-01.internal:6379"
+    assert clustered.loc[1, "timestamp"] == "2026-10-26 10:07:34"
+    # The documented format still parses its request id and service.
+    assert clustered.loc[3, "request_id"] == "req-abc123"
+    assert clustered.loc[3, "service"] == "AuthService"
+    assert pd.isna(clustered.loc[5, "service"])
+    assert pd.isna(clustered.loc[5, "request_id"])
+
+    # ... and the cluster-detail table shows the same values, not None.
+    cluster_id = int(clustered.loc[0, "cluster_id"])
+    entries = cluster_log_entries(result.clustered, cluster_id).set_index("line_id")
+    assert set(entries.index) == {0, 1}
+    for line_id, stamp in ((0, "2026-10-26 10:07:30"), (1, "2026-10-26 10:07:34")):
+        assert entries.loc[line_id, "timestamp"] == stamp
+        assert entries.loc[line_id, "level"] == "ERROR"
+        assert entries.loc[line_id, "service"] == "cache-service"
+        assert pd.isna(entries.loc[line_id, "request_id"])
+    assert entries.loc[0, "message"] == "Redis connection refused to cache-01.internal:6379"
+    assert entries.loc[1, "message"] == "Redis connection refused to cache-01.internal:6379"
+
+
+def test_h18_cluster_detail_preserves_line_ids_and_raw_unparsed_messages(tmp_path):
+    log = tmp_path / "mixed.log"
+    log.write_text(MIXED_FORMAT_LOG, encoding="utf-8")
+    result = run_pipeline(log_path=str(log))
+
+    clustered = result.clustered.set_index("line_id")
+    assert clustered.index.tolist() == list(range(6))         # one row per non-blank source line
+    malformed_cluster = int(clustered.loc[2, "cluster_id"])
+    detail = cluster_log_entries(result.clustered, malformed_cluster)
+
+    row = detail[detail["line_id"] == 2].iloc[0]
+    assert row["message"] == "this line is not a valid log entry at all"
+    assert pd.isna(row["timestamp"])
+    assert pd.isna(row["level"])
+    assert pd.isna(row["service"])
+    assert pd.isna(row["request_id"])
+    assert detail["line_id"].tolist() == sorted(detail["line_id"].tolist())

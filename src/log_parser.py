@@ -4,10 +4,15 @@ Stage 1 of the pipeline. Turns raw, unstructured log text into a structured
 Pandas DataFrame. This is a PURE function: text in, table out. No database,
 no UI, no network, no normalization (that is Day 4).
 
-Expected raw line format (produced by data_generator.py):
+Expected raw line formats:
     <TIMESTAMP> <LEVEL> [<request_id>] [<service>] <message>
-example:
+    <TIMESTAMP> <LEVEL> [<service>] <message>          (no request id in the log)
+examples:
     2026-10-04T06:09:02Z FATAL [req-ba53cce8] [DatabaseService] Database connection pool exhausted...
+    2026-10-26 10:07:30 ERROR [cache-service] Redis connection refused...
+TIMESTAMP accepts ISO-8601 with either a 'T' or a space before the time, optional
+fractional seconds, and an optional UTC suffix ('Z' or a numeric offset). Fields
+the line does not carry are left as None - never invented.
 
 Design decisions (approved Day 3):
   * Columns: line_id, timestamp, level, service, request_id, message, parsed
@@ -32,19 +37,56 @@ COLUMNS = ["line_id", "timestamp", "level", "service", "request_id", "message", 
 VALID_LEVELS = {"DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL", "FATAL"}
 
 # One regex with NAMED capture groups -> each (?P<name>...) becomes a field.
-#   timestamp : ISO-8601 UTC, e.g. 2026-10-04T06:09:02Z
+#   timestamp : ISO-8601, with 'T' or a space before the time, optional
+#               fractional seconds, optional 'Z'/numeric UTC offset
 #   level     : a run of letters (validated against VALID_LEVELS afterwards)
-#   request_id: inside the first [ ... ]
-#   service   : inside the second [ ... ]
-#   message   : everything after the service bracket (".*" so brackets/colons
-#               inside the message do not break the match)
+#   first     : inside the first [ ... ] after the level, if any
+#   second    : inside the second [ ... ], if any
+#   message   : everything after the bracket(s) (".*" so brackets/colons inside
+#               the message do not break the match)
+# Both brackets are OPTIONAL because real logs vary: the bundled dataset always
+# has [request_id] [service], while other formats carry only [service].
+_LOG_TIME = (
+    r"\d{4}-\d{2}-\d{2}[T ]\d{2}:\d{2}:\d{2}"
+    r"(?:[.,]\d{1,9})?"
+    r"(?:Z|[+-]\d{2}:?\d{2})?"
+)
+
 LOG_LINE_PATTERN = re.compile(
-    r"^(?P<timestamp>\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z)\s+"
+    rf"^(?P<timestamp>{_LOG_TIME})\s+"
     r"(?P<level>[A-Za-z]+)\s+"
-    r"\[(?P<request_id>[^\]]+)\]\s+"
-    r"\[(?P<service>[^\]]+)\]\s+"
+    r"(?:\[(?P<first>[^\]]+)\](?:\s+|$))?"
+    r"(?:\[(?P<second>[^\]]+)\](?:\s+|$))?"
     r"(?P<message>.*)$"
 )
+
+# A lone bracket is a request id when it announces itself as one; otherwise it
+# is the service name (the far more common single-bracket layout).
+_REQUEST_ID_PREFIXES = (
+    "req-",
+    "req_",
+    "req:",
+    "request-",
+    "request_",
+    "request:",
+    "trace-",
+    "trace_",
+    "trace:",
+)
+_REQUEST_ID_KEYS = ("request_id=", "request-id=", "request id=", "trace_id=", "trace-id=", "trace id=")
+_UUID_PATTERN = re.compile(r"[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}")
+_LONG_HEX_PATTERN = re.compile(r"[0-9a-fA-F]{8,}")
+
+
+def _looks_like_request_id(value: str) -> bool:
+    """Whether a lone bracket's contents identify a request rather than a service."""
+    token = value.strip()
+    lowered = token.lower()
+    if lowered.startswith(_REQUEST_ID_PREFIXES):
+        return True
+    if any(key in lowered for key in _REQUEST_ID_KEYS):
+        return True
+    return bool(_UUID_PATTERN.fullmatch(token) or _LONG_HEX_PATTERN.fullmatch(token))
 
 
 def _unparsed(line: str) -> dict:
@@ -74,11 +116,24 @@ def parse_line(line: str) -> dict:
     if level not in VALID_LEVELS:
         return _unparsed(line)
 
+    first = match.group("first")
+    second = match.group("second")
+    if second is not None:
+        # Documented two-bracket layout: [request_id] [service].
+        request_id, service = first, second
+    elif first is not None:
+        if _looks_like_request_id(first):
+            request_id, service = first, None
+        else:
+            request_id, service = None, first
+    else:
+        request_id, service = None, None
+
     return {
         "timestamp": match.group("timestamp"),
         "level": level,
-        "service": match.group("service"),
-        "request_id": match.group("request_id"),
+        "service": service,
+        "request_id": request_id,
         "message": match.group("message").strip(),
         "parsed": True,
     }

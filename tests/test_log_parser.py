@@ -34,6 +34,72 @@ def test_parse_known_line():
     assert rec["message"] == "Database connection pool exhausted"
 
 
+def test_space_separated_timestamp_without_request_id_bracket():
+    line = "2026-10-26 10:07:30 ERROR [cache-service] Redis connection refused to cache-01.internal:6379"
+    rec = parse_line(line)
+    assert rec["parsed"] is True
+    assert rec["timestamp"] == "2026-10-26 10:07:30"
+    assert rec["level"] == "ERROR"
+    assert rec["service"] == "cache-service"
+    assert rec["request_id"] is None          # the source line carries no request id
+    assert rec["message"] == "Redis connection refused to cache-01.internal:6379"
+
+
+def test_iso_timestamp_without_request_id_bracket():
+    rec = parse_line("2026-10-26T10:07:34Z WARNING [cache-service] Cache miss for key user:42")
+    assert rec["parsed"] is True
+    assert rec["timestamp"] == "2026-10-26T10:07:34Z"
+    assert rec["level"] == "WARNING"
+    assert rec["service"] == "cache-service"
+    assert rec["request_id"] is None
+
+
+def test_single_request_id_bracket_is_not_mistaken_for_a_service():
+    rec = parse_line("2026-10-26 10:07:30 ERROR [req-533f5a] Redis connection refused")
+    assert rec["parsed"] is True
+    assert rec["request_id"] == "req-533f5a"
+    assert rec["service"] is None
+
+
+def test_missing_optional_fields_stay_none():
+    rec = parse_line("2026-10-26 10:07:30 INFO Request completed in 12ms")
+    assert rec["parsed"] is True
+    assert rec["timestamp"] == "2026-10-26 10:07:30"
+    assert rec["level"] == "INFO"
+    assert rec["service"] is None
+    assert rec["request_id"] is None
+    assert rec["message"] == "Request completed in 12ms"
+
+
+def test_timestamp_variants_are_kept_verbatim():
+    for stamp in (
+        "2026-10-26 10:07:30.123",
+        "2026-10-26 10:07:30,123",
+        "2026-10-26 10:07:30+05:30",
+        "2026-10-26T10:07:30.123456Z",
+    ):
+        rec = parse_line(f"{stamp} ERROR [cache-service] boom")
+        assert rec["parsed"] is True
+        assert rec["timestamp"] == stamp
+
+
+def test_space_format_keeps_line_id_alignment_and_parses_neighbours():
+    text = (
+        "2026-10-26 10:07:30 ERROR [cache-service] Redis connection refused\n"
+        "this line is not a valid log entry at all\n"
+        "2026-10-26 10:07:34 ERROR [cache-service] Redis connection refused\n"
+    )
+    df = parse_logs(text)
+    assert df["line_id"].tolist() == [0, 1, 2]
+    assert df["parsed"].tolist() == [True, False, True]
+    assert df.loc[0, "timestamp"] == "2026-10-26 10:07:30"
+    assert df.loc[0, "message"] == "Redis connection refused"
+    assert df.loc[1, "message"] == "this line is not a valid log entry at all"   # raw text preserved
+    assert pd.isna(df.loc[1, "level"])
+    assert df.loc[2, "timestamp"] == "2026-10-26 10:07:34"
+    assert df.loc[2, "message"] == "Redis connection refused"
+
+
 def test_message_keeps_brackets_and_colons():
     line = "2026-10-05T04:17:56Z ERROR [req-c952199e] [DatabaseService] connect to db-replica-2.internal:5433 [retry] failed"
     rec = parse_line(line)
