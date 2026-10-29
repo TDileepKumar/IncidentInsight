@@ -236,7 +236,8 @@ def _cluster_label(row: pd.Series, cluster_id: int) -> str:
     if "rank" in row.index and pd.notna(row["rank"]):
         parts.append(f"rank {int(row['rank'])}")
     if "size" in row.index and pd.notna(row["size"]):
-        parts.append(f"{int(row['size'])} log entries")
+        size = int(row["size"])
+        parts.append(f"{size} log {'entry' if size == 1 else 'entries'}")
     if "risk_score" in row.index and pd.notna(row["risk_score"]):
         parts.append(f"risk {float(row['risk_score']):.2f}")
     return " - ".join(parts)

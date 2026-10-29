@@ -631,3 +631,17 @@ def test_h18_cluster_detail_preserves_line_ids_and_raw_unparsed_messages(tmp_pat
     assert pd.isna(row["service"])
     assert pd.isna(row["request_id"])
     assert detail["line_id"].tolist() == sorted(detail["line_id"].tolist())
+
+
+def test_h19_cluster_label_pluralizes_a_single_log_entry():
+    # A cluster holding one row must read "1 log entry", never "1 log entries".
+    options = cluster_options(
+        _ranking(
+            [
+                {"cluster_id": 4, "size": 1, "risk_score": 0.2, "rank": 1},
+                {"cluster_id": 5, "size": 2, "risk_score": 0.1, "rank": 2},
+            ]
+        )
+    )
+    assert options[4] == "Cluster 4 - rank 1 - 1 log entry - risk 0.20"
+    assert options[5] == "Cluster 5 - rank 2 - 2 log entries - risk 0.10"
