@@ -1,8 +1,15 @@
 # IncidentInsight dependencies.
 # The LLM client uses only the Python standard library (urllib), so no SDK here.
+# numpy is imported directly by src/clusterer.py, src/evaluation.py and
+# src/feature_extractor.py; scipy by src/clusterer.py and src/feature_extractor.py.
+# Both are declared explicitly rather than relying on scikit-learn to pull them
+# in transitively.
+# numpy 2.1 is the first release with Python 3.13 wheels, matching .python-version.
+numpy>=2.1
 pandas>=2.0
 pytest>=7.0
 scikit-learn==1.8.0
-# Streamlit powers the Day 15 app.py UI (chat_message/chat_input, session_state,
+scipy>=1.11
+# Streamlit powers the app.py UI (chat_message/chat_input, session_state,
 # and streamlit.testing.v1.AppTest). Floor set to the version validated locally.
 streamlit>=1.65
