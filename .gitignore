@@ -12,7 +12,8 @@ __pycache__/
 .env.*
 !.env.example
 
-# Generated data (reproducible via `python data_generator.py`)
+# Generated data. `python data_generator.py` writes a FRESH dataset here; it does
+# NOT reproduce the preserved historical baseline in data/baseline/7126c46/.
 data/raw/*.log
 data/processed/*.csv
 data/processed/*.json

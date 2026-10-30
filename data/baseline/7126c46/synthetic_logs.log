@@ -1,0 +1,1000 @@
+2026-10-07T15:43:13Z CRITICAL [req-533f5a] [OrderService] Failed to establish database connection after 5 attempts
+2026-10-07T11:02:42Z ERROR [req-288510] [UploadService] File lookup failed for resource profile_image
+2026-10-03T23:08:12Z ERROR [req-3c1031] [GatewayService] Connection request exceeded timeout limit of 30s
+2026-10-07T14:15:11Z ERROR [req-1836a0] [PaymentService] Gateway response failed with status 502
+2026-10-03T13:51:53Z ERROR [req-ff7d39] [APIService] Connection request exceeded timeout limit of 15s
+2026-10-01T04:22:23Z ERROR [req-f3402d] [QueryService] Database query timed out after 15 seconds
+2026-10-01T17:53:27Z ERROR [req-97289c] [APIService] Upstream request timed out after 30 seconds
+2026-10-02T21:19:50Z WARNING [req-4008d4] [AuthService] Authentication failed with HTTP status 401
+2026-10-05T11:06:44Z WARNING [req-8beef8] [DatabaseService] Database operation timed out while waiting for response
+2026-10-04T04:00:46Z ERROR [req-10fd71] [GatewayService] Request timed out while waiting for server response
+2026-10-03T15:11:36Z WARNING [req-53d9a4] [AuthService] Invalid credentials received for user 5483
+2026-10-01T09:20:59Z ERROR [req-66b2bc] [OrderService] Could not connect to database at db-01.internal:3306
+2026-10-04T02:18:59Z WARNING [req-2626c9] [APIService] Invalid input for field amount
+2026-10-07T20:38:03Z CRITICAL [req-50fd9d] [OrderService] Could not connect to database at db-02.internal:5432
+2026-10-03T07:40:44Z WARNING [req-93ab8d] [AuthService] Authentication failed with HTTP status 401
+2026-10-04T03:09:49Z WARNING [req-807ab6] [LoginService] Unauthorized access attempt from client 634
+2026-10-06T05:46:12Z ERROR [req-e87804] [PaymentService] Payment provider returned HTTP 502 for transaction TX940848
+2026-10-02T21:28:10Z ERROR [req-43d643] [QueryService] Database operation timed out while waiting for response
+2026-10-02T05:11:11Z ERROR [req-900c0a] [DatabaseService] Query execution exceeded timeout limit of 45s
+2026-10-04T21:54:25Z WARNING [req-17df85] [AuthService] Invalid credentials received for user 9907
+2026-10-04T02:32:51Z ERROR [req-5dc960] [DatabaseService] Database operation timed out while waiting for response
+2026-10-03T03:09:38Z ERROR [req-033e02] [DatabaseService] Failed to establish database connection after 5 attempts
+2026-10-03T05:41:59Z ERROR [req-40a26c] [OrderService] Could not connect to database at db-01.internal:5433
+2026-10-04T05:52:37Z WARNING [req-eb1efd] [LoginService] Unauthorized access attempt from client 549
+2026-10-02T16:29:26Z WARNING [req-e3c51b] [GatewayService] Upstream request timed out after 15 seconds
+2026-10-05T00:11:45Z CRITICAL [req-143df5] [OrderService] Database connection refused by server db-01.internal
+2026-10-04T07:50:58Z WARNING [req-b705e6] [APIService] Invalid input for field email
+2026-10-05T06:35:20Z WARNING [req-6d0473] [LoginService] Invalid credentials received for user 3898
+2026-10-05T05:23:24Z ERROR [req-9e12d7] [UserService] NullPointerException at UserHandler.py:213
+2026-10-05T15:04:58Z ERROR [req-62c8c3] [QueryService] Database operation timed out while waiting for response
+2026-10-06T22:25:43Z ERROR [req-ba303c] [APIService] Request timed out while waiting for server response
+2026-10-01T17:24:50Z CRITICAL [req-cfc91b] [CheckoutService] Payment request failed after 5 attempts
+2026-10-04T19:00:26Z ERROR [req-1a8591] [DatabaseService] Could not connect to database at db-02.internal:5432
+2026-10-02T07:44:26Z ERROR [req-1b0c62] [DatabaseService] Database connection refused by server db-02.internal
+2026-10-07T05:43:29Z ERROR [req-daafb6] [OrderService] Null reference encountered in handler at PaymentController.java:239
+2026-10-04T16:58:17Z WARNING [req-f78ee9] [QueryService] Query execution exceeded timeout limit of 30s
+2026-10-05T03:49:41Z ERROR [req-5bf7dd] [DatabaseService] Database query timed out after 15 seconds
+2026-10-02T06:24:31Z WARNING [req-5cda03] [LoginService] Invalid credentials received for user 2744
+2026-10-03T01:12:40Z CRITICAL [req-69b35b] [CheckoutService] Payment provider returned HTTP 502 for transaction TX773223
+2026-10-02T13:19:17Z ERROR [req-90b950] [UploadService] No such file or directory: /reports/daily_108.csv
+2026-10-05T00:10:15Z ERROR [req-b85a74] [OrderService] NullPointerException at OrderService.java:41
+2026-10-04T23:21:00Z ERROR [req-fbf676] [UploadService] File lookup failed for resource daily_report
+2026-10-05T16:56:22Z WARNING [req-355cdf] [APIService] Request validation failed for field quantity
+2026-10-07T19:30:37Z CRITICAL [req-434308] [OrderService] Failed to establish database connection after 3 attempts
+2026-10-01T10:51:50Z ERROR [req-6afa82] [DatabaseService] Could not connect to database at db-02.internal:5433
+2026-10-03T07:53:58Z ERROR [req-3edec3] [GatewayService] Request timed out while waiting for server response
+2026-10-02T16:56:28Z ERROR [req-1ca799] [APIService] Connection request exceeded timeout limit of 15s
+2026-10-05T03:36:45Z ERROR [req-8df716] [DatabaseService] Query execution exceeded timeout limit of 60s
+2026-10-02T02:20:13Z ERROR [req-cebeab] [OrderService] Failed to establish database connection after 4 attempts
+2026-10-07T13:59:44Z ERROR [req-cb62f5] [APIService] Connection request exceeded timeout limit of 10s
+2026-10-02T16:00:37Z ERROR [req-57b936] [QueryService] Database operation timed out while waiting for response
+2026-10-02T10:14:24Z ERROR [req-f5defe] [DatabaseService] Database query timed out after 45 seconds
+2026-10-02T01:57:51Z ERROR [req-a6d977] [GatewayService] Request timed out while waiting for server response
+2026-10-03T03:00:40Z CRITICAL [req-adc291] [OrderService] Failed to establish database connection after 4 attempts
+2026-10-06T22:40:41Z CRITICAL [req-901bcd] [OrderService] Database connection refused by server db-01.internal
+2026-10-05T13:33:08Z ERROR [req-91b3f9] [OrderService] NullPointerException at PaymentController.java:124
+2026-10-06T14:13:07Z CRITICAL [req-554047] [PaymentService] Payment request failed after 2 attempts
+2026-10-07T04:42:28Z WARNING [req-b2cd9a] [DatabaseService] Database operation timed out while waiting for response
+2026-10-01T08:34:50Z ERROR [req-52377d] [OrderService] Null reference encountered in handler at UserHandler.py:152
+2026-10-07T06:23:42Z ERROR [req-f0c791] [UserService] Cannot invoke method because object reference is null
+2026-10-07T00:54:50Z WARNING [req-ce028d] [AuthService] Invalid credentials received for user 2541
+2026-10-03T20:39:50Z CRITICAL [req-761c7a] [UserService] Null reference encountered in handler at OrderService.java:81
+2026-10-02T04:03:33Z ERROR [req-a93c94] [GatewayService] Request timed out while waiting for server response
+2026-10-02T04:55:17Z ERROR [req-a5a7e2] [GatewayService] Request timed out while waiting for server response
+2026-10-05T22:31:13Z CRITICAL [req-ef5e43] [OrderService] Database connection refused by server db-01.internal
+2026-10-03T12:08:01Z ERROR [req-9140a9] [FileService] Unable to locate requested file /reports/daily_108.csv
+2026-10-05T02:11:27Z ERROR [req-915a1c] [DatabaseService] Could not connect to database at db-02.internal:5433
+2026-10-05T19:38:52Z ERROR [req-187635] [DatabaseService] Query execution exceeded timeout limit of 60s
+2026-10-06T17:53:15Z ERROR [req-095ffa] [DatabaseService] Database connection refused by server db-02.internal
+2026-10-07T01:22:34Z WARNING [req-c3cb0c] [GatewayService] Connection request exceeded timeout limit of 60s
+2026-10-05T05:36:30Z CRITICAL [req-641a4b] [UserService] Cannot invoke method because object reference is null
+2026-10-07T16:27:17Z WARNING [req-d11ce3] [LoginService] Invalid credentials received for user 7479
+2026-10-01T12:11:32Z WARNING [req-360893] [AuthService] Authentication failed with HTTP status 401
+2026-10-04T23:30:48Z CRITICAL [req-4baf0f] [OrderService] Database connection refused by server db-02.internal
+2026-10-05T17:24:11Z ERROR [req-82e6e1] [PaymentService] Payment provider returned HTTP 502 for transaction TX309490
+2026-10-01T14:34:18Z WARNING [req-f260a3] [UploadService] No such file or directory: /documents/invoice_472.pdf
+2026-10-02T05:34:30Z WARNING [req-23a2f5] [ValidationService] Value 9004 is outside the permitted range
+2026-10-07T14:36:17Z WARNING [req-3c749c] [DatabaseService] Database operation timed out while waiting for response
+2026-10-07T05:04:26Z ERROR [req-346003] [FileService] No such file or directory: /documents/invoice_472.pdf
+2026-10-07T05:32:42Z ERROR [req-fb66bc] [FileService] Unable to locate requested file /documents/invoice_472.pdf
+2026-10-01T17:02:23Z WARNING [req-63d316] [APIService] Request timed out while waiting for server response
+2026-10-01T08:32:06Z ERROR [req-0effd5] [OrderService] Failed to establish database connection after 3 attempts
+2026-10-01T09:30:20Z WARNING [req-4a372d] [LoginService] Invalid credentials received for user 4204
+2026-10-07T02:56:58Z WARNING [req-7ec59e] [FileService] No such file or directory: /uploads/image_2931.png
+2026-10-02T15:58:05Z WARNING [req-ce5230] [QueryService] Query execution exceeded timeout limit of 45s
+2026-10-02T01:16:54Z ERROR [req-e08644] [DatabaseService] Query execution exceeded timeout limit of 60s
+2026-10-01T17:57:13Z ERROR [req-c0927b] [DatabaseService] Database query timed out after 60 seconds
+2026-10-02T08:18:39Z ERROR [req-c81a5f] [APIService] Connection request exceeded timeout limit of 15s
+2026-10-04T05:26:43Z ERROR [req-87d01c] [ValidationService] Request validation failed for field user_id
+2026-10-07T18:09:43Z ERROR [req-9be717] [OrderService] Could not connect to database at db-01.internal:5433
+2026-10-06T00:05:22Z ERROR [req-2dea94] [OrderService] Database connection refused by server db-01.internal
+2026-10-01T23:00:30Z WARNING [req-13ba8d] [AuthService] Unauthorized access attempt from client 866
+2026-10-03T23:23:12Z ERROR [req-b08c14] [CheckoutService] Payment provider returned HTTP 502 for transaction TX879207
+2026-10-06T18:33:40Z ERROR [req-68ffae] [QueryService] Database query timed out after 60 seconds
+2026-10-07T08:34:09Z ERROR [req-6e18b1] [DatabaseService] Database operation timed out while waiting for response
+2026-10-02T23:42:26Z ERROR [req-f8698e] [GatewayService] Connection request exceeded timeout limit of 15s
+2026-10-05T08:53:37Z ERROR [req-7fe670] [DatabaseService] Database connection refused by server db-01.internal
+2026-10-04T09:30:18Z ERROR [req-0b3d0c] [DatabaseService] Failed to establish database connection after 4 attempts
+2026-10-03T19:28:48Z ERROR [req-475436] [OrderService] NullPointerException at OrderService.java:41
+2026-10-06T12:57:01Z ERROR [req-eb0415] [QueryService] Database operation timed out while waiting for response
+2026-10-06T18:14:14Z CRITICAL [req-558492] [OrderService] NullPointerException at OrderService.java:165
+2026-10-06T04:05:11Z ERROR [req-0a5a26] [GatewayService] Request timed out while waiting for server response
+2026-10-02T00:20:49Z ERROR [req-d975a5] [GatewayService] Connection request exceeded timeout limit of 15s
+2026-10-06T21:58:53Z ERROR [req-91a07e] [GatewayService] Connection request exceeded timeout limit of 60s
+2026-10-05T16:27:28Z ERROR [req-96ed79] [ValidationService] Request validation failed for field quantity
+2026-10-05T09:15:39Z WARNING [req-c75ffb] [LoginService] Invalid credentials received for user 2742
+2026-10-05T13:05:16Z ERROR [req-4beef1] [AuthService] Invalid credentials received for user 8270
+2026-10-02T17:20:57Z ERROR [req-fa584a] [OrderService] Null reference encountered in handler at OrderService.java:109
+2026-10-06T17:07:59Z ERROR [req-a1da7c] [UserService] Cannot invoke method because object reference is null
+2026-10-02T03:37:33Z WARNING [req-642bb0] [UploadService] No such file or directory: /uploads/image_2931.png
+2026-10-02T09:06:25Z ERROR [req-e2b050] [UserService] Cannot invoke method because object reference is null
+2026-10-06T02:52:12Z WARNING [req-93efb5] [AuthService] Unauthorized access attempt from client 971
+2026-10-07T13:52:53Z ERROR [req-c28fa1] [OrderService] Failed to establish database connection after 2 attempts
+2026-10-06T10:45:11Z CRITICAL [req-ec955f] [OrderService] Failed to establish database connection after 5 attempts
+2026-10-06T16:40:53Z WARNING [req-279c05] [AuthService] Invalid credentials received for user 7628
+2026-10-02T20:34:15Z ERROR [req-e14110] [OrderService] Null reference encountered in handler at PaymentController.java:153
+2026-10-06T17:54:49Z WARNING [req-4777be] [APIService] Connection request exceeded timeout limit of 15s
+2026-10-02T03:31:36Z CRITICAL [req-adaa44] [OrderService] Database connection refused by server db-02.internal
+2026-10-03T21:42:47Z ERROR [req-62c965] [DatabaseService] Could not connect to database at db-02.internal:3306
+2026-10-06T09:30:22Z ERROR [req-3e3f3d] [APIService] Upstream request timed out after 60 seconds
+2026-10-05T19:59:07Z ERROR [req-894857] [UploadService] Unable to locate requested file /uploads/image_2931.png
+2026-10-06T13:10:41Z ERROR [req-3713b4] [OrderService] Could not connect to database at db-01.internal:5433
+2026-10-02T05:08:37Z ERROR [req-acd418] [APIService] Request timed out while waiting for server response
+2026-10-02T08:31:48Z CRITICAL [req-bb5e14] [OrderService] Null reference encountered in handler at PaymentController.java:77
+2026-10-05T13:57:13Z ERROR [req-148b43] [DatabaseService] Failed to establish database connection after 3 attempts
+2026-10-07T10:37:37Z ERROR [req-5fdd67] [PaymentService] Payment provider returned HTTP 502 for transaction TX544612
+2026-10-05T03:48:36Z ERROR [req-98b669] [DatabaseService] Database query timed out after 10 seconds
+2026-10-04T10:30:58Z ERROR [req-316da9] [DatabaseService] Database query timed out after 60 seconds
+2026-10-03T09:57:38Z ERROR [req-f5aed2] [LoginService] Invalid credentials received for user 6322
+2026-10-07T22:32:18Z WARNING [req-0a4fee] [APIService] Upstream request timed out after 30 seconds
+2026-10-07T01:23:02Z ERROR [req-6f6335] [FileService] Unable to locate requested file /documents/invoice_472.pdf
+2026-10-07T17:26:48Z ERROR [req-4d126a] [UserService] NullPointerException at UserHandler.py:64
+2026-10-05T09:49:37Z ERROR [req-16d7ba] [AuthService] Invalid credentials received for user 8242
+2026-10-06T19:25:16Z CRITICAL [req-6929de] [OrderService] Failed to establish database connection after 4 attempts
+2026-10-07T04:13:10Z CRITICAL [req-45ff2c] [OrderService] Database connection refused by server db-02.internal
+2026-10-07T06:19:58Z WARNING [req-f66c73] [DatabaseService] Database query timed out after 30 seconds
+2026-10-07T23:02:24Z WARNING [req-293fc2] [DatabaseService] Database operation timed out while waiting for response
+2026-10-02T18:23:54Z ERROR [req-0a3a11] [APIService] Request validation failed for field quantity
+2026-10-02T09:09:21Z ERROR [req-6676cc] [QueryService] Query execution exceeded timeout limit of 45s
+2026-10-05T04:09:14Z ERROR [req-69a3b9] [DatabaseService] Database query timed out after 15 seconds
+2026-10-03T15:59:34Z ERROR [req-e8b8d2] [GatewayService] Connection request exceeded timeout limit of 45s
+2026-10-06T05:06:45Z ERROR [req-3e9ace] [APIService] Connection request exceeded timeout limit of 15s
+2026-10-01T23:39:28Z ERROR [req-f2d3f7] [OrderService] Failed to establish database connection after 5 attempts
+2026-10-05T02:59:45Z CRITICAL [req-44656d] [DatabaseService] Database connection refused by server db-02.internal
+2026-10-07T23:09:15Z ERROR [req-faec8f] [LoginService] Invalid credentials received for user 8778
+2026-10-06T09:53:13Z WARNING [req-fa27a8] [FileService] Unable to locate requested file /reports/daily_108.csv
+2026-10-06T11:30:31Z ERROR [req-77a639] [PaymentService] Payment provider returned HTTP 502 for transaction TX902097
+2026-10-03T04:03:32Z ERROR [req-1fc775] [APIService] Value 4561 is outside the permitted range
+2026-10-07T22:47:04Z ERROR [req-c8794a] [ValidationService] Request validation failed for field email
+2026-10-06T00:35:53Z ERROR [req-557368] [QueryService] Database operation timed out while waiting for response
+2026-10-07T20:01:43Z CRITICAL [req-75a098] [OrderService] Cannot invoke method because object reference is null
+2026-10-04T18:05:33Z ERROR [req-396c61] [PaymentService] Gateway response failed with status 502
+2026-10-01T23:10:10Z CRITICAL [req-e5a4b1] [UserService] NullPointerException at OrderService.java:98
+2026-10-05T10:59:38Z CRITICAL [req-e6d590] [OrderService] Could not connect to database at db-02.internal:5433
+2026-10-02T12:40:40Z CRITICAL [req-34885a] [DatabaseService] Failed to establish database connection after 3 attempts
+2026-10-07T15:12:16Z ERROR [req-42be7d] [CheckoutService] Payment request failed after 2 attempts
+2026-10-06T16:17:16Z ERROR [req-75566f] [UserService] NullPointerException at OrderService.java:84
+2026-10-06T20:39:50Z WARNING [req-c7f4f4] [DatabaseService] Database operation timed out while waiting for response
+2026-10-01T19:15:26Z ERROR [req-b2dc6c] [OrderService] Failed to establish database connection after 3 attempts
+2026-10-04T20:06:41Z WARNING [req-63a1bc] [AuthService] Authentication failed with HTTP status 401
+2026-10-05T19:17:15Z WARNING [req-f08aba] [LoginService] Invalid credentials received for user 7794
+2026-10-04T03:57:33Z ERROR [req-3c4b1e] [OrderService] Database connection refused by server db-02.internal
+2026-10-05T04:35:47Z ERROR [req-2179e3] [OrderService] Failed to establish database connection after 3 attempts
+2026-10-03T17:34:07Z WARNING [req-34ec52] [QueryService] Database operation timed out while waiting for response
+2026-10-06T09:18:41Z ERROR [req-8dcd6e] [GatewayService] Request timed out while waiting for server response
+2026-10-06T11:52:40Z ERROR [req-b3522c] [QueryService] Database query timed out after 10 seconds
+2026-10-02T20:49:55Z WARNING [req-894e73] [DatabaseService] Database query timed out after 60 seconds
+2026-10-05T13:03:12Z WARNING [req-d1edc6] [LoginService] Authentication failed with HTTP status 401
+2026-10-07T13:54:18Z ERROR [req-2cf149] [OrderService] Could not connect to database at db-01.internal:5432
+2026-10-02T00:15:36Z WARNING [req-e07309] [GatewayService] Request timed out while waiting for server response
+2026-10-06T16:57:54Z WARNING [req-8af6d2] [UploadService] Unable to locate requested file /reports/daily_108.csv
+2026-10-03T09:52:14Z ERROR [req-816635] [UserService] NullPointerException at UserHandler.py:185
+2026-10-02T12:56:21Z WARNING [req-13ad3e] [QueryService] Query execution exceeded timeout limit of 30s
+2026-10-01T20:44:54Z ERROR [req-e28f55] [AuthService] Invalid credentials received for user 8148
+2026-10-02T13:53:12Z ERROR [req-788220] [DatabaseService] Database query timed out after 45 seconds
+2026-10-06T19:06:51Z WARNING [req-260b13] [APIService] Connection request exceeded timeout limit of 30s
+2026-10-02T10:46:40Z CRITICAL [req-ac5f12] [DatabaseService] Could not connect to database at db-01.internal:3306
+2026-10-04T22:47:24Z ERROR [req-9cdf06] [QueryService] Database query timed out after 45 seconds
+2026-10-05T17:36:48Z CRITICAL [req-6726f5] [PaymentService] Payment request failed after 5 attempts
+2026-10-01T17:06:46Z ERROR [req-55367a] [APIService] Request timed out while waiting for server response
+2026-10-05T15:44:25Z WARNING [req-5086f3] [GatewayService] Request timed out while waiting for server response
+2026-10-05T05:44:02Z ERROR [req-7b4bca] [LoginService] Unauthorized access attempt from client 942
+2026-10-06T23:32:57Z ERROR [req-b4fbda] [APIService] Upstream request timed out after 10 seconds
+2026-10-01T23:18:15Z ERROR [req-01c7ea] [UserService] Null reference encountered in handler at OrderService.java:71
+2026-10-05T19:11:04Z ERROR [req-e33fc5] [QueryService] Query execution exceeded timeout limit of 15s
+2026-10-05T17:02:43Z ERROR [req-eeb687] [UserService] Null reference encountered in handler at OrderService.java:73
+2026-10-03T05:00:02Z ERROR [req-6ec012] [DatabaseService] Could not connect to database at db-01.internal:5433
+2026-10-07T08:25:06Z ERROR [req-728e10] [AuthService] Authentication failed with HTTP status 401
+2026-10-05T11:02:33Z WARNING [req-1d93c7] [APIService] Request validation failed for field user_id
+2026-10-05T08:54:45Z ERROR [req-17d71f] [QueryService] Query execution exceeded timeout limit of 45s
+2026-10-01T15:11:13Z CRITICAL [req-c403b4] [UserService] Null reference encountered in handler at OrderService.java:197
+2026-10-02T03:56:57Z ERROR [req-f8bca9] [DatabaseService] Database operation timed out while waiting for response
+2026-10-01T09:03:11Z ERROR [req-dac726] [OrderService] Failed to establish database connection after 5 attempts
+2026-10-01T08:30:41Z WARNING [req-edd32b] [LoginService] Authentication failed with HTTP status 401
+2026-10-06T21:07:52Z ERROR [req-bd3c83] [AuthService] Authentication failed with HTTP status 401
+2026-10-02T11:14:49Z WARNING [req-297886] [ValidationService] Value 3139 is outside the permitted range
+2026-10-04T20:40:14Z ERROR [req-38a8ab] [PaymentService] Payment provider returned HTTP 502 for transaction TX846621
+2026-10-01T11:54:19Z WARNING [req-5dce8d] [APIService] Connection request exceeded timeout limit of 15s
+2026-10-05T03:44:37Z CRITICAL [req-b06f06] [CheckoutService] Gateway response failed with status 502
+2026-10-05T02:18:14Z ERROR [req-473bd3] [OrderService] Database connection refused by server db-01.internal
+2026-10-07T16:26:39Z ERROR [req-200b29] [OrderService] Failed to establish database connection after 3 attempts
+2026-10-06T03:47:48Z WARNING [req-924554] [APIService] Request timed out while waiting for server response
+2026-10-05T05:45:46Z ERROR [req-ba3584] [DatabaseService] Could not connect to database at db-01.internal:5432
+2026-10-05T22:57:11Z ERROR [req-6703b6] [OrderService] Failed to establish database connection after 5 attempts
+2026-10-07T00:31:46Z CRITICAL [req-7f5db1] [OrderService] Failed to establish database connection after 5 attempts
+2026-10-05T05:27:43Z ERROR [req-b3bfbd] [PaymentService] Gateway response failed with status 502
+2026-10-03T21:00:55Z ERROR [req-cf8a36] [OrderService] Failed to establish database connection after 3 attempts
+2026-10-02T15:44:39Z ERROR [req-bb7b6c] [OrderService] Failed to establish database connection after 4 attempts
+2026-10-06T13:51:46Z ERROR [req-1fce01] [DatabaseService] Database connection refused by server db-02.internal
+2026-10-04T19:11:22Z WARNING [req-6dc560] [LoginService] Invalid credentials received for user 3276
+2026-10-03T17:57:45Z ERROR [req-b3133c] [UserService] Cannot invoke method because object reference is null
+2026-10-04T15:46:26Z WARNING [req-ff0dd3] [LoginService] Invalid credentials received for user 4946
+2026-10-04T15:01:45Z ERROR [req-2661c4] [DatabaseService] Database query timed out after 15 seconds
+2026-10-07T12:24:11Z ERROR [req-766470] [QueryService] Database operation timed out while waiting for response
+2026-10-03T22:30:14Z ERROR [req-34ef71] [DatabaseService] Database query timed out after 15 seconds
+2026-10-03T21:42:01Z CRITICAL [req-288b78] [OrderService] Failed to establish database connection after 5 attempts
+2026-10-05T19:58:42Z ERROR [req-a5448d] [OrderService] NullPointerException at UserHandler.py:138
+2026-10-07T07:38:29Z CRITICAL [req-8634a7] [PaymentService] Payment request failed after 5 attempts
+2026-10-04T05:13:55Z ERROR [req-4c1d2e] [GatewayService] Upstream request timed out after 60 seconds
+2026-10-05T17:18:57Z CRITICAL [req-ee0c23] [PaymentService] Gateway response failed with status 502
+2026-10-03T14:03:24Z CRITICAL [req-bf8e8b] [DatabaseService] Database connection refused by server db-02.internal
+2026-10-01T18:03:41Z WARNING [req-41f746] [QueryService] Database query timed out after 30 seconds
+2026-10-01T23:26:05Z WARNING [req-c2ad0d] [GatewayService] Connection request exceeded timeout limit of 45s
+2026-10-05T19:59:49Z ERROR [req-2af2b7] [LoginService] Authentication failed with HTTP status 401
+2026-10-07T03:39:46Z ERROR [req-6bc5bc] [UserService] Cannot invoke method because object reference is null
+2026-10-06T18:26:09Z CRITICAL [req-2a45c2] [OrderService] Failed to establish database connection after 3 attempts
+2026-10-06T05:58:05Z CRITICAL [req-0e80c7] [PaymentService] Gateway response failed with status 502
+2026-10-06T20:46:13Z ERROR [req-f4ac27] [GatewayService] Request timed out while waiting for server response
+2026-10-05T11:29:56Z WARNING [req-0eecc0] [QueryService] Database operation timed out while waiting for response
+2026-10-05T08:23:35Z WARNING [req-3d3331] [APIService] Upstream request timed out after 15 seconds
+2026-10-06T11:23:59Z WARNING [req-6789e7] [QueryService] Query execution exceeded timeout limit of 60s
+2026-10-04T21:40:37Z ERROR [req-61730c] [OrderService] Failed to establish database connection after 4 attempts
+2026-10-05T03:15:09Z ERROR [req-b2c5b9] [FileService] No such file or directory: /reports/daily_108.csv
+2026-10-06T17:57:46Z WARNING [req-476622] [APIService] Value 8408 is outside the permitted range
+2026-10-02T00:36:37Z ERROR [req-47729a] [UserService] Cannot invoke method because object reference is null
+2026-10-02T06:58:06Z ERROR [req-e599bd] [DatabaseService] Query execution exceeded timeout limit of 10s
+2026-10-04T15:27:41Z WARNING [req-6906d1] [GatewayService] Upstream request timed out after 30 seconds
+2026-10-03T13:15:07Z ERROR [req-ac00cd] [PaymentService] Gateway response failed with status 502
+2026-10-02T16:43:58Z ERROR [req-cb33e3] [APIService] Request validation failed for field user_id
+2026-10-06T19:21:12Z WARNING [req-1cf851] [LoginService] Unauthorized access attempt from client 286
+2026-10-04T16:14:30Z CRITICAL [req-4236d2] [OrderService] Null reference encountered in handler at UserHandler.py:68
+2026-10-07T22:53:35Z WARNING [req-7ac067] [LoginService] Unauthorized access attempt from client 760
+2026-10-02T07:22:58Z ERROR [req-74b8b2] [UploadService] No such file or directory: /reports/daily_108.csv
+2026-10-05T01:37:50Z ERROR [req-d18433] [DatabaseService] Failed to establish database connection after 3 attempts
+2026-10-07T05:34:22Z WARNING [req-502426] [APIService] Invalid input for field quantity
+2026-10-04T20:37:23Z ERROR [req-2e408d] [LoginService] Unauthorized access attempt from client 803
+2026-10-05T12:39:32Z ERROR [req-7580e0] [DatabaseService] Failed to establish database connection after 2 attempts
+2026-10-07T04:38:38Z WARNING [req-0ba4e3] [APIService] Connection request exceeded timeout limit of 45s
+2026-10-05T06:37:15Z ERROR [req-a2f963] [DatabaseService] Failed to establish database connection after 3 attempts
+2026-10-02T00:17:16Z CRITICAL [req-32888f] [PaymentService] Payment request failed after 5 attempts
+2026-10-01T11:58:42Z ERROR [req-2deb56] [GatewayService] Upstream request timed out after 15 seconds
+2026-10-05T16:20:15Z ERROR [req-89b702] [OrderService] Null reference encountered in handler at PaymentController.java:230
+2026-10-01T19:27:40Z ERROR [req-c152ca] [CheckoutService] Payment provider returned HTTP 502 for transaction TX267188
+2026-10-07T04:48:16Z ERROR [req-28eccd] [FileService] File lookup failed for resource daily_report
+2026-10-07T01:35:16Z ERROR [req-557182] [CheckoutService] Payment request failed after 4 attempts
+2026-10-06T22:25:56Z ERROR [req-7ad465] [OrderService] Failed to establish database connection after 2 attempts
+2026-10-06T10:05:49Z ERROR [req-cecea5] [DatabaseService] Query execution exceeded timeout limit of 60s
+2026-10-03T06:11:43Z ERROR [req-49be87] [FileService] Unable to locate requested file /documents/invoice_472.pdf
+2026-10-07T08:48:51Z ERROR [req-b221e1] [DatabaseService] Database operation timed out while waiting for response
+2026-10-03T08:06:38Z CRITICAL [req-48c084] [UserService] Null reference encountered in handler at OrderService.java:59
+2026-10-04T04:58:27Z ERROR [req-9381eb] [UserService] Cannot invoke method because object reference is null
+2026-10-03T16:14:01Z ERROR [req-085eb4] [OrderService] Could not connect to database at db-02.internal:5432
+2026-10-04T12:53:39Z ERROR [req-3f3d2b] [ValidationService] Value 8904 is outside the permitted range
+2026-10-05T06:00:30Z CRITICAL [req-c90703] [OrderService] NullPointerException at OrderService.java:161
+2026-10-03T07:18:00Z ERROR [req-fad76a] [LoginService] Authentication failed with HTTP status 401
+2026-10-02T18:07:22Z ERROR [req-aa0007] [LoginService] Invalid credentials received for user 6184
+2026-10-06T04:32:57Z ERROR [req-4b6797] [QueryService] Database query timed out after 15 seconds
+2026-10-07T23:40:34Z ERROR [req-b7e584] [OrderService] Database connection refused by server db-02.internal
+2026-10-02T09:51:49Z ERROR [req-2eb862] [OrderService] NullPointerException at UserHandler.py:157
+2026-10-04T19:31:42Z ERROR [req-b45e94] [DatabaseService] Database operation timed out while waiting for response
+2026-10-03T18:01:26Z ERROR [req-62a876] [AuthService] Authentication failed with HTTP status 401
+2026-10-01T18:34:17Z CRITICAL [req-fe7ee3] [DatabaseService] Could not connect to database at db-02.internal:5432
+2026-10-06T03:03:15Z ERROR [req-83c74c] [GatewayService] Request timed out while waiting for server response
+2026-10-03T16:02:32Z WARNING [req-ce4307] [APIService] Invalid input for field amount
+2026-10-03T18:14:35Z ERROR [req-3d8849] [DatabaseService] Query execution exceeded timeout limit of 45s
+2026-10-05T05:28:28Z WARNING [req-45665e] [LoginService] Unauthorized access attempt from client 896
+2026-10-05T15:54:50Z CRITICAL [req-a302db] [PaymentService] Payment provider returned HTTP 502 for transaction TX481851
+2026-10-05T05:51:49Z WARNING [req-2fa808] [LoginService] Authentication failed with HTTP status 401
+2026-10-04T06:46:11Z WARNING [req-a4752f] [AuthService] Invalid credentials received for user 7047
+2026-10-02T11:20:57Z ERROR [req-cac4d0] [DatabaseService] Could not connect to database at db-02.internal:5432
+2026-10-06T18:35:49Z ERROR [req-e598e5] [APIService] Upstream request timed out after 15 seconds
+2026-10-05T19:24:54Z ERROR [req-a96bc7] [CheckoutService] Gateway response failed with status 502
+2026-10-07T07:01:59Z WARNING [req-2bfcc5] [LoginService] Authentication failed with HTTP status 401
+2026-10-03T13:42:47Z ERROR [req-8be275] [QueryService] Database operation timed out while waiting for response
+2026-10-03T22:52:15Z ERROR [req-96c044] [OrderService] Failed to establish database connection after 4 attempts
+2026-10-03T09:28:29Z ERROR [req-979aa0] [OrderService] Database connection refused by server db-01.internal
+2026-10-02T15:45:10Z ERROR [req-ab987d] [LoginService] Authentication failed with HTTP status 401
+2026-10-02T08:47:35Z WARNING [req-b98d15] [FileService] Unable to locate requested file /reports/daily_108.csv
+2026-10-06T21:07:22Z ERROR [req-bbcaa2] [UserService] Cannot invoke method because object reference is null
+2026-10-02T03:54:45Z ERROR [req-c080ab] [GatewayService] Upstream request timed out after 45 seconds
+2026-10-07T20:01:40Z WARNING [req-36c3fe] [QueryService] Database operation timed out while waiting for response
+2026-10-02T17:17:18Z ERROR [req-d4f121] [UploadService] File lookup failed for resource daily_report
+2026-10-06T00:25:25Z ERROR [req-9ef1a7] [DatabaseService] Database operation timed out while waiting for response
+2026-10-07T21:41:14Z ERROR [req-37abaa] [LoginService] Unauthorized access attempt from client 106
+2026-10-06T03:07:36Z ERROR [req-610c5a] [AuthService] Authentication failed with HTTP status 401
+2026-10-05T02:58:44Z ERROR [req-3ef783] [APIService] Upstream request timed out after 10 seconds
+2026-10-05T11:26:38Z WARNING [req-fd5422] [AuthService] Unauthorized access attempt from client 411
+2026-10-06T00:53:34Z WARNING [req-2df8d4] [LoginService] Authentication failed with HTTP status 401
+2026-10-03T06:28:34Z CRITICAL [req-07516d] [UserService] Null reference encountered in handler at OrderService.java:78
+2026-10-04T18:13:23Z ERROR [req-d161a3] [LoginService] Invalid credentials received for user 8519
+2026-10-02T03:17:22Z ERROR [req-2e77ab] [LoginService] Invalid credentials received for user 5621
+2026-10-07T11:34:29Z ERROR [req-e82c7d] [OrderService] Failed to establish database connection after 5 attempts
+2026-10-03T03:35:15Z CRITICAL [req-426507] [UserService] Cannot invoke method because object reference is null
+2026-10-01T12:55:42Z CRITICAL [req-6fa177] [DatabaseService] Failed to establish database connection after 5 attempts
+2026-10-02T23:55:29Z ERROR [req-dabf98] [OrderService] Could not connect to database at db-01.internal:3306
+2026-10-01T06:16:53Z WARNING [req-646cd3] [LoginService] Authentication failed with HTTP status 401
+2026-10-02T17:57:37Z ERROR [req-0678fe] [FileService] File lookup failed for resource profile_image
+2026-10-05T10:29:01Z ERROR [req-ab1e5b] [PaymentService] Gateway response failed with status 502
+2026-10-06T03:40:17Z ERROR [req-64d360] [OrderService] Cannot invoke method because object reference is null
+2026-10-04T04:53:27Z CRITICAL [req-7d106c] [OrderService] Could not connect to database at db-01.internal:3306
+2026-10-04T16:31:17Z WARNING [req-8f2d0b] [GatewayService] Upstream request timed out after 30 seconds
+2026-10-01T03:19:49Z WARNING [req-c704e8] [QueryService] Database query timed out after 30 seconds
+2026-10-06T18:55:21Z WARNING [req-de6a7c] [AuthService] Authentication failed with HTTP status 401
+2026-10-07T11:12:19Z WARNING [req-73b4da] [GatewayService] Connection request exceeded timeout limit of 10s
+2026-10-02T16:07:35Z ERROR [req-75f006] [OrderService] NullPointerException at OrderService.java:187
+2026-10-06T06:15:27Z ERROR [req-6c7a0c] [LoginService] Authentication failed with HTTP status 401
+2026-10-03T08:03:51Z ERROR [req-1a49de] [APIService] Connection request exceeded timeout limit of 60s
+2026-10-02T18:33:04Z ERROR [req-443994] [QueryService] Database query timed out after 30 seconds
+2026-10-02T15:14:36Z ERROR [req-e60ec8] [DatabaseService] Query execution exceeded timeout limit of 60s
+2026-10-04T23:38:15Z WARNING [req-a8cfe5] [QueryService] Database operation timed out while waiting for response
+2026-10-03T00:18:19Z WARNING [req-23ef55] [QueryService] Database query timed out after 45 seconds
+2026-10-01T09:25:39Z WARNING [req-44e831] [AuthService] Unauthorized access attempt from client 422
+2026-10-02T09:55:19Z CRITICAL [req-cdbb6c] [OrderService] Null reference encountered in handler at UserHandler.py:156
+2026-10-03T17:38:08Z WARNING [req-680945] [ValidationService] Request validation failed for field user_id
+2026-10-05T21:38:38Z ERROR [req-77746c] [APIService] Value 3489 is outside the permitted range
+2026-10-02T01:57:49Z ERROR [req-bd96bb] [AuthService] Unauthorized access attempt from client 489
+2026-10-03T20:55:11Z ERROR [req-e658eb] [OrderService] Null reference encountered in handler at PaymentController.java:58
+2026-10-01T01:55:40Z WARNING [req-a388ca] [GatewayService] Request timed out while waiting for server response
+2026-10-01T15:17:01Z WARNING [req-faf36a] [LoginService] Unauthorized access attempt from client 221
+2026-10-02T00:40:34Z ERROR [req-8f1584] [OrderService] Failed to establish database connection after 2 attempts
+2026-10-07T15:12:29Z ERROR [req-12e89d] [OrderService] Database connection refused by server db-02.internal
+2026-10-03T09:42:52Z WARNING [req-c226ab] [DatabaseService] Query execution exceeded timeout limit of 10s
+2026-10-02T23:52:17Z CRITICAL [req-3e7114] [DatabaseService] Failed to establish database connection after 5 attempts
+2026-10-05T22:05:10Z CRITICAL [req-80a52e] [OrderService] Failed to establish database connection after 4 attempts
+2026-10-02T03:22:52Z WARNING [req-613dec] [APIService] Invalid input for field email
+2026-10-05T09:07:51Z ERROR [req-0deb08] [FileService] File lookup failed for resource profile_image
+2026-10-02T14:39:05Z CRITICAL [req-39e7a4] [OrderService] Could not connect to database at db-01.internal:3306
+2026-10-04T21:52:58Z CRITICAL [req-40181c] [DatabaseService] Could not connect to database at db-01.internal:3306
+2026-10-01T22:56:30Z CRITICAL [req-ed6cbe] [UserService] Cannot invoke method because object reference is null
+2026-10-05T20:02:34Z ERROR [req-b0c770] [DatabaseService] Database query timed out after 10 seconds
+2026-10-05T00:40:05Z ERROR [req-5c5d3f] [QueryService] Database query timed out after 10 seconds
+2026-10-02T13:59:09Z WARNING [req-f5a98c] [ValidationService] Invalid input for field user_id
+2026-10-01T12:51:47Z ERROR [req-7fcc44] [GatewayService] Connection request exceeded timeout limit of 30s
+2026-10-02T05:15:17Z ERROR [req-cb5085] [UserService] NullPointerException at OrderService.java:212
+2026-10-06T23:35:26Z ERROR [req-c09ca1] [GatewayService] Upstream request timed out after 45 seconds
+2026-10-02T02:40:34Z WARNING [req-6ed714] [FileService] No such file or directory: /documents/invoice_472.pdf
+2026-10-02T04:39:58Z ERROR [req-671230] [OrderService] Could not connect to database at db-01.internal:5432
+2026-10-07T04:52:26Z ERROR [req-6ba571] [ValidationService] Request validation failed for field email
+2026-10-03T11:08:02Z CRITICAL [req-301db8] [OrderService] Cannot invoke method because object reference is null
+2026-10-01T13:01:46Z ERROR [req-3c1517] [UserService] NullPointerException at OrderService.java:123
+2026-10-06T07:52:13Z ERROR [req-74d99f] [UserService] Null reference encountered in handler at UserHandler.py:213
+2026-10-01T10:26:12Z WARNING [req-8c91bd] [DatabaseService] Database query timed out after 45 seconds
+2026-10-04T14:09:12Z WARNING [req-3503ae] [ValidationService] Value 9890 is outside the permitted range
+2026-10-02T05:50:02Z ERROR [req-5037cd] [OrderService] Database connection refused by server db-01.internal
+2026-10-02T07:21:54Z ERROR [req-529b20] [AuthService] Unauthorized access attempt from client 337
+2026-10-02T21:13:14Z ERROR [req-eb8510] [CheckoutService] Gateway response failed with status 502
+2026-10-05T07:20:39Z ERROR [req-2d14e9] [DatabaseService] Failed to establish database connection after 4 attempts
+2026-10-03T07:39:28Z ERROR [req-c17e3d] [OrderService] Cannot invoke method because object reference is null
+2026-10-04T12:00:18Z ERROR [req-f82f2d] [OrderService] Cannot invoke method because object reference is null
+2026-10-02T14:41:00Z ERROR [req-813834] [GatewayService] Request timed out while waiting for server response
+2026-10-04T06:16:59Z CRITICAL [req-e2ec13] [DatabaseService] Could not connect to database at db-02.internal:5433
+2026-10-01T07:06:38Z ERROR [req-f69398] [FileService] No such file or directory: /reports/daily_108.csv
+2026-10-04T22:23:37Z WARNING [req-a6091a] [DatabaseService] Database operation timed out while waiting for response
+2026-10-02T01:47:10Z ERROR [req-b50b9f] [APIService] Connection request exceeded timeout limit of 60s
+2026-10-02T15:12:24Z ERROR [req-2ef6a1] [OrderService] NullPointerException at OrderService.java:170
+2026-10-02T09:04:11Z CRITICAL [req-b26c88] [UserService] Null reference encountered in handler at OrderService.java:114
+2026-10-06T05:12:50Z CRITICAL [req-9b4e2c] [OrderService] Database connection refused by server db-02.internal
+2026-10-07T07:00:23Z ERROR [req-9f64ee] [OrderService] Failed to establish database connection after 3 attempts
+2026-10-07T17:32:22Z ERROR [req-ee8790] [DatabaseService] Could not connect to database at db-02.internal:5432
+2026-10-07T01:25:55Z CRITICAL [req-a79463] [OrderService] Database connection refused by server db-02.internal
+2026-10-03T17:42:20Z ERROR [req-738792] [DatabaseService] Could not connect to database at db-02.internal:5432
+2026-10-05T17:53:05Z WARNING [req-4b83b5] [DatabaseService] Query execution exceeded timeout limit of 10s
+2026-10-01T22:06:14Z WARNING [req-e6c71f] [APIService] Request timed out while waiting for server response
+2026-10-01T16:37:10Z WARNING [req-ca6425] [AuthService] Unauthorized access attempt from client 262
+2026-10-06T06:36:31Z ERROR [req-6bcd5c] [OrderService] Database connection refused by server db-01.internal
+2026-10-07T16:28:43Z ERROR [req-4ede79] [APIService] Request timed out while waiting for server response
+2026-10-04T23:53:54Z ERROR [req-4d7ec4] [LoginService] Invalid credentials received for user 5906
+2026-10-01T02:23:22Z ERROR [req-171726] [DatabaseService] Database query timed out after 45 seconds
+2026-10-06T19:37:31Z ERROR [req-f30b15] [APIService] Value 9302 is outside the permitted range
+2026-10-01T23:24:39Z ERROR [req-3c7686] [OrderService] Cannot invoke method because object reference is null
+2026-10-07T19:15:11Z CRITICAL [req-c1bbb7] [PaymentService] Gateway response failed with status 502
+2026-10-05T18:38:56Z WARNING [req-1c68a6] [FileService] File lookup failed for resource invoice_472
+2026-10-07T22:04:16Z ERROR [req-606cc2] [QueryService] Query execution exceeded timeout limit of 45s
+2026-10-02T03:14:05Z ERROR [req-7743c1] [LoginService] Unauthorized access attempt from client 506
+2026-10-05T15:43:01Z WARNING [req-96b31f] [QueryService] Database query timed out after 30 seconds
+2026-10-05T08:43:04Z WARNING [req-053f1a] [APIService] Request validation failed for field quantity
+2026-10-06T20:28:39Z ERROR [req-9ee410] [QueryService] Query execution exceeded timeout limit of 60s
+2026-10-05T00:42:01Z ERROR [req-dfcaf0] [OrderService] Could not connect to database at db-02.internal:5432
+2026-10-06T10:50:23Z WARNING [req-fe268e] [QueryService] Query execution exceeded timeout limit of 60s
+2026-10-04T16:04:38Z ERROR [req-949002] [UserService] NullPointerException at UserHandler.py:246
+2026-10-07T13:30:36Z ERROR [req-80a237] [QueryService] Query execution exceeded timeout limit of 60s
+2026-10-04T11:54:59Z CRITICAL [req-48603b] [OrderService] Could not connect to database at db-01.internal:5433
+2026-10-05T09:57:33Z WARNING [req-79477a] [FileService] No such file or directory: /documents/invoice_472.pdf
+2026-10-02T06:01:11Z WARNING [req-baff36] [AuthService] Invalid credentials received for user 7574
+2026-10-02T13:15:59Z WARNING [req-423701] [DatabaseService] Database operation timed out while waiting for response
+2026-10-04T19:14:37Z ERROR [req-ef5448] [UserService] Cannot invoke method because object reference is null
+2026-10-02T13:41:10Z ERROR [req-83601f] [APIService] Connection request exceeded timeout limit of 10s
+2026-10-07T17:46:41Z ERROR [req-d7e452] [QueryService] Query execution exceeded timeout limit of 15s
+2026-10-03T03:41:20Z ERROR [req-0f3f0f] [DatabaseService] Could not connect to database at db-01.internal:5432
+2026-10-05T16:30:02Z CRITICAL [req-662c4f] [OrderService] Cannot invoke method because object reference is null
+2026-10-07T16:11:20Z ERROR [req-81338b] [QueryService] Database operation timed out while waiting for response
+2026-10-03T02:19:22Z ERROR [req-f45707] [DatabaseService] Could not connect to database at db-01.internal:5432
+2026-10-02T00:57:50Z ERROR [req-1feb21] [LoginService] Invalid credentials received for user 8949
+2026-10-03T06:51:42Z ERROR [req-e3fb1c] [ValidationService] Value 2020 is outside the permitted range
+2026-10-05T13:09:35Z ERROR [req-252d34] [PaymentService] Payment request failed after 2 attempts
+2026-10-02T21:04:57Z ERROR [req-a6cdae] [QueryService] Query execution exceeded timeout limit of 60s
+2026-10-01T07:43:44Z CRITICAL [req-32e706] [OrderService] Could not connect to database at db-02.internal:3306
+2026-10-07T19:42:31Z ERROR [req-f79f8f] [UserService] NullPointerException at UserHandler.py:199
+2026-10-03T12:21:13Z WARNING [req-b0d18d] [APIService] Connection request exceeded timeout limit of 15s
+2026-10-07T22:27:32Z ERROR [req-484fda] [UploadService] Unable to locate requested file /documents/invoice_472.pdf
+2026-10-03T17:24:15Z ERROR [req-47269e] [GatewayService] Connection request exceeded timeout limit of 45s
+2026-10-07T19:08:44Z WARNING [req-00801e] [GatewayService] Connection request exceeded timeout limit of 45s
+2026-10-05T04:12:42Z CRITICAL [req-f93c82] [PaymentService] Gateway response failed with status 502
+2026-10-04T21:47:46Z ERROR [req-18a440] [DatabaseService] Database query timed out after 15 seconds
+2026-10-05T19:59:44Z ERROR [req-4a9c58] [OrderService] Failed to establish database connection after 5 attempts
+2026-10-05T22:21:25Z ERROR [req-fedb5a] [CheckoutService] Gateway response failed with status 502
+2026-10-02T05:16:37Z WARNING [req-4b4d10] [AuthService] Unauthorized access attempt from client 257
+2026-10-04T10:41:59Z ERROR [req-17c305] [GatewayService] Connection request exceeded timeout limit of 10s
+2026-10-02T03:02:42Z ERROR [req-81b74f] [PaymentService] Payment provider returned HTTP 502 for transaction TX432272
+2026-10-01T15:53:36Z ERROR [req-a4b5c7] [DatabaseService] Database operation timed out while waiting for response
+2026-10-04T15:35:00Z ERROR [req-ffecc4] [PaymentService] Payment request failed after 2 attempts
+2026-10-05T13:55:27Z WARNING [req-e3dc87] [APIService] Upstream request timed out after 30 seconds
+2026-10-07T21:28:01Z ERROR [req-698e09] [PaymentService] Payment request failed after 5 attempts
+2026-10-02T13:05:08Z ERROR [req-593894] [PaymentService] Gateway response failed with status 502
+2026-10-03T08:45:50Z ERROR [req-c078bc] [LoginService] Unauthorized access attempt from client 859
+2026-10-01T12:47:18Z ERROR [req-e98965] [QueryService] Database operation timed out while waiting for response
+2026-10-03T20:31:08Z ERROR [req-b3c4d0] [QueryService] Database operation timed out while waiting for response
+2026-10-06T20:35:54Z ERROR [req-178029] [UserService] Cannot invoke method because object reference is null
+2026-10-07T20:52:46Z ERROR [req-e5605c] [DatabaseService] Database operation timed out while waiting for response
+2026-10-07T00:34:25Z ERROR [req-b02e21] [QueryService] Query execution exceeded timeout limit of 10s
+2026-10-04T08:11:38Z WARNING [req-ea1af7] [DatabaseService] Database query timed out after 30 seconds
+2026-10-02T22:40:10Z WARNING [req-a1a054] [GatewayService] Connection request exceeded timeout limit of 10s
+2026-10-06T19:58:55Z ERROR [req-8df661] [DatabaseService] Failed to establish database connection after 2 attempts
+2026-10-04T19:11:07Z CRITICAL [req-6de593] [OrderService] Failed to establish database connection after 2 attempts
+2026-10-01T09:25:58Z CRITICAL [req-2747b9] [OrderService] Database connection refused by server db-02.internal
+2026-10-06T03:31:17Z ERROR [req-9df205] [OrderService] Cannot invoke method because object reference is null
+2026-10-01T03:55:00Z ERROR [req-dec2c7] [FileService] No such file or directory: /uploads/image_2931.png
+2026-10-01T21:33:11Z ERROR [req-c6f06a] [DatabaseService] Query execution exceeded timeout limit of 30s
+2026-10-07T22:12:37Z WARNING [req-b5caa9] [QueryService] Database operation timed out while waiting for response
+2026-10-07T06:30:37Z WARNING [req-2c85ef] [APIService] Request validation failed for field email
+2026-10-05T20:38:24Z CRITICAL [req-0964fb] [OrderService] Could not connect to database at db-02.internal:5433
+2026-10-04T05:11:17Z ERROR [req-a4515a] [QueryService] Database query timed out after 15 seconds
+2026-10-05T16:18:13Z ERROR [req-f31b38] [FileService] No such file or directory: /uploads/image_2931.png
+2026-10-04T01:54:46Z ERROR [req-ebeb9d] [OrderService] Null reference encountered in handler at PaymentController.java:104
+2026-10-03T18:06:51Z ERROR [req-200196] [UploadService] No such file or directory: /documents/invoice_472.pdf
+2026-10-07T17:41:59Z WARNING [req-0ab2e2] [APIService] Request timed out while waiting for server response
+2026-10-01T08:43:54Z ERROR [req-568a22] [UserService] Cannot invoke method because object reference is null
+2026-10-06T12:31:50Z ERROR [req-6c4a37] [OrderService] Could not connect to database at db-01.internal:5433
+2026-10-04T22:16:15Z CRITICAL [req-4aea1b] [OrderService] Failed to establish database connection after 2 attempts
+2026-10-01T12:13:53Z WARNING [req-c891d5] [QueryService] Database operation timed out while waiting for response
+2026-10-01T15:22:17Z ERROR [req-88f7f0] [DatabaseService] Query execution exceeded timeout limit of 60s
+2026-10-04T06:41:38Z ERROR [req-1b678e] [UserService] Null reference encountered in handler at PaymentController.java:212
+2026-10-03T10:16:16Z WARNING [req-f52d82] [FileService] Unable to locate requested file /reports/daily_108.csv
+2026-10-03T15:49:41Z ERROR [req-a51f4e] [ValidationService] Invalid input for field email
+2026-10-06T09:19:00Z WARNING [req-b1fbb5] [AuthService] Authentication failed with HTTP status 401
+2026-10-04T03:12:06Z CRITICAL [req-ae2e69] [CheckoutService] Payment provider returned HTTP 502 for transaction TX391595
+2026-10-07T16:14:44Z ERROR [req-12a850] [QueryService] Database operation timed out while waiting for response
+2026-10-01T14:29:39Z CRITICAL [req-14e286] [OrderService] Database connection refused by server db-02.internal
+2026-10-05T08:34:39Z ERROR [req-7c0f54] [DatabaseService] Could not connect to database at db-02.internal:3306
+2026-10-01T18:30:45Z ERROR [req-72c22a] [OrderService] Failed to establish database connection after 3 attempts
+2026-10-06T13:24:40Z ERROR [req-9e0383] [OrderService] Null reference encountered in handler at PaymentController.java:225
+2026-10-02T09:44:37Z ERROR [req-0a2d6f] [ValidationService] Invalid input for field email
+2026-10-03T08:05:39Z ERROR [req-1e9b23] [DatabaseService] Could not connect to database at db-01.internal:3306
+2026-10-05T14:45:57Z WARNING [req-efbbd2] [LoginService] Authentication failed with HTTP status 401
+2026-10-07T13:23:38Z CRITICAL [req-13b8ec] [PaymentService] Gateway response failed with status 502
+2026-10-01T12:33:29Z ERROR [req-a51599] [GatewayService] Request timed out while waiting for server response
+2026-10-04T16:52:50Z ERROR [req-8aa2f7] [UserService] NullPointerException at PaymentController.java:151
+2026-10-04T00:23:30Z ERROR [req-73b0e7] [LoginService] Unauthorized access attempt from client 117
+2026-10-06T18:18:40Z ERROR [req-3f1093] [GatewayService] Upstream request timed out after 30 seconds
+2026-10-03T18:37:56Z ERROR [req-a2b8fd] [AuthService] Authentication failed with HTTP status 401
+2026-10-03T20:22:00Z CRITICAL [req-ebd235] [PaymentService] Gateway response failed with status 502
+2026-10-01T23:01:08Z ERROR [req-ec8be5] [OrderService] Failed to establish database connection after 5 attempts
+2026-10-03T09:12:53Z ERROR [req-bbc994] [DatabaseService] Database operation timed out while waiting for response
+2026-10-04T18:08:20Z ERROR [req-e76adc] [DatabaseService] Database connection refused by server db-02.internal
+2026-10-07T05:58:35Z ERROR [req-1223d9] [APIService] Connection request exceeded timeout limit of 45s
+2026-10-02T17:47:36Z WARNING [req-af2f5f] [FileService] No such file or directory: /documents/invoice_472.pdf
+2026-10-01T11:56:55Z ERROR [req-e8b77f] [DatabaseService] Database connection refused by server db-02.internal
+2026-10-04T21:49:02Z ERROR [req-c2efee] [OrderService] Database connection refused by server db-01.internal
+2026-10-06T01:13:10Z CRITICAL [req-989bc4] [DatabaseService] Failed to establish database connection after 5 attempts
+2026-10-03T01:38:58Z WARNING [req-960f96] [UploadService] Unable to locate requested file /documents/invoice_472.pdf
+2026-10-06T05:08:33Z ERROR [req-7ea5a3] [OrderService] Database connection refused by server db-02.internal
+2026-10-01T19:13:50Z ERROR [req-9f8c1c] [UploadService] File lookup failed for resource invoice_472
+2026-10-01T05:03:55Z ERROR [req-ae1782] [UserService] NullPointerException at UserHandler.py:155
+2026-10-01T19:35:59Z ERROR [req-980cb9] [DatabaseService] Database connection refused by server db-01.internal
+2026-10-06T09:34:13Z ERROR [req-f833eb] [DatabaseService] Database operation timed out while waiting for response
+2026-10-04T06:25:24Z ERROR [req-47d283] [LoginService] Unauthorized access attempt from client 141
+2026-10-02T14:44:54Z CRITICAL [req-1a873c] [CheckoutService] Payment request failed after 3 attempts
+2026-10-06T01:30:00Z WARNING [req-1defd4] [GatewayService] Connection request exceeded timeout limit of 10s
+2026-10-02T09:53:01Z CRITICAL [req-01368f] [PaymentService] Payment request failed after 5 attempts
+2026-10-04T13:38:54Z ERROR [req-d9e927] [DatabaseService] Query execution exceeded timeout limit of 45s
+2026-10-02T23:12:43Z CRITICAL [req-d057ab] [OrderService] NullPointerException at OrderService.java:132
+2026-10-02T19:21:25Z WARNING [req-a3ed03] [DatabaseService] Database query timed out after 30 seconds
+2026-10-05T16:14:11Z ERROR [req-bc547d] [AuthService] Invalid credentials received for user 3422
+2026-10-03T20:03:31Z ERROR [req-aefa82] [QueryService] Query execution exceeded timeout limit of 10s
+2026-10-06T01:48:47Z WARNING [req-b62b9f] [LoginService] Unauthorized access attempt from client 169
+2026-10-03T01:30:40Z ERROR [req-143745] [OrderService] Failed to establish database connection after 3 attempts
+2026-10-04T22:56:59Z ERROR [req-752206] [DatabaseService] Database connection refused by server db-02.internal
+2026-10-07T02:41:23Z WARNING [req-c4bfa4] [FileService] File lookup failed for resource invoice_472
+2026-10-03T21:18:25Z WARNING [req-70aff6] [DatabaseService] Database query timed out after 10 seconds
+2026-10-05T02:29:44Z WARNING [req-69a2e4] [UploadService] No such file or directory: /uploads/image_2931.png
+2026-10-01T11:24:03Z ERROR [req-b526b2] [OrderService] Database connection refused by server db-01.internal
+2026-10-03T21:03:37Z WARNING [req-302598] [AuthService] Authentication failed with HTTP status 401
+2026-10-07T20:15:03Z ERROR [req-8f0d55] [OrderService] Failed to establish database connection after 2 attempts
+2026-10-07T21:46:45Z ERROR [req-361c23] [APIService] Connection request exceeded timeout limit of 10s
+2026-10-04T16:34:01Z WARNING [req-c8f72c] [QueryService] Database query timed out after 60 seconds
+2026-10-03T23:53:50Z WARNING [req-54323b] [LoginService] Authentication failed with HTTP status 401
+2026-10-03T08:46:34Z WARNING [req-566047] [DatabaseService] Query execution exceeded timeout limit of 10s
+2026-10-03T14:49:43Z ERROR [req-4a9f6c] [LoginService] Invalid credentials received for user 1861
+2026-10-04T15:27:11Z ERROR [req-503fe0] [FileService] No such file or directory: /uploads/image_2931.png
+2026-10-06T17:59:16Z CRITICAL [req-74fd33] [DatabaseService] Failed to establish database connection after 4 attempts
+2026-10-03T23:35:28Z WARNING [req-2cd64d] [ValidationService] Value 6571 is outside the permitted range
+2026-10-01T20:15:33Z ERROR [req-a9488d] [DatabaseService] Database connection refused by server db-01.internal
+2026-10-03T18:16:36Z CRITICAL [req-0d259c] [OrderService] Could not connect to database at db-02.internal:5432
+2026-10-04T10:13:32Z ERROR [req-1af03c] [PaymentService] Payment provider returned HTTP 502 for transaction TX719482
+2026-10-02T00:51:51Z ERROR [req-6e8f75] [DatabaseService] Failed to establish database connection after 2 attempts
+2026-10-07T13:20:32Z ERROR [req-965bef] [DatabaseService] Database connection refused by server db-01.internal
+2026-10-04T11:01:22Z WARNING [req-a4c755] [AuthService] Authentication failed with HTTP status 401
+2026-10-01T23:18:47Z WARNING [req-09aa55] [QueryService] Query execution exceeded timeout limit of 15s
+2026-10-04T11:33:34Z ERROR [req-b231c6] [DatabaseService] Failed to establish database connection after 2 attempts
+2026-10-03T11:45:54Z WARNING [req-095b81] [QueryService] Query execution exceeded timeout limit of 10s
+2026-10-04T10:18:07Z CRITICAL [req-22ae88] [CheckoutService] Payment provider returned HTTP 502 for transaction TX186391
+2026-10-07T09:09:16Z ERROR [req-a1791e] [DatabaseService] Database connection refused by server db-02.internal
+2026-10-06T23:16:20Z ERROR [req-a510af] [APIService] Upstream request timed out after 10 seconds
+2026-10-06T14:27:25Z CRITICAL [req-35ab84] [OrderService] Database connection refused by server db-01.internal
+2026-10-06T04:13:11Z CRITICAL [req-24a0db] [OrderService] Cannot invoke method because object reference is null
+2026-10-01T09:33:55Z CRITICAL [req-a05be2] [PaymentService] Gateway response failed with status 502
+2026-10-04T03:03:31Z WARNING [req-d02a6c] [QueryService] Database operation timed out while waiting for response
+2026-10-03T02:15:08Z CRITICAL [req-b4bba7] [OrderService] Failed to establish database connection after 3 attempts
+2026-10-04T07:15:20Z ERROR [req-61aa18] [CheckoutService] Payment provider returned HTTP 502 for transaction TX648236
+2026-10-07T14:14:51Z CRITICAL [req-7e710b] [DatabaseService] Failed to establish database connection after 3 attempts
+2026-10-01T00:27:20Z CRITICAL [req-5a5226] [DatabaseService] Failed to establish database connection after 2 attempts
+2026-10-07T16:41:18Z CRITICAL [req-6d7ce3] [DatabaseService] Could not connect to database at db-01.internal:3306
+2026-10-04T16:11:48Z ERROR [req-d02973] [GatewayService] Connection request exceeded timeout limit of 15s
+2026-10-07T23:32:45Z CRITICAL [req-743c6d] [CheckoutService] Payment provider returned HTTP 502 for transaction TX108952
+2026-10-01T01:04:36Z ERROR [req-39182c] [APIService] Request timed out while waiting for server response
+2026-10-06T00:30:43Z WARNING [req-7c8c65] [AuthService] Invalid credentials received for user 3639
+2026-10-04T21:57:57Z WARNING [req-d3aa9b] [GatewayService] Request timed out while waiting for server response
+2026-10-07T16:17:37Z ERROR [req-0cf35b] [DatabaseService] Could not connect to database at db-01.internal:5432
+2026-10-05T12:25:21Z CRITICAL [req-a15b2e] [DatabaseService] Failed to establish database connection after 2 attempts
+2026-10-07T18:13:14Z ERROR [req-b6448d] [UserService] NullPointerException at UserHandler.py:144
+2026-10-01T06:53:49Z CRITICAL [req-6d7088] [CheckoutService] Gateway response failed with status 502
+2026-10-06T00:34:12Z WARNING [req-cb22eb] [LoginService] Invalid credentials received for user 9144
+2026-10-06T00:54:01Z WARNING [req-4d0e39] [LoginService] Authentication failed with HTTP status 401
+2026-10-06T01:47:26Z ERROR [req-f67294] [DatabaseService] Database connection refused by server db-02.internal
+2026-10-05T20:40:18Z ERROR [req-cd04c0] [DatabaseService] Database query timed out after 10 seconds
+2026-10-05T02:26:06Z CRITICAL [req-fc3b0d] [OrderService] Failed to establish database connection after 3 attempts
+2026-10-04T13:50:43Z ERROR [req-74300c] [OrderService] NullPointerException at UserHandler.py:130
+2026-10-07T23:31:15Z ERROR [req-507a61] [OrderService] Cannot invoke method because object reference is null
+2026-10-03T06:44:05Z CRITICAL [req-1ac2c9] [UserService] NullPointerException at OrderService.java:133
+2026-10-02T16:50:31Z ERROR [req-7845a5] [PaymentService] Payment provider returned HTTP 502 for transaction TX265132
+2026-10-07T10:42:06Z ERROR [req-0e8fa8] [DatabaseService] Could not connect to database at db-01.internal:3306
+2026-10-03T02:01:19Z WARNING [req-3a0e61] [GatewayService] Request timed out while waiting for server response
+2026-10-07T05:12:25Z ERROR [req-561c9a] [GatewayService] Request timed out while waiting for server response
+2026-10-03T08:59:19Z WARNING [req-a6b788] [AuthService] Authentication failed with HTTP status 401
+2026-10-06T00:31:54Z ERROR [req-d3d1bf] [OrderService] Database connection refused by server db-02.internal
+2026-10-04T05:05:01Z CRITICAL [req-14c8b3] [DatabaseService] Could not connect to database at db-01.internal:3306
+2026-10-02T18:40:07Z ERROR [req-2a3189] [UserService] NullPointerException at UserHandler.py:210
+2026-10-07T20:10:21Z WARNING [req-a5d453] [AuthService] Authentication failed with HTTP status 401
+2026-10-07T23:45:45Z ERROR [req-232805] [GatewayService] Upstream request timed out after 30 seconds
+2026-10-01T13:17:24Z CRITICAL [req-72984b] [UserService] NullPointerException at PaymentController.java:45
+2026-10-04T18:43:12Z WARNING [req-b8bf9c] [AuthService] Invalid credentials received for user 5675
+2026-10-05T21:00:33Z ERROR [req-6552ac] [QueryService] Database operation timed out while waiting for response
+2026-10-02T00:54:51Z ERROR [req-c5767c] [UserService] Cannot invoke method because object reference is null
+2026-10-06T10:45:17Z ERROR [req-82d29b] [AuthService] Unauthorized access attempt from client 416
+2026-10-07T14:20:54Z ERROR [req-7eb3ae] [UserService] NullPointerException at OrderService.java:174
+2026-10-04T05:45:46Z CRITICAL [req-efc898] [DatabaseService] Failed to establish database connection after 3 attempts
+2026-10-01T18:49:15Z ERROR [req-11ea88] [AuthService] Invalid credentials received for user 3845
+2026-10-02T17:14:28Z WARNING [req-a76180] [APIService] Request timed out while waiting for server response
+2026-10-04T00:18:17Z ERROR [req-65dace] [QueryService] Query execution exceeded timeout limit of 45s
+2026-10-07T04:59:21Z WARNING [req-f76b97] [QueryService] Database operation timed out while waiting for response
+2026-10-05T23:57:45Z CRITICAL [req-bd9223] [UserService] NullPointerException at PaymentController.java:243
+2026-10-04T05:05:37Z ERROR [req-7c45d6] [CheckoutService] Gateway response failed with status 502
+2026-10-03T03:41:53Z ERROR [req-261b04] [CheckoutService] Payment provider returned HTTP 502 for transaction TX466009
+2026-10-02T00:20:56Z ERROR [req-2483c4] [AuthService] Invalid credentials received for user 4314
+2026-10-06T08:03:16Z ERROR [req-d58b54] [CheckoutService] Payment provider returned HTTP 502 for transaction TX559849
+2026-10-04T13:53:40Z ERROR [req-fc3a15] [AuthService] Unauthorized access attempt from client 362
+2026-10-01T10:17:14Z WARNING [req-b54401] [DatabaseService] Query execution exceeded timeout limit of 30s
+2026-10-05T01:12:15Z WARNING [req-5c494d] [AuthService] Invalid credentials received for user 6486
+2026-10-07T11:38:00Z WARNING [req-5855e4] [AuthService] Unauthorized access attempt from client 330
+2026-10-02T03:59:40Z WARNING [req-833d3d] [APIService] Request timed out while waiting for server response
+2026-10-07T22:35:04Z ERROR [req-9326df] [OrderService] Failed to establish database connection after 5 attempts
+2026-10-01T12:52:52Z ERROR [req-fdc419] [GatewayService] Connection request exceeded timeout limit of 45s
+2026-10-07T19:59:01Z ERROR [req-12c136] [DatabaseService] Failed to establish database connection after 4 attempts
+2026-10-05T13:55:58Z WARNING [req-098364] [UploadService] Unable to locate requested file /uploads/image_2931.png
+2026-10-03T22:06:13Z ERROR [req-82f2a5] [OrderService] Cannot invoke method because object reference is null
+2026-10-07T10:32:41Z WARNING [req-ad1abf] [FileService] No such file or directory: /uploads/image_2931.png
+2026-10-05T16:02:56Z WARNING [req-a3922a] [GatewayService] Connection request exceeded timeout limit of 45s
+2026-10-01T03:27:48Z ERROR [req-a77282] [AuthService] Authentication failed with HTTP status 401
+2026-10-05T19:05:37Z ERROR [req-960959] [DatabaseService] Database operation timed out while waiting for response
+2026-10-05T19:11:18Z ERROR [req-b22d2b] [CheckoutService] Payment provider returned HTTP 502 for transaction TX612267
+2026-10-02T18:01:26Z ERROR [req-2cd6e8] [APIService] Request timed out while waiting for server response
+2026-10-06T07:08:49Z ERROR [req-3cf8b9] [OrderService] NullPointerException at PaymentController.java:103
+2026-10-05T03:44:17Z WARNING [req-7c7dd4] [AuthService] Unauthorized access attempt from client 658
+2026-10-07T04:11:46Z WARNING [req-05e3d1] [FileService] No such file or directory: /uploads/image_2931.png
+2026-10-01T08:44:35Z ERROR [req-1d7d0b] [APIService] Request timed out while waiting for server response
+2026-10-03T22:07:46Z WARNING [req-a7a3bc] [UploadService] Unable to locate requested file /documents/invoice_472.pdf
+2026-10-06T12:52:44Z ERROR [req-5ea0c5] [GatewayService] Connection request exceeded timeout limit of 10s
+2026-10-02T19:17:32Z ERROR [req-647ac5] [DatabaseService] Database operation timed out while waiting for response
+2026-10-05T06:32:04Z ERROR [req-6b0dd8] [CheckoutService] Gateway response failed with status 502
+2026-10-06T11:14:05Z WARNING [req-a26107] [LoginService] Unauthorized access attempt from client 813
+2026-10-02T02:29:12Z WARNING [req-615eca] [LoginService] Unauthorized access attempt from client 536
+2026-10-01T00:22:23Z ERROR [req-62ccc6] [OrderService] Failed to establish database connection after 5 attempts
+2026-10-01T14:44:57Z ERROR [req-ec93e5] [OrderService] Failed to establish database connection after 2 attempts
+2026-10-03T14:47:33Z ERROR [req-d1b22e] [GatewayService] Upstream request timed out after 10 seconds
+2026-10-06T17:26:01Z ERROR [req-e17f5e] [PaymentService] Gateway response failed with status 502
+2026-10-01T21:51:26Z CRITICAL [req-a33405] [OrderService] Database connection refused by server db-01.internal
+2026-10-06T23:40:55Z CRITICAL [req-0c5c99] [UserService] Cannot invoke method because object reference is null
+2026-10-05T16:34:58Z ERROR [req-fad3b4] [QueryService] Database operation timed out while waiting for response
+2026-10-07T23:39:47Z ERROR [req-1e12bb] [PaymentService] Gateway response failed with status 502
+2026-10-01T07:35:51Z ERROR [req-145880] [QueryService] Database query timed out after 15 seconds
+2026-10-07T03:22:53Z ERROR [req-cc8ceb] [QueryService] Database operation timed out while waiting for response
+2026-10-04T22:25:02Z ERROR [req-04fc6d] [DatabaseService] Database connection refused by server db-02.internal
+2026-10-03T04:53:56Z CRITICAL [req-e10b37] [PaymentService] Payment provider returned HTTP 502 for transaction TX491311
+2026-10-01T22:09:56Z ERROR [req-6ae06e] [FileService] Unable to locate requested file /uploads/image_2931.png
+2026-10-05T12:18:26Z CRITICAL [req-e75f74] [DatabaseService] Could not connect to database at db-02.internal:3306
+2026-10-01T10:05:32Z CRITICAL [req-9e825a] [DatabaseService] Failed to establish database connection after 5 attempts
+2026-10-01T01:55:18Z WARNING [req-e1ccff] [DatabaseService] Query execution exceeded timeout limit of 60s
+2026-10-07T03:10:18Z ERROR [req-bb6372] [APIService] Request timed out while waiting for server response
+2026-10-05T07:02:00Z WARNING [req-6f1803] [AuthService] Authentication failed with HTTP status 401
+2026-10-02T14:57:01Z ERROR [req-ec1916] [APIService] Connection request exceeded timeout limit of 15s
+2026-10-04T01:36:55Z ERROR [req-b3ada2] [DatabaseService] Database query timed out after 10 seconds
+2026-10-03T20:12:16Z CRITICAL [req-937bf7] [OrderService] Failed to establish database connection after 4 attempts
+2026-10-04T13:42:08Z ERROR [req-6786d5] [DatabaseService] Database connection refused by server db-02.internal
+2026-10-05T17:42:56Z WARNING [req-2c78bc] [LoginService] Authentication failed with HTTP status 401
+2026-10-01T08:13:27Z ERROR [req-71c629] [ValidationService] Value 4248 is outside the permitted range
+2026-10-02T10:47:08Z ERROR [req-718138] [OrderService] Cannot invoke method because object reference is null
+2026-10-05T01:45:38Z ERROR [req-cd9afa] [UploadService] Unable to locate requested file /documents/invoice_472.pdf
+2026-10-01T06:25:07Z ERROR [req-d5bf1e] [GatewayService] Request timed out while waiting for server response
+2026-10-06T17:48:36Z WARNING [req-a83c1c] [QueryService] Database operation timed out while waiting for response
+2026-10-04T06:57:56Z ERROR [req-5287e5] [UserService] Null reference encountered in handler at PaymentController.java:135
+2026-10-01T18:30:13Z ERROR [req-61b1cd] [OrderService] Failed to establish database connection after 2 attempts
+2026-10-02T16:43:42Z ERROR [req-46e75a] [DatabaseService] Could not connect to database at db-02.internal:3306
+2026-10-01T13:19:24Z ERROR [req-660f47] [PaymentService] Payment request failed after 2 attempts
+2026-10-04T15:02:08Z ERROR [req-5c44eb] [DatabaseService] Database operation timed out while waiting for response
+2026-10-06T04:33:33Z WARNING [req-62d846] [GatewayService] Upstream request timed out after 30 seconds
+2026-10-05T16:18:41Z ERROR [req-9a0fb0] [AuthService] Unauthorized access attempt from client 687
+2026-10-04T19:24:49Z ERROR [req-14dd93] [UserService] Cannot invoke method because object reference is null
+2026-10-07T06:21:40Z ERROR [req-93ac00] [GatewayService] Upstream request timed out after 60 seconds
+2026-10-03T08:15:00Z WARNING [req-a8290f] [DatabaseService] Database operation timed out while waiting for response
+2026-10-07T17:11:30Z ERROR [req-704c19] [APIService] Connection request exceeded timeout limit of 60s
+2026-10-03T14:47:17Z WARNING [req-ba098a] [APIService] Request timed out while waiting for server response
+2026-10-03T08:05:08Z WARNING [req-744da2] [APIService] Upstream request timed out after 10 seconds
+2026-10-05T21:10:18Z ERROR [req-a3fa40] [DatabaseService] Database connection refused by server db-01.internal
+2026-10-06T23:19:19Z ERROR [req-24d4d5] [QueryService] Database query timed out after 10 seconds
+2026-10-05T02:25:49Z ERROR [req-c1d48a] [QueryService] Database query timed out after 60 seconds
+2026-10-06T21:42:05Z CRITICAL [req-5d4210] [UserService] NullPointerException at PaymentController.java:172
+2026-10-03T00:19:42Z ERROR [req-9854ce] [OrderService] Database connection refused by server db-01.internal
+2026-10-04T18:36:43Z CRITICAL [req-acdeaf] [UserService] NullPointerException at OrderService.java:159
+2026-10-05T21:55:33Z ERROR [req-9ba14c] [QueryService] Database operation timed out while waiting for response
+2026-10-07T20:14:06Z ERROR [req-b3fdc2] [OrderService] Cannot invoke method because object reference is null
+2026-10-05T17:43:11Z ERROR [req-5b9fac] [OrderService] NullPointerException at PaymentController.java:54
+2026-10-02T05:46:37Z ERROR [req-16591c] [DatabaseService] Database connection refused by server db-02.internal
+2026-10-07T05:43:51Z ERROR [req-34e241] [QueryService] Database operation timed out while waiting for response
+2026-10-01T01:43:02Z ERROR [req-4c71e0] [OrderService] Database connection refused by server db-01.internal
+2026-10-07T07:03:30Z CRITICAL [req-1bf384] [OrderService] Null reference encountered in handler at UserHandler.py:101
+2026-10-04T13:47:03Z ERROR [req-2d7e4a] [DatabaseService] Failed to establish database connection after 2 attempts
+2026-10-05T04:14:17Z ERROR [req-696929] [DatabaseService] Query execution exceeded timeout limit of 30s
+2026-10-05T08:18:37Z WARNING [req-3d5e69] [AuthService] Authentication failed with HTTP status 401
+2026-10-03T21:28:47Z WARNING [req-176519] [AuthService] Authentication failed with HTTP status 401
+2026-10-03T11:23:15Z ERROR [req-80773e] [OrderService] Failed to establish database connection after 3 attempts
+2026-10-05T22:04:11Z ERROR [req-ca342e] [GatewayService] Connection request exceeded timeout limit of 10s
+2026-10-06T18:16:15Z WARNING [req-b2b8d6] [APIService] Request timed out while waiting for server response
+2026-10-06T09:41:35Z WARNING [req-78b384] [APIService] Request timed out while waiting for server response
+2026-10-01T10:52:58Z ERROR [req-e06532] [QueryService] Database operation timed out while waiting for response
+2026-10-03T15:45:37Z ERROR [req-ae133a] [LoginService] Invalid credentials received for user 6245
+2026-10-05T10:02:40Z WARNING [req-3d211d] [QueryService] Database operation timed out while waiting for response
+2026-10-07T08:41:53Z ERROR [req-3e085c] [DatabaseService] Query execution exceeded timeout limit of 10s
+2026-10-03T03:40:40Z ERROR [req-e6cfcb] [DatabaseService] Database operation timed out while waiting for response
+2026-10-01T17:43:00Z ERROR [req-d8e88e] [OrderService] Database connection refused by server db-01.internal
+2026-10-06T19:13:17Z CRITICAL [req-823c79] [PaymentService] Gateway response failed with status 502
+2026-10-03T21:41:45Z ERROR [req-0cfef6] [DatabaseService] Failed to establish database connection after 2 attempts
+2026-10-04T00:32:20Z WARNING [req-632655] [ValidationService] Request validation failed for field amount
+2026-10-05T03:14:21Z ERROR [req-aeaf39] [UserService] NullPointerException at PaymentController.java:75
+2026-10-05T04:15:34Z ERROR [req-27e78b] [CheckoutService] Payment request failed after 5 attempts
+2026-10-05T10:32:25Z ERROR [req-5dae12] [DatabaseService] Database connection refused by server db-01.internal
+2026-10-07T12:33:41Z WARNING [req-67c3bd] [AuthService] Authentication failed with HTTP status 401
+2026-10-07T11:25:43Z ERROR [req-f4427e] [OrderService] Failed to establish database connection after 2 attempts
+2026-10-01T12:06:50Z CRITICAL [req-0f01fe] [CheckoutService] Payment request failed after 2 attempts
+2026-10-04T21:02:57Z ERROR [req-6334db] [UploadService] No such file or directory: /documents/invoice_472.pdf
+2026-10-05T19:32:53Z ERROR [req-07958c] [OrderService] Database connection refused by server db-02.internal
+2026-10-07T03:18:19Z ERROR [req-5f8a14] [DatabaseService] Failed to establish database connection after 5 attempts
+2026-10-04T04:14:59Z ERROR [req-da1196] [APIService] Upstream request timed out after 60 seconds
+2026-10-02T10:17:33Z ERROR [req-1d2fed] [DatabaseService] Query execution exceeded timeout limit of 30s
+2026-10-06T13:10:44Z ERROR [req-e47172] [PaymentService] Payment request failed after 3 attempts
+2026-10-02T00:21:37Z ERROR [req-8f962f] [OrderService] NullPointerException at UserHandler.py:173
+2026-10-04T16:43:59Z ERROR [req-ece027] [CheckoutService] Gateway response failed with status 502
+2026-10-06T05:22:24Z ERROR [req-98d53c] [DatabaseService] Database query timed out after 60 seconds
+2026-10-04T09:33:06Z ERROR [req-434fe1] [OrderService] NullPointerException at OrderService.java:240
+2026-10-03T17:11:53Z WARNING [req-496fe3] [FileService] Unable to locate requested file /documents/invoice_472.pdf
+2026-10-05T09:24:41Z ERROR [req-81ee30] [APIService] Request timed out while waiting for server response
+2026-10-06T07:25:45Z WARNING [req-4882f6] [AuthService] Invalid credentials received for user 7738
+2026-10-01T19:40:35Z ERROR [req-a237a8] [DatabaseService] Database operation timed out while waiting for response
+2026-10-04T00:03:34Z WARNING [req-48bfb6] [QueryService] Database operation timed out while waiting for response
+2026-10-05T18:37:38Z CRITICAL [req-0173c1] [CheckoutService] Payment provider returned HTTP 502 for transaction TX958294
+2026-10-04T09:41:23Z ERROR [req-56d2b1] [QueryService] Database operation timed out while waiting for response
+2026-10-07T16:24:17Z ERROR [req-a4f070] [APIService] Connection request exceeded timeout limit of 10s
+2026-10-04T03:12:36Z ERROR [req-77ba69] [UserService] NullPointerException at UserHandler.py:135
+2026-10-06T05:21:06Z CRITICAL [req-7feb25] [PaymentService] Payment provider returned HTTP 502 for transaction TX763756
+2026-10-07T05:51:22Z CRITICAL [req-565651] [PaymentService] Gateway response failed with status 502
+2026-10-01T11:34:43Z ERROR [req-ec19e4] [QueryService] Query execution exceeded timeout limit of 10s
+2026-10-06T07:34:19Z ERROR [req-3080be] [APIService] Upstream request timed out after 45 seconds
+2026-10-07T07:50:22Z ERROR [req-a07295] [DatabaseService] Database connection refused by server db-02.internal
+2026-10-01T12:39:08Z WARNING [req-87a20e] [QueryService] Database query timed out after 60 seconds
+2026-10-01T16:22:16Z WARNING [req-ca9f1d] [DatabaseService] Database query timed out after 15 seconds
+2026-10-06T21:32:13Z WARNING [req-c2ca55] [LoginService] Invalid credentials received for user 5606
+2026-10-06T11:59:19Z WARNING [req-fba2a5] [APIService] Connection request exceeded timeout limit of 30s
+2026-10-01T07:46:05Z ERROR [req-0da23e] [OrderService] Failed to establish database connection after 5 attempts
+2026-10-06T09:29:33Z ERROR [req-38b595] [APIService] Request timed out while waiting for server response
+2026-10-05T20:46:55Z ERROR [req-db646a] [AuthService] Authentication failed with HTTP status 401
+2026-10-06T00:31:51Z ERROR [req-c777a0] [DatabaseService] Failed to establish database connection after 3 attempts
+2026-10-04T09:17:50Z WARNING [req-43a534] [DatabaseService] Database query timed out after 45 seconds
+2026-10-01T06:09:39Z WARNING [req-27d199] [LoginService] Unauthorized access attempt from client 539
+2026-10-06T06:44:57Z WARNING [req-d3c724] [GatewayService] Upstream request timed out after 15 seconds
+2026-10-04T23:09:49Z CRITICAL [req-6a5e69] [DatabaseService] Could not connect to database at db-01.internal:3306
+2026-10-07T14:34:52Z ERROR [req-882ccd] [OrderService] Could not connect to database at db-01.internal:5433
+2026-10-01T23:48:34Z ERROR [req-e17710] [FileService] File lookup failed for resource invoice_472
+2026-10-02T04:32:47Z WARNING [req-b04782] [APIService] Value 1459 is outside the permitted range
+2026-10-04T01:00:29Z ERROR [req-1c2422] [DatabaseService] Could not connect to database at db-01.internal:5433
+2026-10-05T03:52:37Z WARNING [req-5e6ba4] [APIService] Connection request exceeded timeout limit of 60s
+2026-10-05T17:40:03Z ERROR [req-9b72a9] [LoginService] Invalid credentials received for user 4568
+2026-10-01T22:15:57Z CRITICAL [req-a740a1] [UserService] Null reference encountered in handler at UserHandler.py:212
+2026-10-05T18:39:26Z CRITICAL [req-c34055] [OrderService] Cannot invoke method because object reference is null
+2026-10-03T06:49:00Z WARNING [req-d93eeb] [UploadService] No such file or directory: /reports/daily_108.csv
+2026-10-06T11:40:01Z ERROR [req-e60fd4] [OrderService] Could not connect to database at db-02.internal:3306
+2026-10-03T01:53:01Z ERROR [req-441999] [GatewayService] Connection request exceeded timeout limit of 15s
+2026-10-01T20:25:04Z ERROR [req-39d119] [APIService] Request timed out while waiting for server response
+2026-10-06T01:49:15Z CRITICAL [req-234b45] [OrderService] Database connection refused by server db-01.internal
+2026-10-06T17:24:41Z ERROR [req-620af1] [DatabaseService] Could not connect to database at db-01.internal:3306
+2026-10-07T11:37:25Z ERROR [req-0c15cb] [CheckoutService] Gateway response failed with status 502
+2026-10-02T13:33:17Z ERROR [req-0ba24c] [AuthService] Unauthorized access attempt from client 991
+2026-10-06T13:54:31Z CRITICAL [req-272a6d] [OrderService] Could not connect to database at db-02.internal:3306
+2026-10-05T01:04:37Z CRITICAL [req-c44fc2] [OrderService] Null reference encountered in handler at PaymentController.java:141
+2026-10-02T14:07:39Z ERROR [req-c09489] [AuthService] Unauthorized access attempt from client 552
+2026-10-02T11:15:35Z CRITICAL [req-c85aca] [DatabaseService] Database connection refused by server db-02.internal
+2026-10-05T16:41:14Z ERROR [req-40ef39] [DatabaseService] Database connection refused by server db-01.internal
+2026-10-07T04:48:42Z ERROR [req-244700] [PaymentService] Payment provider returned HTTP 502 for transaction TX656334
+2026-10-06T13:50:27Z ERROR [req-2a678c] [ValidationService] Invalid input for field user_id
+2026-10-07T18:49:09Z ERROR [req-0ebb51] [CheckoutService] Gateway response failed with status 502
+2026-10-07T01:54:05Z ERROR [req-e5141d] [ValidationService] Request validation failed for field quantity
+2026-10-07T03:46:21Z ERROR [req-4f76e3] [OrderService] Database connection refused by server db-01.internal
+2026-10-05T20:03:47Z ERROR [req-9c5dfb] [AuthService] Authentication failed with HTTP status 401
+2026-10-06T10:38:04Z WARNING [req-1d80f7] [UploadService] No such file or directory: /uploads/image_2931.png
+2026-10-05T01:04:32Z ERROR [req-65637d] [DatabaseService] Database query timed out after 45 seconds
+2026-10-06T03:44:29Z ERROR [req-072915] [UserService] Cannot invoke method because object reference is null
+2026-10-02T17:15:13Z CRITICAL [req-7f71ee] [OrderService] NullPointerException at OrderService.java:110
+2026-10-05T01:12:31Z ERROR [req-70fbb2] [UserService] Cannot invoke method because object reference is null
+2026-10-02T17:51:43Z WARNING [req-420fbe] [QueryService] Query execution exceeded timeout limit of 30s
+2026-10-03T08:39:34Z ERROR [req-ee01b9] [QueryService] Database operation timed out while waiting for response
+2026-10-02T14:46:20Z WARNING [req-3efa52] [FileService] File lookup failed for resource invoice_472
+2026-10-02T20:30:27Z CRITICAL [req-36c59d] [DatabaseService] Database connection refused by server db-02.internal
+2026-10-04T09:02:20Z CRITICAL [req-efb3b9] [OrderService] Database connection refused by server db-02.internal
+2026-10-02T06:53:42Z WARNING [req-275dd4] [APIService] Upstream request timed out after 45 seconds
+2026-10-02T03:00:51Z ERROR [req-18c267] [OrderService] Database connection refused by server db-02.internal
+2026-10-07T07:58:13Z CRITICAL [req-e4cc70] [CheckoutService] Gateway response failed with status 502
+2026-10-06T19:27:58Z WARNING [req-1c8525] [FileService] No such file or directory: /documents/invoice_472.pdf
+2026-10-01T20:10:23Z ERROR [req-67b291] [AuthService] Authentication failed with HTTP status 401
+2026-10-05T17:58:40Z ERROR [req-273166] [UploadService] File lookup failed for resource daily_report
+2026-10-03T07:55:32Z ERROR [req-fffe77] [DatabaseService] Could not connect to database at db-01.internal:5433
+2026-10-02T19:58:04Z ERROR [req-0ecc9f] [GatewayService] Request timed out while waiting for server response
+2026-10-06T02:11:32Z ERROR [req-e97fb0] [GatewayService] Upstream request timed out after 60 seconds
+2026-10-05T02:58:49Z WARNING [req-6b4d3d] [LoginService] Unauthorized access attempt from client 681
+2026-10-07T12:02:42Z ERROR [req-046375] [OrderService] Could not connect to database at db-01.internal:5432
+2026-10-06T12:09:23Z ERROR [req-f42d47] [OrderService] Failed to establish database connection after 2 attempts
+2026-10-04T10:05:28Z ERROR [req-6d2f45] [UserService] Null reference encountered in handler at UserHandler.py:107
+2026-10-05T00:33:25Z CRITICAL [req-37328d] [OrderService] NullPointerException at OrderService.java:80
+2026-10-07T13:46:51Z ERROR [req-eb41ea] [OrderService] NullPointerException at OrderService.java:117
+2026-10-04T02:11:39Z ERROR [req-1271e2] [APIService] Invalid input for field user_id
+2026-10-01T02:15:05Z ERROR [req-bf3c51] [OrderService] Could not connect to database at db-01.internal:5433
+2026-10-01T02:09:50Z WARNING [req-7f8736] [DatabaseService] Database operation timed out while waiting for response
+2026-10-07T15:43:26Z ERROR [req-10e2b6] [LoginService] Unauthorized access attempt from client 989
+2026-10-01T03:24:41Z ERROR [req-7b1429] [CheckoutService] Gateway response failed with status 502
+2026-10-07T17:24:38Z ERROR [req-ceefd2] [AuthService] Authentication failed with HTTP status 401
+2026-10-05T19:15:13Z ERROR [req-d773f9] [OrderService] Database connection refused by server db-02.internal
+2026-10-03T10:27:25Z WARNING [req-9e32f0] [QueryService] Database query timed out after 10 seconds
+2026-10-06T14:52:36Z CRITICAL [req-96add4] [DatabaseService] Database connection refused by server db-01.internal
+2026-10-04T09:36:08Z WARNING [req-19cb84] [LoginService] Invalid credentials received for user 5986
+2026-10-02T09:45:31Z ERROR [req-d9eb40] [DatabaseService] Database query timed out after 30 seconds
+2026-10-07T17:37:46Z ERROR [req-40f792] [QueryService] Database operation timed out while waiting for response
+2026-10-04T07:40:14Z ERROR [req-c2dd90] [DatabaseService] Database operation timed out while waiting for response
+2026-10-02T05:49:52Z ERROR [req-2790e9] [APIService] Upstream request timed out after 10 seconds
+2026-10-04T23:08:05Z ERROR [req-752f52] [PaymentService] Payment request failed after 3 attempts
+2026-10-07T17:23:48Z CRITICAL [req-ecf264] [OrderService] Failed to establish database connection after 3 attempts
+2026-10-02T11:50:22Z WARNING [req-20fa15] [AuthService] Unauthorized access attempt from client 227
+2026-10-01T18:37:44Z ERROR [req-1d3ae1] [GatewayService] Connection request exceeded timeout limit of 45s
+2026-10-07T06:20:28Z ERROR [req-5c9d3e] [APIService] Request timed out while waiting for server response
+2026-10-03T13:00:06Z ERROR [req-0c0b6c] [APIService] Request timed out while waiting for server response
+2026-10-07T11:28:31Z ERROR [req-bb0c79] [QueryService] Database query timed out after 10 seconds
+2026-10-05T10:32:31Z ERROR [req-4282b6] [DatabaseService] Query execution exceeded timeout limit of 30s
+2026-10-05T18:43:57Z ERROR [req-cb7e62] [OrderService] Failed to establish database connection after 3 attempts
+2026-10-01T20:16:28Z WARNING [req-1bd6b0] [QueryService] Query execution exceeded timeout limit of 10s
+2026-10-01T07:03:02Z ERROR [req-2b5450] [QueryService] Database operation timed out while waiting for response
+2026-10-02T11:20:53Z ERROR [req-222282] [OrderService] Failed to establish database connection after 5 attempts
+2026-10-02T01:58:40Z ERROR [req-da3356] [APIService] Upstream request timed out after 15 seconds
+2026-10-02T19:05:41Z WARNING [req-26870a] [APIService] Connection request exceeded timeout limit of 60s
+2026-10-02T03:50:25Z ERROR [req-c00c9a] [FileService] File lookup failed for resource invoice_472
+2026-10-02T13:55:43Z ERROR [req-6cc006] [APIService] Upstream request timed out after 10 seconds
+2026-10-06T13:34:14Z WARNING [req-2bd3d9] [GatewayService] Upstream request timed out after 60 seconds
+2026-10-02T08:07:54Z ERROR [req-22cb27] [GatewayService] Request timed out while waiting for server response
+2026-10-03T21:33:25Z CRITICAL [req-620a60] [DatabaseService] Database connection refused by server db-01.internal
+2026-10-01T09:45:38Z ERROR [req-75f942] [DatabaseService] Database operation timed out while waiting for response
+2026-10-02T06:28:14Z ERROR [req-5bdfd4] [OrderService] NullPointerException at UserHandler.py:81
+2026-10-05T00:38:27Z ERROR [req-181af6] [CheckoutService] Payment request failed after 5 attempts
+2026-10-06T20:56:57Z WARNING [req-999921] [AuthService] Invalid credentials received for user 1484
+2026-10-06T20:08:07Z ERROR [req-2528d3] [APIService] Request timed out while waiting for server response
+2026-10-02T21:00:18Z WARNING [req-0e4ddb] [LoginService] Unauthorized access attempt from client 403
+2026-10-06T19:35:14Z CRITICAL [req-669b29] [OrderService] Failed to establish database connection after 2 attempts
+2026-10-02T05:30:10Z ERROR [req-a4f341] [DatabaseService] Query execution exceeded timeout limit of 10s
+2026-10-06T21:44:31Z CRITICAL [req-aac933] [OrderService] Could not connect to database at db-01.internal:5433
+2026-10-05T10:20:12Z ERROR [req-4795cd] [QueryService] Database query timed out after 10 seconds
+2026-10-04T21:48:45Z WARNING [req-7fc092] [APIService] Request validation failed for field amount
+2026-10-05T15:29:42Z WARNING [req-4ed7b3] [LoginService] Unauthorized access attempt from client 866
+2026-10-07T03:47:36Z WARNING [req-a5b1c7] [GatewayService] Request timed out while waiting for server response
+2026-10-01T10:57:28Z ERROR [req-2e1482] [GatewayService] Connection request exceeded timeout limit of 30s
+2026-10-07T14:16:50Z CRITICAL [req-4ba076] [OrderService] NullPointerException at UserHandler.py:69
+2026-10-03T17:39:48Z WARNING [req-5a4b4f] [GatewayService] Connection request exceeded timeout limit of 10s
+2026-10-03T13:07:19Z ERROR [req-33579b] [DatabaseService] Query execution exceeded timeout limit of 45s
+2026-10-05T21:01:55Z ERROR [req-0b840c] [GatewayService] Upstream request timed out after 45 seconds
+2026-10-07T17:02:44Z WARNING [req-083507] [LoginService] Invalid credentials received for user 5650
+2026-10-05T21:50:09Z CRITICAL [req-fb91fb] [OrderService] NullPointerException at PaymentController.java:45
+2026-10-04T15:42:59Z ERROR [req-0c394e] [DatabaseService] Database connection refused by server db-02.internal
+2026-10-04T09:39:52Z CRITICAL [req-90422e] [DatabaseService] Could not connect to database at db-02.internal:5432
+2026-10-06T13:26:59Z ERROR [req-02a458] [GatewayService] Upstream request timed out after 15 seconds
+2026-10-05T14:17:10Z ERROR [req-d12dae] [DatabaseService] Database query timed out after 10 seconds
+2026-10-05T08:22:36Z ERROR [req-1ea391] [PaymentService] Payment request failed after 5 attempts
+2026-10-02T05:32:10Z ERROR [req-dcca9a] [UserService] NullPointerException at UserHandler.py:42
+2026-10-02T04:36:28Z ERROR [req-226716] [QueryService] Database operation timed out while waiting for response
+2026-10-07T12:10:27Z WARNING [req-2be4be] [LoginService] Invalid credentials received for user 6440
+2026-10-07T13:54:31Z CRITICAL [req-f50d7a] [DatabaseService] Failed to establish database connection after 2 attempts
+2026-10-03T06:11:25Z ERROR [req-848af4] [OrderService] Failed to establish database connection after 4 attempts
+2026-10-04T11:28:58Z WARNING [req-4024c4] [DatabaseService] Database query timed out after 30 seconds
+2026-10-02T01:45:10Z ERROR [req-74cd4a] [UploadService] File lookup failed for resource daily_report
+2026-10-04T06:27:48Z ERROR [req-eeced5] [CheckoutService] Gateway response failed with status 502
+2026-10-04T03:55:36Z ERROR [req-a65741] [AuthService] Authentication failed with HTTP status 401
+2026-10-05T21:01:36Z ERROR [req-77ad0a] [UploadService] Unable to locate requested file /reports/daily_108.csv
+2026-10-02T15:43:50Z WARNING [req-b84634] [APIService] Connection request exceeded timeout limit of 30s
+2026-10-01T14:26:28Z ERROR [req-1d4c5e] [OrderService] NullPointerException at UserHandler.py:105
+2026-10-07T09:16:58Z WARNING [req-9696dc] [GatewayService] Request timed out while waiting for server response
+2026-10-02T19:33:32Z ERROR [req-ce4048] [DatabaseService] Database query timed out after 60 seconds
+2026-10-05T16:58:18Z ERROR [req-a22646] [ValidationService] Invalid input for field amount
+2026-10-06T22:13:14Z WARNING [req-b3edd6] [DatabaseService] Database operation timed out while waiting for response
+2026-10-02T15:07:09Z WARNING [req-bba41a] [QueryService] Query execution exceeded timeout limit of 30s
+2026-10-01T05:56:31Z ERROR [req-0f9733] [PaymentService] Payment request failed after 3 attempts
+2026-10-05T05:18:53Z WARNING [req-291a49] [APIService] Connection request exceeded timeout limit of 60s
+2026-10-04T17:47:12Z ERROR [req-e623a6] [DatabaseService] Database connection refused by server db-01.internal
+2026-10-05T03:21:53Z CRITICAL [req-ad8716] [CheckoutService] Payment request failed after 3 attempts
+2026-10-06T09:56:13Z ERROR [req-f5e4a9] [QueryService] Database operation timed out while waiting for response
+2026-10-06T20:35:21Z WARNING [req-adab2c] [QueryService] Database query timed out after 15 seconds
+2026-10-05T01:02:10Z ERROR [req-f8673a] [OrderService] Cannot invoke method because object reference is null
+2026-10-05T14:17:04Z WARNING [req-c8613a] [AuthService] Invalid credentials received for user 9666
+2026-10-07T20:08:33Z CRITICAL [req-b6bbcd] [CheckoutService] Gateway response failed with status 502
+2026-10-03T19:05:35Z ERROR [req-cfa902] [QueryService] Database operation timed out while waiting for response
+2026-10-01T19:19:07Z ERROR [req-f7feb7] [CheckoutService] Gateway response failed with status 502
+2026-10-01T21:40:56Z ERROR [req-326684] [APIService] Request timed out while waiting for server response
+2026-10-04T00:20:00Z ERROR [req-0bd18d] [LoginService] Unauthorized access attempt from client 460
+2026-10-07T02:38:20Z ERROR [req-0dd2c8] [UserService] Cannot invoke method because object reference is null
+2026-10-01T08:18:01Z CRITICAL [req-08c2d2] [PaymentService] Gateway response failed with status 502
+2026-10-01T00:54:17Z ERROR [req-2f6153] [UserService] Null reference encountered in handler at OrderService.java:87
+2026-10-03T14:40:36Z WARNING [req-5f2521] [LoginService] Invalid credentials received for user 1178
+2026-10-03T23:47:01Z CRITICAL [req-12d155] [DatabaseService] Database connection refused by server db-01.internal
+2026-10-06T18:33:53Z ERROR [req-b11c7d] [GatewayService] Connection request exceeded timeout limit of 60s
+2026-10-04T22:48:18Z ERROR [req-8c6743] [UploadService] File lookup failed for resource invoice_472
+2026-10-06T07:00:44Z WARNING [req-f243b5] [LoginService] Invalid credentials received for user 7436
+2026-10-02T17:40:26Z ERROR [req-bbab3b] [AuthService] Unauthorized access attempt from client 588
+2026-10-03T15:01:55Z ERROR [req-7d91db] [FileService] Unable to locate requested file /documents/invoice_472.pdf
+2026-10-04T04:37:32Z ERROR [req-615ab3] [OrderService] Null reference encountered in handler at PaymentController.java:164
+2026-10-06T12:53:37Z ERROR [req-40728a] [CheckoutService] Payment request failed after 3 attempts
+2026-10-07T21:35:46Z WARNING [req-e21d4d] [FileService] File lookup failed for resource profile_image
+2026-10-04T12:01:07Z WARNING [req-3aa066] [LoginService] Authentication failed with HTTP status 401
+2026-10-03T17:11:17Z WARNING [req-c42eaf] [AuthService] Unauthorized access attempt from client 927
+2026-10-07T04:49:00Z WARNING [req-49a2af] [DatabaseService] Query execution exceeded timeout limit of 60s
+2026-10-05T07:50:38Z ERROR [req-8f9429] [GatewayService] Request timed out while waiting for server response
+2026-10-03T16:29:02Z ERROR [req-6f0b5b] [CheckoutService] Payment provider returned HTTP 502 for transaction TX799984
+2026-10-01T02:21:53Z WARNING [req-fc8621] [QueryService] Database query timed out after 60 seconds
+2026-10-07T02:39:13Z ERROR [req-a15cf0] [UserService] Null reference encountered in handler at PaymentController.java:152
+2026-10-06T13:25:39Z WARNING [req-553a2b] [FileService] No such file or directory: /documents/invoice_472.pdf
+2026-10-05T23:47:08Z ERROR [req-7168bd] [QueryService] Database query timed out after 15 seconds
+2026-10-01T17:43:41Z ERROR [req-3a4317] [PaymentService] Payment request failed after 2 attempts
+2026-10-04T16:59:49Z WARNING [req-93683d] [APIService] Upstream request timed out after 60 seconds
+2026-10-03T09:24:58Z WARNING [req-cd7f65] [LoginService] Authentication failed with HTTP status 401
+2026-10-01T08:55:46Z ERROR [req-bf012e] [DatabaseService] Database connection refused by server db-02.internal
+2026-10-05T22:16:58Z ERROR [req-741b77] [DatabaseService] Failed to establish database connection after 5 attempts
+2026-10-03T11:44:58Z ERROR [req-9fd609] [GatewayService] Connection request exceeded timeout limit of 15s
+2026-10-02T11:21:50Z ERROR [req-f00d5a] [AuthService] Invalid credentials received for user 2722
+2026-10-05T09:14:47Z WARNING [req-0a813e] [ValidationService] Request validation failed for field email
+2026-10-06T08:09:22Z ERROR [req-305d0e] [APIService] Upstream request timed out after 45 seconds
+2026-10-03T00:41:24Z ERROR [req-cef748] [DatabaseService] Database query timed out after 45 seconds
+2026-10-06T21:00:20Z ERROR [req-6388f6] [CheckoutService] Gateway response failed with status 502
+2026-10-05T11:33:55Z CRITICAL [req-6cfad7] [UserService] Null reference encountered in handler at OrderService.java:154
+2026-10-07T17:27:10Z WARNING [req-0979f5] [GatewayService] Request timed out while waiting for server response
+2026-10-01T07:26:15Z ERROR [req-9be9ec] [OrderService] Cannot invoke method because object reference is null
+2026-10-02T20:47:03Z ERROR [req-758fc8] [QueryService] Database query timed out after 15 seconds
+2026-10-02T09:21:36Z ERROR [req-f6f7f0] [OrderService] Could not connect to database at db-01.internal:5433
+2026-10-03T15:46:52Z ERROR [req-e008e8] [PaymentService] Gateway response failed with status 502
+2026-10-05T20:23:49Z ERROR [req-f73936] [OrderService] Could not connect to database at db-01.internal:5432
+2026-10-02T09:32:44Z ERROR [req-f6802c] [DatabaseService] Could not connect to database at db-01.internal:3306
+2026-10-02T08:25:39Z ERROR [req-bdd640] [OrderService] Could not connect to database at db-01.internal:5432
+2026-10-01T22:39:46Z ERROR [req-58c88c] [OrderService] Could not connect to database at db-01.internal:3306
+2026-10-03T10:30:47Z ERROR [req-9fc972] [QueryService] Database operation timed out while waiting for response
+2026-10-01T00:27:35Z WARNING [req-11e121] [LoginService] Unauthorized access attempt from client 280
+2026-10-04T13:01:08Z WARNING [req-ea9265] [AuthService] Unauthorized access attempt from client 477
+2026-10-05T12:42:10Z ERROR [req-bba316] [APIService] Request timed out while waiting for server response
+2026-10-03T01:55:08Z ERROR [req-7ff6b8] [OrderService] Failed to establish database connection after 2 attempts
+2026-10-02T22:05:09Z ERROR [req-d8a712] [PaymentService] Payment request failed after 3 attempts
+2026-10-01T08:27:31Z ERROR [req-3964af] [PaymentService] Payment request failed after 5 attempts
+2026-10-02T20:42:20Z ERROR [req-3ce75d] [APIService] Upstream request timed out after 45 seconds
+2026-10-01T23:53:00Z WARNING [req-b6617c] [APIService] Request validation failed for field user_id
+2026-10-07T02:23:48Z WARNING [req-735e81] [AuthService] Invalid credentials received for user 5249
+2026-10-05T12:37:09Z WARNING [req-8a34b2] [APIService] Connection request exceeded timeout limit of 45s
+2026-10-01T06:57:51Z ERROR [req-8aa2b4] [OrderService] Failed to establish database connection after 2 attempts
+2026-10-07T15:58:34Z ERROR [req-c1e1b9] [DatabaseService] Could not connect to database at db-01.internal:3306
+2026-10-03T14:24:03Z CRITICAL [req-21df30] [OrderService] Could not connect to database at db-02.internal:5433
+2026-10-04T11:27:21Z ERROR [req-a1b7e3] [DatabaseService] Database query timed out after 10 seconds
+2026-10-04T16:02:30Z ERROR [req-b540b3] [DatabaseService] Database connection refused by server db-01.internal
+2026-10-04T08:28:08Z CRITICAL [req-029943] [DatabaseService] Could not connect to database at db-01.internal:3306
+2026-10-02T01:20:54Z ERROR [req-8e6de2] [QueryService] Database operation timed out while waiting for response
+2026-10-01T04:46:55Z ERROR [req-56db63] [APIService] Request timed out while waiting for server response
+2026-10-01T12:28:07Z WARNING [req-34ef25] [QueryService] Query execution exceeded timeout limit of 10s
+2026-10-02T04:21:33Z WARNING [req-a32e3a] [QueryService] Query execution exceeded timeout limit of 30s
+2026-10-07T08:56:19Z ERROR [req-4dac49] [AuthService] Authentication failed with HTTP status 401
+2026-10-02T20:55:45Z ERROR [req-2e4beb] [DatabaseService] Failed to establish database connection after 5 attempts
+2026-10-01T18:08:28Z ERROR [req-a995ec] [DatabaseService] Could not connect to database at db-02.internal:5433
+2026-10-02T10:09:54Z ERROR [req-8f65ab] [UserService] Cannot invoke method because object reference is null
+2026-10-07T12:40:58Z ERROR [req-3db017] [DatabaseService] Database connection refused by server db-01.internal
+2026-10-07T18:46:37Z ERROR [req-7ab994] [DatabaseService] Database connection refused by server db-02.internal
+2026-10-02T06:54:51Z ERROR [req-c971bf] [QueryService] Database operation timed out while waiting for response
+2026-10-03T15:45:40Z ERROR [req-2f068e] [AuthService] Unauthorized access attempt from client 268
+2026-10-04T21:29:41Z CRITICAL [req-d8fbd5] [OrderService] Cannot invoke method because object reference is null
+2026-10-06T16:51:24Z ERROR [req-19dad5] [OrderService] NullPointerException at UserHandler.py:148
+2026-10-06T22:31:51Z WARNING [req-3b1723] [APIService] Upstream request timed out after 10 seconds
+2026-10-06T07:44:19Z ERROR [req-485835] [OrderService] Cannot invoke method because object reference is null
+2026-10-02T06:07:22Z WARNING [req-758964] [AuthService] Invalid credentials received for user 2520
+2026-10-05T18:26:07Z ERROR [req-c0ba22] [DatabaseService] Database query timed out after 15 seconds
+2026-10-01T23:19:12Z ERROR [req-baed6f] [QueryService] Query execution exceeded timeout limit of 15s
+2026-10-07T05:12:25Z CRITICAL [req-0425c4] [CheckoutService] Payment provider returned HTTP 502 for transaction TX170369
+2026-10-07T20:15:53Z ERROR [req-9112fb] [OrderService] Failed to establish database connection after 3 attempts
+2026-10-05T11:21:30Z CRITICAL [req-bfbf39] [OrderService] Failed to establish database connection after 4 attempts
+2026-10-02T08:27:24Z WARNING [req-fa11f0] [APIService] Request validation failed for field email
+2026-10-02T23:01:08Z WARNING [req-1de20f] [AuthService] Unauthorized access attempt from client 997
+2026-10-04T00:02:02Z ERROR [req-45bfd2] [OrderService] Cannot invoke method because object reference is null
+2026-10-04T13:21:41Z ERROR [req-5424aa] [OrderService] Cannot invoke method because object reference is null
+2026-10-04T01:37:25Z WARNING [req-818d72] [AuthService] Authentication failed with HTTP status 401
+2026-10-05T18:46:28Z ERROR [req-3665de] [UserService] Null reference encountered in handler at OrderService.java:142
+2026-10-07T04:56:36Z ERROR [req-963d10] [LoginService] Authentication failed with HTTP status 401
+2026-10-01T05:56:09Z CRITICAL [req-270287] [DatabaseService] Could not connect to database at db-02.internal:3306
+2026-10-01T22:34:48Z ERROR [req-07ec2d] [GatewayService] Connection request exceeded timeout limit of 60s
+2026-10-04T08:53:48Z ERROR [req-24940b] [UserService] Null reference encountered in handler at OrderService.java:46
+2026-10-01T12:36:23Z ERROR [req-4d38a8] [APIService] Upstream request timed out after 60 seconds
+2026-10-02T11:09:10Z ERROR [req-395e54] [GatewayService] Request timed out while waiting for server response
+2026-10-02T03:20:06Z ERROR [req-756663] [UserService] NullPointerException at PaymentController.java:183
+2026-10-02T00:45:35Z ERROR [req-24b3bc] [GatewayService] Request timed out while waiting for server response
+2026-10-07T09:57:11Z ERROR [req-8e8ded] [FileService] No such file or directory: /reports/daily_108.csv
+2026-10-07T11:17:04Z ERROR [req-8bd88f] [OrderService] Failed to establish database connection after 5 attempts
+2026-10-05T13:20:05Z WARNING [req-fdbceb] [AuthService] Authentication failed with HTTP status 401
+2026-10-07T20:36:32Z ERROR [req-10bb79] [APIService] Connection request exceeded timeout limit of 60s
+2026-10-06T14:19:41Z CRITICAL [req-3ebb65] [CheckoutService] Payment provider returned HTTP 502 for transaction TX267003
+2026-10-06T06:57:38Z CRITICAL [req-d0725b] [OrderService] Could not connect to database at db-02.internal:5433
+2026-10-03T01:44:58Z ERROR [req-c497d0] [QueryService] Database operation timed out while waiting for response
+2026-10-07T14:22:23Z ERROR [req-41ff81] [DatabaseService] Database query timed out after 60 seconds
+2026-10-01T01:54:47Z ERROR [req-fc0145] [DatabaseService] Database query timed out after 60 seconds
+2026-10-01T20:59:08Z ERROR [req-3ec8f4] [LoginService] Unauthorized access attempt from client 486
+2026-10-06T11:33:59Z ERROR [req-b8ff61] [DatabaseService] Database query timed out after 30 seconds
+2026-10-04T23:24:52Z WARNING [req-32dba0] [APIService] Request timed out while waiting for server response
+2026-10-03T07:28:04Z WARNING [req-b46499] [LoginService] Invalid credentials received for user 8769
+2026-10-06T10:54:48Z ERROR [req-ec8566] [PaymentService] Gateway response failed with status 502
+2026-10-02T08:43:50Z WARNING [req-0df634] [DatabaseService] Database operation timed out while waiting for response
+2026-10-03T21:03:56Z ERROR [req-699fdb] [APIService] Request timed out while waiting for server response
+2026-10-01T22:19:45Z ERROR [req-d2e08e] [GatewayService] Connection request exceeded timeout limit of 15s
+2026-10-03T18:17:31Z ERROR [req-060edf] [DatabaseService] Database connection refused by server db-02.internal
+2026-10-06T11:56:18Z WARNING [req-4a9ff5] [QueryService] Database operation timed out while waiting for response
+2026-10-06T17:56:20Z ERROR [req-f57417] [GatewayService] Upstream request timed out after 10 seconds
+2026-10-05T05:45:17Z ERROR [req-d947c7] [AuthService] Authentication failed with HTTP status 401
+2026-10-07T22:48:54Z ERROR [req-79ec53] [QueryService] Database query timed out after 60 seconds
+2026-10-02T05:34:00Z ERROR [req-c3528b] [APIService] Request timed out while waiting for server response
+2026-10-03T04:00:41Z CRITICAL [req-f668a6] [OrderService] Could not connect to database at db-01.internal:3306
+2026-10-02T05:16:29Z ERROR [req-2a96e1] [OrderService] Could not connect to database at db-01.internal:5433
+2026-10-01T19:37:14Z ERROR [req-1923ca] [DatabaseService] Database operation timed out while waiting for response
+2026-10-02T20:30:21Z WARNING [req-ba059e] [AuthService] Authentication failed with HTTP status 401
+2026-10-03T17:36:26Z ERROR [req-59aa7c] [UserService] Cannot invoke method because object reference is null
+2026-10-01T17:42:36Z ERROR [req-c59498] [UserService] Cannot invoke method because object reference is null
+2026-10-04T19:08:42Z ERROR [req-0bb401] [DatabaseService] Failed to establish database connection after 4 attempts
+2026-10-06T19:22:56Z CRITICAL [req-2ea9c5] [DatabaseService] Could not connect to database at db-02.internal:5432
+2026-10-01T18:38:56Z ERROR [req-056280] [DatabaseService] Failed to establish database connection after 2 attempts
+2026-10-03T12:15:16Z CRITICAL [req-7ba109] [OrderService] Database connection refused by server db-01.internal
+2026-10-07T13:48:16Z ERROR [req-490ccf] [APIService] Upstream request timed out after 30 seconds
+2026-10-01T02:04:59Z ERROR [req-b3aac0] [FileService] File lookup failed for resource profile_image
+2026-10-01T23:04:17Z ERROR [req-a0152b] [DatabaseService] Database operation timed out while waiting for response
+2026-10-06T13:02:13Z ERROR [req-5e717f] [DatabaseService] Database connection refused by server db-02.internal
+2026-10-02T00:46:51Z ERROR [req-80777a] [QueryService] Database operation timed out while waiting for response
+2026-10-04T14:55:38Z ERROR [req-eb9e54] [DatabaseService] Database query timed out after 15 seconds
+2026-10-06T15:13:39Z CRITICAL [req-4d5c55] [OrderService] Could not connect to database at db-01.internal:5432
+2026-10-04T03:31:54Z ERROR [req-1b387c] [GatewayService] Connection request exceeded timeout limit of 10s
+2026-10-05T06:03:48Z ERROR [req-39ef20] [CheckoutService] Payment provider returned HTTP 502 for transaction TX804892
+2026-10-05T13:10:44Z ERROR [req-f4a985] [PaymentService] Payment provider returned HTTP 502 for transaction TX816367
+2026-10-06T15:53:38Z ERROR [req-c0f2b3] [FileService] No such file or directory: /documents/invoice_472.pdf
+2026-10-06T11:18:20Z ERROR [req-c01f36] [OrderService] Failed to establish database connection after 2 attempts
+2026-10-02T03:31:14Z WARNING [req-a92dcf] [GatewayService] Request timed out while waiting for server response
+2026-10-03T14:57:47Z ERROR [req-b25db5] [AuthService] Unauthorized access attempt from client 712
+2026-10-07T03:02:22Z WARNING [req-e24957] [GatewayService] Connection request exceeded timeout limit of 30s
+2026-10-05T17:36:50Z ERROR [req-f5b0fa] [CheckoutService] Payment provider returned HTTP 502 for transaction TX770699
+2026-10-07T00:35:09Z WARNING [req-baabd9] [QueryService] Query execution exceeded timeout limit of 30s

@@ -1,0 +1,1001 @@
+line_id,timestamp,level,category,request_id,message
+0,2026-10-07T15:43:13Z,CRITICAL,db_connection_failure,req-533f5a,Failed to establish database connection after 5 attempts
+1,2026-10-07T11:02:42Z,ERROR,file_not_found,req-288510,File lookup failed for resource profile_image
+2,2026-10-03T23:08:12Z,ERROR,request_timeout,req-3c1031,Connection request exceeded timeout limit of 30s
+3,2026-10-07T14:15:11Z,ERROR,payment_gateway_error,req-1836a0,Gateway response failed with status 502
+4,2026-10-03T13:51:53Z,ERROR,request_timeout,req-ff7d39,Connection request exceeded timeout limit of 15s
+5,2026-10-01T04:22:23Z,ERROR,db_timeout,req-f3402d,Database query timed out after 15 seconds
+6,2026-10-01T17:53:27Z,ERROR,request_timeout,req-97289c,Upstream request timed out after 30 seconds
+7,2026-10-02T21:19:50Z,WARNING,auth_failure,req-4008d4,Authentication failed with HTTP status 401
+8,2026-10-05T11:06:44Z,WARNING,db_timeout,req-8beef8,Database operation timed out while waiting for response
+9,2026-10-04T04:00:46Z,ERROR,request_timeout,req-10fd71,Request timed out while waiting for server response
+10,2026-10-03T15:11:36Z,WARNING,auth_failure,req-53d9a4,Invalid credentials received for user 5483
+11,2026-10-01T09:20:59Z,ERROR,db_connection_failure,req-66b2bc,Could not connect to database at db-01.internal:3306
+12,2026-10-04T02:18:59Z,WARNING,validation_error,req-2626c9,Invalid input for field amount
+13,2026-10-07T20:38:03Z,CRITICAL,db_connection_failure,req-50fd9d,Could not connect to database at db-02.internal:5432
+14,2026-10-03T07:40:44Z,WARNING,auth_failure,req-93ab8d,Authentication failed with HTTP status 401
+15,2026-10-04T03:09:49Z,WARNING,auth_failure,req-807ab6,Unauthorized access attempt from client 634
+16,2026-10-06T05:46:12Z,ERROR,payment_gateway_error,req-e87804,Payment provider returned HTTP 502 for transaction TX940848
+17,2026-10-02T21:28:10Z,ERROR,db_timeout,req-43d643,Database operation timed out while waiting for response
+18,2026-10-02T05:11:11Z,ERROR,db_timeout,req-900c0a,Query execution exceeded timeout limit of 45s
+19,2026-10-04T21:54:25Z,WARNING,auth_failure,req-17df85,Invalid credentials received for user 9907
+20,2026-10-04T02:32:51Z,ERROR,db_timeout,req-5dc960,Database operation timed out while waiting for response
+21,2026-10-03T03:09:38Z,ERROR,db_connection_failure,req-033e02,Failed to establish database connection after 5 attempts
+22,2026-10-03T05:41:59Z,ERROR,db_connection_failure,req-40a26c,Could not connect to database at db-01.internal:5433
+23,2026-10-04T05:52:37Z,WARNING,auth_failure,req-eb1efd,Unauthorized access attempt from client 549
+24,2026-10-02T16:29:26Z,WARNING,request_timeout,req-e3c51b,Upstream request timed out after 15 seconds
+25,2026-10-05T00:11:45Z,CRITICAL,db_connection_failure,req-143df5,Database connection refused by server db-01.internal
+26,2026-10-04T07:50:58Z,WARNING,validation_error,req-b705e6,Invalid input for field email
+27,2026-10-05T06:35:20Z,WARNING,auth_failure,req-6d0473,Invalid credentials received for user 3898
+28,2026-10-05T05:23:24Z,ERROR,null_pointer,req-9e12d7,NullPointerException at UserHandler.py:213
+29,2026-10-05T15:04:58Z,ERROR,db_timeout,req-62c8c3,Database operation timed out while waiting for response
+30,2026-10-06T22:25:43Z,ERROR,request_timeout,req-ba303c,Request timed out while waiting for server response
+31,2026-10-01T17:24:50Z,CRITICAL,payment_gateway_error,req-cfc91b,Payment request failed after 5 attempts
+32,2026-10-04T19:00:26Z,ERROR,db_connection_failure,req-1a8591,Could not connect to database at db-02.internal:5432
+33,2026-10-02T07:44:26Z,ERROR,db_connection_failure,req-1b0c62,Database connection refused by server db-02.internal
+34,2026-10-07T05:43:29Z,ERROR,null_pointer,req-daafb6,Null reference encountered in handler at PaymentController.java:239
+35,2026-10-04T16:58:17Z,WARNING,db_timeout,req-f78ee9,Query execution exceeded timeout limit of 30s
+36,2026-10-05T03:49:41Z,ERROR,db_timeout,req-5bf7dd,Database query timed out after 15 seconds
+37,2026-10-02T06:24:31Z,WARNING,auth_failure,req-5cda03,Invalid credentials received for user 2744
+38,2026-10-03T01:12:40Z,CRITICAL,payment_gateway_error,req-69b35b,Payment provider returned HTTP 502 for transaction TX773223
+39,2026-10-02T13:19:17Z,ERROR,file_not_found,req-90b950,No such file or directory: /reports/daily_108.csv
+40,2026-10-05T00:10:15Z,ERROR,null_pointer,req-b85a74,NullPointerException at OrderService.java:41
+41,2026-10-04T23:21:00Z,ERROR,file_not_found,req-fbf676,File lookup failed for resource daily_report
+42,2026-10-05T16:56:22Z,WARNING,validation_error,req-355cdf,Request validation failed for field quantity
+43,2026-10-07T19:30:37Z,CRITICAL,db_connection_failure,req-434308,Failed to establish database connection after 3 attempts
+44,2026-10-01T10:51:50Z,ERROR,db_connection_failure,req-6afa82,Could not connect to database at db-02.internal:5433
+45,2026-10-03T07:53:58Z,ERROR,request_timeout,req-3edec3,Request timed out while waiting for server response
+46,2026-10-02T16:56:28Z,ERROR,request_timeout,req-1ca799,Connection request exceeded timeout limit of 15s
+47,2026-10-05T03:36:45Z,ERROR,db_timeout,req-8df716,Query execution exceeded timeout limit of 60s
+48,2026-10-02T02:20:13Z,ERROR,db_connection_failure,req-cebeab,Failed to establish database connection after 4 attempts
+49,2026-10-07T13:59:44Z,ERROR,request_timeout,req-cb62f5,Connection request exceeded timeout limit of 10s
+50,2026-10-02T16:00:37Z,ERROR,db_timeout,req-57b936,Database operation timed out while waiting for response
+51,2026-10-02T10:14:24Z,ERROR,db_timeout,req-f5defe,Database query timed out after 45 seconds
+52,2026-10-02T01:57:51Z,ERROR,request_timeout,req-a6d977,Request timed out while waiting for server response
+53,2026-10-03T03:00:40Z,CRITICAL,db_connection_failure,req-adc291,Failed to establish database connection after 4 attempts
+54,2026-10-06T22:40:41Z,CRITICAL,db_connection_failure,req-901bcd,Database connection refused by server db-01.internal
+55,2026-10-05T13:33:08Z,ERROR,null_pointer,req-91b3f9,NullPointerException at PaymentController.java:124
+56,2026-10-06T14:13:07Z,CRITICAL,payment_gateway_error,req-554047,Payment request failed after 2 attempts
+57,2026-10-07T04:42:28Z,WARNING,db_timeout,req-b2cd9a,Database operation timed out while waiting for response
+58,2026-10-01T08:34:50Z,ERROR,null_pointer,req-52377d,Null reference encountered in handler at UserHandler.py:152
+59,2026-10-07T06:23:42Z,ERROR,null_pointer,req-f0c791,Cannot invoke method because object reference is null
+60,2026-10-07T00:54:50Z,WARNING,auth_failure,req-ce028d,Invalid credentials received for user 2541
+61,2026-10-03T20:39:50Z,CRITICAL,null_pointer,req-761c7a,Null reference encountered in handler at OrderService.java:81
+62,2026-10-02T04:03:33Z,ERROR,request_timeout,req-a93c94,Request timed out while waiting for server response
+63,2026-10-02T04:55:17Z,ERROR,request_timeout,req-a5a7e2,Request timed out while waiting for server response
+64,2026-10-05T22:31:13Z,CRITICAL,db_connection_failure,req-ef5e43,Database connection refused by server db-01.internal
+65,2026-10-03T12:08:01Z,ERROR,file_not_found,req-9140a9,Unable to locate requested file /reports/daily_108.csv
+66,2026-10-05T02:11:27Z,ERROR,db_connection_failure,req-915a1c,Could not connect to database at db-02.internal:5433
+67,2026-10-05T19:38:52Z,ERROR,db_timeout,req-187635,Query execution exceeded timeout limit of 60s
+68,2026-10-06T17:53:15Z,ERROR,db_connection_failure,req-095ffa,Database connection refused by server db-02.internal
+69,2026-10-07T01:22:34Z,WARNING,request_timeout,req-c3cb0c,Connection request exceeded timeout limit of 60s
+70,2026-10-05T05:36:30Z,CRITICAL,null_pointer,req-641a4b,Cannot invoke method because object reference is null
+71,2026-10-07T16:27:17Z,WARNING,auth_failure,req-d11ce3,Invalid credentials received for user 7479
+72,2026-10-01T12:11:32Z,WARNING,auth_failure,req-360893,Authentication failed with HTTP status 401
+73,2026-10-04T23:30:48Z,CRITICAL,db_connection_failure,req-4baf0f,Database connection refused by server db-02.internal
+74,2026-10-05T17:24:11Z,ERROR,payment_gateway_error,req-82e6e1,Payment provider returned HTTP 502 for transaction TX309490
+75,2026-10-01T14:34:18Z,WARNING,file_not_found,req-f260a3,No such file or directory: /documents/invoice_472.pdf
+76,2026-10-02T05:34:30Z,WARNING,validation_error,req-23a2f5,Value 9004 is outside the permitted range
+77,2026-10-07T14:36:17Z,WARNING,db_timeout,req-3c749c,Database operation timed out while waiting for response
+78,2026-10-07T05:04:26Z,ERROR,file_not_found,req-346003,No such file or directory: /documents/invoice_472.pdf
+79,2026-10-07T05:32:42Z,ERROR,file_not_found,req-fb66bc,Unable to locate requested file /documents/invoice_472.pdf
+80,2026-10-01T17:02:23Z,WARNING,request_timeout,req-63d316,Request timed out while waiting for server response
+81,2026-10-01T08:32:06Z,ERROR,db_connection_failure,req-0effd5,Failed to establish database connection after 3 attempts
+82,2026-10-01T09:30:20Z,WARNING,auth_failure,req-4a372d,Invalid credentials received for user 4204
+83,2026-10-07T02:56:58Z,WARNING,file_not_found,req-7ec59e,No such file or directory: /uploads/image_2931.png
+84,2026-10-02T15:58:05Z,WARNING,db_timeout,req-ce5230,Query execution exceeded timeout limit of 45s
+85,2026-10-02T01:16:54Z,ERROR,db_timeout,req-e08644,Query execution exceeded timeout limit of 60s
+86,2026-10-01T17:57:13Z,ERROR,db_timeout,req-c0927b,Database query timed out after 60 seconds
+87,2026-10-02T08:18:39Z,ERROR,request_timeout,req-c81a5f,Connection request exceeded timeout limit of 15s
+88,2026-10-04T05:26:43Z,ERROR,validation_error,req-87d01c,Request validation failed for field user_id
+89,2026-10-07T18:09:43Z,ERROR,db_connection_failure,req-9be717,Could not connect to database at db-01.internal:5433
+90,2026-10-06T00:05:22Z,ERROR,db_connection_failure,req-2dea94,Database connection refused by server db-01.internal
+91,2026-10-01T23:00:30Z,WARNING,auth_failure,req-13ba8d,Unauthorized access attempt from client 866
+92,2026-10-03T23:23:12Z,ERROR,payment_gateway_error,req-b08c14,Payment provider returned HTTP 502 for transaction TX879207
+93,2026-10-06T18:33:40Z,ERROR,db_timeout,req-68ffae,Database query timed out after 60 seconds
+94,2026-10-07T08:34:09Z,ERROR,db_timeout,req-6e18b1,Database operation timed out while waiting for response
+95,2026-10-02T23:42:26Z,ERROR,request_timeout,req-f8698e,Connection request exceeded timeout limit of 15s
+96,2026-10-05T08:53:37Z,ERROR,db_connection_failure,req-7fe670,Database connection refused by server db-01.internal
+97,2026-10-04T09:30:18Z,ERROR,db_connection_failure,req-0b3d0c,Failed to establish database connection after 4 attempts
+98,2026-10-03T19:28:48Z,ERROR,null_pointer,req-475436,NullPointerException at OrderService.java:41
+99,2026-10-06T12:57:01Z,ERROR,db_timeout,req-eb0415,Database operation timed out while waiting for response
+100,2026-10-06T18:14:14Z,CRITICAL,null_pointer,req-558492,NullPointerException at OrderService.java:165
+101,2026-10-06T04:05:11Z,ERROR,request_timeout,req-0a5a26,Request timed out while waiting for server response
+102,2026-10-02T00:20:49Z,ERROR,request_timeout,req-d975a5,Connection request exceeded timeout limit of 15s
+103,2026-10-06T21:58:53Z,ERROR,request_timeout,req-91a07e,Connection request exceeded timeout limit of 60s
+104,2026-10-05T16:27:28Z,ERROR,validation_error,req-96ed79,Request validation failed for field quantity
+105,2026-10-05T09:15:39Z,WARNING,auth_failure,req-c75ffb,Invalid credentials received for user 2742
+106,2026-10-05T13:05:16Z,ERROR,auth_failure,req-4beef1,Invalid credentials received for user 8270
+107,2026-10-02T17:20:57Z,ERROR,null_pointer,req-fa584a,Null reference encountered in handler at OrderService.java:109
+108,2026-10-06T17:07:59Z,ERROR,null_pointer,req-a1da7c,Cannot invoke method because object reference is null
+109,2026-10-02T03:37:33Z,WARNING,file_not_found,req-642bb0,No such file or directory: /uploads/image_2931.png
+110,2026-10-02T09:06:25Z,ERROR,null_pointer,req-e2b050,Cannot invoke method because object reference is null
+111,2026-10-06T02:52:12Z,WARNING,auth_failure,req-93efb5,Unauthorized access attempt from client 971
+112,2026-10-07T13:52:53Z,ERROR,db_connection_failure,req-c28fa1,Failed to establish database connection after 2 attempts
+113,2026-10-06T10:45:11Z,CRITICAL,db_connection_failure,req-ec955f,Failed to establish database connection after 5 attempts
+114,2026-10-06T16:40:53Z,WARNING,auth_failure,req-279c05,Invalid credentials received for user 7628
+115,2026-10-02T20:34:15Z,ERROR,null_pointer,req-e14110,Null reference encountered in handler at PaymentController.java:153
+116,2026-10-06T17:54:49Z,WARNING,request_timeout,req-4777be,Connection request exceeded timeout limit of 15s
+117,2026-10-02T03:31:36Z,CRITICAL,db_connection_failure,req-adaa44,Database connection refused by server db-02.internal
+118,2026-10-03T21:42:47Z,ERROR,db_connection_failure,req-62c965,Could not connect to database at db-02.internal:3306
+119,2026-10-06T09:30:22Z,ERROR,request_timeout,req-3e3f3d,Upstream request timed out after 60 seconds
+120,2026-10-05T19:59:07Z,ERROR,file_not_found,req-894857,Unable to locate requested file /uploads/image_2931.png
+121,2026-10-06T13:10:41Z,ERROR,db_connection_failure,req-3713b4,Could not connect to database at db-01.internal:5433
+122,2026-10-02T05:08:37Z,ERROR,request_timeout,req-acd418,Request timed out while waiting for server response
+123,2026-10-02T08:31:48Z,CRITICAL,null_pointer,req-bb5e14,Null reference encountered in handler at PaymentController.java:77
+124,2026-10-05T13:57:13Z,ERROR,db_connection_failure,req-148b43,Failed to establish database connection after 3 attempts
+125,2026-10-07T10:37:37Z,ERROR,payment_gateway_error,req-5fdd67,Payment provider returned HTTP 502 for transaction TX544612
+126,2026-10-05T03:48:36Z,ERROR,db_timeout,req-98b669,Database query timed out after 10 seconds
+127,2026-10-04T10:30:58Z,ERROR,db_timeout,req-316da9,Database query timed out after 60 seconds
+128,2026-10-03T09:57:38Z,ERROR,auth_failure,req-f5aed2,Invalid credentials received for user 6322
+129,2026-10-07T22:32:18Z,WARNING,request_timeout,req-0a4fee,Upstream request timed out after 30 seconds
+130,2026-10-07T01:23:02Z,ERROR,file_not_found,req-6f6335,Unable to locate requested file /documents/invoice_472.pdf
+131,2026-10-07T17:26:48Z,ERROR,null_pointer,req-4d126a,NullPointerException at UserHandler.py:64
+132,2026-10-05T09:49:37Z,ERROR,auth_failure,req-16d7ba,Invalid credentials received for user 8242
+133,2026-10-06T19:25:16Z,CRITICAL,db_connection_failure,req-6929de,Failed to establish database connection after 4 attempts
+134,2026-10-07T04:13:10Z,CRITICAL,db_connection_failure,req-45ff2c,Database connection refused by server db-02.internal
+135,2026-10-07T06:19:58Z,WARNING,db_timeout,req-f66c73,Database query timed out after 30 seconds
+136,2026-10-07T23:02:24Z,WARNING,db_timeout,req-293fc2,Database operation timed out while waiting for response
+137,2026-10-02T18:23:54Z,ERROR,validation_error,req-0a3a11,Request validation failed for field quantity
+138,2026-10-02T09:09:21Z,ERROR,db_timeout,req-6676cc,Query execution exceeded timeout limit of 45s
+139,2026-10-05T04:09:14Z,ERROR,db_timeout,req-69a3b9,Database query timed out after 15 seconds
+140,2026-10-03T15:59:34Z,ERROR,request_timeout,req-e8b8d2,Connection request exceeded timeout limit of 45s
+141,2026-10-06T05:06:45Z,ERROR,request_timeout,req-3e9ace,Connection request exceeded timeout limit of 15s
+142,2026-10-01T23:39:28Z,ERROR,db_connection_failure,req-f2d3f7,Failed to establish database connection after 5 attempts
+143,2026-10-05T02:59:45Z,CRITICAL,db_connection_failure,req-44656d,Database connection refused by server db-02.internal
+144,2026-10-07T23:09:15Z,ERROR,auth_failure,req-faec8f,Invalid credentials received for user 8778
+145,2026-10-06T09:53:13Z,WARNING,file_not_found,req-fa27a8,Unable to locate requested file /reports/daily_108.csv
+146,2026-10-06T11:30:31Z,ERROR,payment_gateway_error,req-77a639,Payment provider returned HTTP 502 for transaction TX902097
+147,2026-10-03T04:03:32Z,ERROR,validation_error,req-1fc775,Value 4561 is outside the permitted range
+148,2026-10-07T22:47:04Z,ERROR,validation_error,req-c8794a,Request validation failed for field email
+149,2026-10-06T00:35:53Z,ERROR,db_timeout,req-557368,Database operation timed out while waiting for response
+150,2026-10-07T20:01:43Z,CRITICAL,null_pointer,req-75a098,Cannot invoke method because object reference is null
+151,2026-10-04T18:05:33Z,ERROR,payment_gateway_error,req-396c61,Gateway response failed with status 502
+152,2026-10-01T23:10:10Z,CRITICAL,null_pointer,req-e5a4b1,NullPointerException at OrderService.java:98
+153,2026-10-05T10:59:38Z,CRITICAL,db_connection_failure,req-e6d590,Could not connect to database at db-02.internal:5433
+154,2026-10-02T12:40:40Z,CRITICAL,db_connection_failure,req-34885a,Failed to establish database connection after 3 attempts
+155,2026-10-07T15:12:16Z,ERROR,payment_gateway_error,req-42be7d,Payment request failed after 2 attempts
+156,2026-10-06T16:17:16Z,ERROR,null_pointer,req-75566f,NullPointerException at OrderService.java:84
+157,2026-10-06T20:39:50Z,WARNING,db_timeout,req-c7f4f4,Database operation timed out while waiting for response
+158,2026-10-01T19:15:26Z,ERROR,db_connection_failure,req-b2dc6c,Failed to establish database connection after 3 attempts
+159,2026-10-04T20:06:41Z,WARNING,auth_failure,req-63a1bc,Authentication failed with HTTP status 401
+160,2026-10-05T19:17:15Z,WARNING,auth_failure,req-f08aba,Invalid credentials received for user 7794
+161,2026-10-04T03:57:33Z,ERROR,db_connection_failure,req-3c4b1e,Database connection refused by server db-02.internal
+162,2026-10-05T04:35:47Z,ERROR,db_connection_failure,req-2179e3,Failed to establish database connection after 3 attempts
+163,2026-10-03T17:34:07Z,WARNING,db_timeout,req-34ec52,Database operation timed out while waiting for response
+164,2026-10-06T09:18:41Z,ERROR,request_timeout,req-8dcd6e,Request timed out while waiting for server response
+165,2026-10-06T11:52:40Z,ERROR,db_timeout,req-b3522c,Database query timed out after 10 seconds
+166,2026-10-02T20:49:55Z,WARNING,db_timeout,req-894e73,Database query timed out after 60 seconds
+167,2026-10-05T13:03:12Z,WARNING,auth_failure,req-d1edc6,Authentication failed with HTTP status 401
+168,2026-10-07T13:54:18Z,ERROR,db_connection_failure,req-2cf149,Could not connect to database at db-01.internal:5432
+169,2026-10-02T00:15:36Z,WARNING,request_timeout,req-e07309,Request timed out while waiting for server response
+170,2026-10-06T16:57:54Z,WARNING,file_not_found,req-8af6d2,Unable to locate requested file /reports/daily_108.csv
+171,2026-10-03T09:52:14Z,ERROR,null_pointer,req-816635,NullPointerException at UserHandler.py:185
+172,2026-10-02T12:56:21Z,WARNING,db_timeout,req-13ad3e,Query execution exceeded timeout limit of 30s
+173,2026-10-01T20:44:54Z,ERROR,auth_failure,req-e28f55,Invalid credentials received for user 8148
+174,2026-10-02T13:53:12Z,ERROR,db_timeout,req-788220,Database query timed out after 45 seconds
+175,2026-10-06T19:06:51Z,WARNING,request_timeout,req-260b13,Connection request exceeded timeout limit of 30s
+176,2026-10-02T10:46:40Z,CRITICAL,db_connection_failure,req-ac5f12,Could not connect to database at db-01.internal:3306
+177,2026-10-04T22:47:24Z,ERROR,db_timeout,req-9cdf06,Database query timed out after 45 seconds
+178,2026-10-05T17:36:48Z,CRITICAL,payment_gateway_error,req-6726f5,Payment request failed after 5 attempts
+179,2026-10-01T17:06:46Z,ERROR,request_timeout,req-55367a,Request timed out while waiting for server response
+180,2026-10-05T15:44:25Z,WARNING,request_timeout,req-5086f3,Request timed out while waiting for server response
+181,2026-10-05T05:44:02Z,ERROR,auth_failure,req-7b4bca,Unauthorized access attempt from client 942
+182,2026-10-06T23:32:57Z,ERROR,request_timeout,req-b4fbda,Upstream request timed out after 10 seconds
+183,2026-10-01T23:18:15Z,ERROR,null_pointer,req-01c7ea,Null reference encountered in handler at OrderService.java:71
+184,2026-10-05T19:11:04Z,ERROR,db_timeout,req-e33fc5,Query execution exceeded timeout limit of 15s
+185,2026-10-05T17:02:43Z,ERROR,null_pointer,req-eeb687,Null reference encountered in handler at OrderService.java:73
+186,2026-10-03T05:00:02Z,ERROR,db_connection_failure,req-6ec012,Could not connect to database at db-01.internal:5433
+187,2026-10-07T08:25:06Z,ERROR,auth_failure,req-728e10,Authentication failed with HTTP status 401
+188,2026-10-05T11:02:33Z,WARNING,validation_error,req-1d93c7,Request validation failed for field user_id
+189,2026-10-05T08:54:45Z,ERROR,db_timeout,req-17d71f,Query execution exceeded timeout limit of 45s
+190,2026-10-01T15:11:13Z,CRITICAL,null_pointer,req-c403b4,Null reference encountered in handler at OrderService.java:197
+191,2026-10-02T03:56:57Z,ERROR,db_timeout,req-f8bca9,Database operation timed out while waiting for response
+192,2026-10-01T09:03:11Z,ERROR,db_connection_failure,req-dac726,Failed to establish database connection after 5 attempts
+193,2026-10-01T08:30:41Z,WARNING,auth_failure,req-edd32b,Authentication failed with HTTP status 401
+194,2026-10-06T21:07:52Z,ERROR,auth_failure,req-bd3c83,Authentication failed with HTTP status 401
+195,2026-10-02T11:14:49Z,WARNING,validation_error,req-297886,Value 3139 is outside the permitted range
+196,2026-10-04T20:40:14Z,ERROR,payment_gateway_error,req-38a8ab,Payment provider returned HTTP 502 for transaction TX846621
+197,2026-10-01T11:54:19Z,WARNING,request_timeout,req-5dce8d,Connection request exceeded timeout limit of 15s
+198,2026-10-05T03:44:37Z,CRITICAL,payment_gateway_error,req-b06f06,Gateway response failed with status 502
+199,2026-10-05T02:18:14Z,ERROR,db_connection_failure,req-473bd3,Database connection refused by server db-01.internal
+200,2026-10-07T16:26:39Z,ERROR,db_connection_failure,req-200b29,Failed to establish database connection after 3 attempts
+201,2026-10-06T03:47:48Z,WARNING,request_timeout,req-924554,Request timed out while waiting for server response
+202,2026-10-05T05:45:46Z,ERROR,db_connection_failure,req-ba3584,Could not connect to database at db-01.internal:5432
+203,2026-10-05T22:57:11Z,ERROR,db_connection_failure,req-6703b6,Failed to establish database connection after 5 attempts
+204,2026-10-07T00:31:46Z,CRITICAL,db_connection_failure,req-7f5db1,Failed to establish database connection after 5 attempts
+205,2026-10-05T05:27:43Z,ERROR,payment_gateway_error,req-b3bfbd,Gateway response failed with status 502
+206,2026-10-03T21:00:55Z,ERROR,db_connection_failure,req-cf8a36,Failed to establish database connection after 3 attempts
+207,2026-10-02T15:44:39Z,ERROR,db_connection_failure,req-bb7b6c,Failed to establish database connection after 4 attempts
+208,2026-10-06T13:51:46Z,ERROR,db_connection_failure,req-1fce01,Database connection refused by server db-02.internal
+209,2026-10-04T19:11:22Z,WARNING,auth_failure,req-6dc560,Invalid credentials received for user 3276
+210,2026-10-03T17:57:45Z,ERROR,null_pointer,req-b3133c,Cannot invoke method because object reference is null
+211,2026-10-04T15:46:26Z,WARNING,auth_failure,req-ff0dd3,Invalid credentials received for user 4946
+212,2026-10-04T15:01:45Z,ERROR,db_timeout,req-2661c4,Database query timed out after 15 seconds
+213,2026-10-07T12:24:11Z,ERROR,db_timeout,req-766470,Database operation timed out while waiting for response
+214,2026-10-03T22:30:14Z,ERROR,db_timeout,req-34ef71,Database query timed out after 15 seconds
+215,2026-10-03T21:42:01Z,CRITICAL,db_connection_failure,req-288b78,Failed to establish database connection after 5 attempts
+216,2026-10-05T19:58:42Z,ERROR,null_pointer,req-a5448d,NullPointerException at UserHandler.py:138
+217,2026-10-07T07:38:29Z,CRITICAL,payment_gateway_error,req-8634a7,Payment request failed after 5 attempts
+218,2026-10-04T05:13:55Z,ERROR,request_timeout,req-4c1d2e,Upstream request timed out after 60 seconds
+219,2026-10-05T17:18:57Z,CRITICAL,payment_gateway_error,req-ee0c23,Gateway response failed with status 502
+220,2026-10-03T14:03:24Z,CRITICAL,db_connection_failure,req-bf8e8b,Database connection refused by server db-02.internal
+221,2026-10-01T18:03:41Z,WARNING,db_timeout,req-41f746,Database query timed out after 30 seconds
+222,2026-10-01T23:26:05Z,WARNING,request_timeout,req-c2ad0d,Connection request exceeded timeout limit of 45s
+223,2026-10-05T19:59:49Z,ERROR,auth_failure,req-2af2b7,Authentication failed with HTTP status 401
+224,2026-10-07T03:39:46Z,ERROR,null_pointer,req-6bc5bc,Cannot invoke method because object reference is null
+225,2026-10-06T18:26:09Z,CRITICAL,db_connection_failure,req-2a45c2,Failed to establish database connection after 3 attempts
+226,2026-10-06T05:58:05Z,CRITICAL,payment_gateway_error,req-0e80c7,Gateway response failed with status 502
+227,2026-10-06T20:46:13Z,ERROR,request_timeout,req-f4ac27,Request timed out while waiting for server response
+228,2026-10-05T11:29:56Z,WARNING,db_timeout,req-0eecc0,Database operation timed out while waiting for response
+229,2026-10-05T08:23:35Z,WARNING,request_timeout,req-3d3331,Upstream request timed out after 15 seconds
+230,2026-10-06T11:23:59Z,WARNING,db_timeout,req-6789e7,Query execution exceeded timeout limit of 60s
+231,2026-10-04T21:40:37Z,ERROR,db_connection_failure,req-61730c,Failed to establish database connection after 4 attempts
+232,2026-10-05T03:15:09Z,ERROR,file_not_found,req-b2c5b9,No such file or directory: /reports/daily_108.csv
+233,2026-10-06T17:57:46Z,WARNING,validation_error,req-476622,Value 8408 is outside the permitted range
+234,2026-10-02T00:36:37Z,ERROR,null_pointer,req-47729a,Cannot invoke method because object reference is null
+235,2026-10-02T06:58:06Z,ERROR,db_timeout,req-e599bd,Query execution exceeded timeout limit of 10s
+236,2026-10-04T15:27:41Z,WARNING,request_timeout,req-6906d1,Upstream request timed out after 30 seconds
+237,2026-10-03T13:15:07Z,ERROR,payment_gateway_error,req-ac00cd,Gateway response failed with status 502
+238,2026-10-02T16:43:58Z,ERROR,validation_error,req-cb33e3,Request validation failed for field user_id
+239,2026-10-06T19:21:12Z,WARNING,auth_failure,req-1cf851,Unauthorized access attempt from client 286
+240,2026-10-04T16:14:30Z,CRITICAL,null_pointer,req-4236d2,Null reference encountered in handler at UserHandler.py:68
+241,2026-10-07T22:53:35Z,WARNING,auth_failure,req-7ac067,Unauthorized access attempt from client 760
+242,2026-10-02T07:22:58Z,ERROR,file_not_found,req-74b8b2,No such file or directory: /reports/daily_108.csv
+243,2026-10-05T01:37:50Z,ERROR,db_connection_failure,req-d18433,Failed to establish database connection after 3 attempts
+244,2026-10-07T05:34:22Z,WARNING,validation_error,req-502426,Invalid input for field quantity
+245,2026-10-04T20:37:23Z,ERROR,auth_failure,req-2e408d,Unauthorized access attempt from client 803
+246,2026-10-05T12:39:32Z,ERROR,db_connection_failure,req-7580e0,Failed to establish database connection after 2 attempts
+247,2026-10-07T04:38:38Z,WARNING,request_timeout,req-0ba4e3,Connection request exceeded timeout limit of 45s
+248,2026-10-05T06:37:15Z,ERROR,db_connection_failure,req-a2f963,Failed to establish database connection after 3 attempts
+249,2026-10-02T00:17:16Z,CRITICAL,payment_gateway_error,req-32888f,Payment request failed after 5 attempts
+250,2026-10-01T11:58:42Z,ERROR,request_timeout,req-2deb56,Upstream request timed out after 15 seconds
+251,2026-10-05T16:20:15Z,ERROR,null_pointer,req-89b702,Null reference encountered in handler at PaymentController.java:230
+252,2026-10-01T19:27:40Z,ERROR,payment_gateway_error,req-c152ca,Payment provider returned HTTP 502 for transaction TX267188
+253,2026-10-07T04:48:16Z,ERROR,file_not_found,req-28eccd,File lookup failed for resource daily_report
+254,2026-10-07T01:35:16Z,ERROR,payment_gateway_error,req-557182,Payment request failed after 4 attempts
+255,2026-10-06T22:25:56Z,ERROR,db_connection_failure,req-7ad465,Failed to establish database connection after 2 attempts
+256,2026-10-06T10:05:49Z,ERROR,db_timeout,req-cecea5,Query execution exceeded timeout limit of 60s
+257,2026-10-03T06:11:43Z,ERROR,file_not_found,req-49be87,Unable to locate requested file /documents/invoice_472.pdf
+258,2026-10-07T08:48:51Z,ERROR,db_timeout,req-b221e1,Database operation timed out while waiting for response
+259,2026-10-03T08:06:38Z,CRITICAL,null_pointer,req-48c084,Null reference encountered in handler at OrderService.java:59
+260,2026-10-04T04:58:27Z,ERROR,null_pointer,req-9381eb,Cannot invoke method because object reference is null
+261,2026-10-03T16:14:01Z,ERROR,db_connection_failure,req-085eb4,Could not connect to database at db-02.internal:5432
+262,2026-10-04T12:53:39Z,ERROR,validation_error,req-3f3d2b,Value 8904 is outside the permitted range
+263,2026-10-05T06:00:30Z,CRITICAL,null_pointer,req-c90703,NullPointerException at OrderService.java:161
+264,2026-10-03T07:18:00Z,ERROR,auth_failure,req-fad76a,Authentication failed with HTTP status 401
+265,2026-10-02T18:07:22Z,ERROR,auth_failure,req-aa0007,Invalid credentials received for user 6184
+266,2026-10-06T04:32:57Z,ERROR,db_timeout,req-4b6797,Database query timed out after 15 seconds
+267,2026-10-07T23:40:34Z,ERROR,db_connection_failure,req-b7e584,Database connection refused by server db-02.internal
+268,2026-10-02T09:51:49Z,ERROR,null_pointer,req-2eb862,NullPointerException at UserHandler.py:157
+269,2026-10-04T19:31:42Z,ERROR,db_timeout,req-b45e94,Database operation timed out while waiting for response
+270,2026-10-03T18:01:26Z,ERROR,auth_failure,req-62a876,Authentication failed with HTTP status 401
+271,2026-10-01T18:34:17Z,CRITICAL,db_connection_failure,req-fe7ee3,Could not connect to database at db-02.internal:5432
+272,2026-10-06T03:03:15Z,ERROR,request_timeout,req-83c74c,Request timed out while waiting for server response
+273,2026-10-03T16:02:32Z,WARNING,validation_error,req-ce4307,Invalid input for field amount
+274,2026-10-03T18:14:35Z,ERROR,db_timeout,req-3d8849,Query execution exceeded timeout limit of 45s
+275,2026-10-05T05:28:28Z,WARNING,auth_failure,req-45665e,Unauthorized access attempt from client 896
+276,2026-10-05T15:54:50Z,CRITICAL,payment_gateway_error,req-a302db,Payment provider returned HTTP 502 for transaction TX481851
+277,2026-10-05T05:51:49Z,WARNING,auth_failure,req-2fa808,Authentication failed with HTTP status 401
+278,2026-10-04T06:46:11Z,WARNING,auth_failure,req-a4752f,Invalid credentials received for user 7047
+279,2026-10-02T11:20:57Z,ERROR,db_connection_failure,req-cac4d0,Could not connect to database at db-02.internal:5432
+280,2026-10-06T18:35:49Z,ERROR,request_timeout,req-e598e5,Upstream request timed out after 15 seconds
+281,2026-10-05T19:24:54Z,ERROR,payment_gateway_error,req-a96bc7,Gateway response failed with status 502
+282,2026-10-07T07:01:59Z,WARNING,auth_failure,req-2bfcc5,Authentication failed with HTTP status 401
+283,2026-10-03T13:42:47Z,ERROR,db_timeout,req-8be275,Database operation timed out while waiting for response
+284,2026-10-03T22:52:15Z,ERROR,db_connection_failure,req-96c044,Failed to establish database connection after 4 attempts
+285,2026-10-03T09:28:29Z,ERROR,db_connection_failure,req-979aa0,Database connection refused by server db-01.internal
+286,2026-10-02T15:45:10Z,ERROR,auth_failure,req-ab987d,Authentication failed with HTTP status 401
+287,2026-10-02T08:47:35Z,WARNING,file_not_found,req-b98d15,Unable to locate requested file /reports/daily_108.csv
+288,2026-10-06T21:07:22Z,ERROR,null_pointer,req-bbcaa2,Cannot invoke method because object reference is null
+289,2026-10-02T03:54:45Z,ERROR,request_timeout,req-c080ab,Upstream request timed out after 45 seconds
+290,2026-10-07T20:01:40Z,WARNING,db_timeout,req-36c3fe,Database operation timed out while waiting for response
+291,2026-10-02T17:17:18Z,ERROR,file_not_found,req-d4f121,File lookup failed for resource daily_report
+292,2026-10-06T00:25:25Z,ERROR,db_timeout,req-9ef1a7,Database operation timed out while waiting for response
+293,2026-10-07T21:41:14Z,ERROR,auth_failure,req-37abaa,Unauthorized access attempt from client 106
+294,2026-10-06T03:07:36Z,ERROR,auth_failure,req-610c5a,Authentication failed with HTTP status 401
+295,2026-10-05T02:58:44Z,ERROR,request_timeout,req-3ef783,Upstream request timed out after 10 seconds
+296,2026-10-05T11:26:38Z,WARNING,auth_failure,req-fd5422,Unauthorized access attempt from client 411
+297,2026-10-06T00:53:34Z,WARNING,auth_failure,req-2df8d4,Authentication failed with HTTP status 401
+298,2026-10-03T06:28:34Z,CRITICAL,null_pointer,req-07516d,Null reference encountered in handler at OrderService.java:78
+299,2026-10-04T18:13:23Z,ERROR,auth_failure,req-d161a3,Invalid credentials received for user 8519
+300,2026-10-02T03:17:22Z,ERROR,auth_failure,req-2e77ab,Invalid credentials received for user 5621
+301,2026-10-07T11:34:29Z,ERROR,db_connection_failure,req-e82c7d,Failed to establish database connection after 5 attempts
+302,2026-10-03T03:35:15Z,CRITICAL,null_pointer,req-426507,Cannot invoke method because object reference is null
+303,2026-10-01T12:55:42Z,CRITICAL,db_connection_failure,req-6fa177,Failed to establish database connection after 5 attempts
+304,2026-10-02T23:55:29Z,ERROR,db_connection_failure,req-dabf98,Could not connect to database at db-01.internal:3306
+305,2026-10-01T06:16:53Z,WARNING,auth_failure,req-646cd3,Authentication failed with HTTP status 401
+306,2026-10-02T17:57:37Z,ERROR,file_not_found,req-0678fe,File lookup failed for resource profile_image
+307,2026-10-05T10:29:01Z,ERROR,payment_gateway_error,req-ab1e5b,Gateway response failed with status 502
+308,2026-10-06T03:40:17Z,ERROR,null_pointer,req-64d360,Cannot invoke method because object reference is null
+309,2026-10-04T04:53:27Z,CRITICAL,db_connection_failure,req-7d106c,Could not connect to database at db-01.internal:3306
+310,2026-10-04T16:31:17Z,WARNING,request_timeout,req-8f2d0b,Upstream request timed out after 30 seconds
+311,2026-10-01T03:19:49Z,WARNING,db_timeout,req-c704e8,Database query timed out after 30 seconds
+312,2026-10-06T18:55:21Z,WARNING,auth_failure,req-de6a7c,Authentication failed with HTTP status 401
+313,2026-10-07T11:12:19Z,WARNING,request_timeout,req-73b4da,Connection request exceeded timeout limit of 10s
+314,2026-10-02T16:07:35Z,ERROR,null_pointer,req-75f006,NullPointerException at OrderService.java:187
+315,2026-10-06T06:15:27Z,ERROR,auth_failure,req-6c7a0c,Authentication failed with HTTP status 401
+316,2026-10-03T08:03:51Z,ERROR,request_timeout,req-1a49de,Connection request exceeded timeout limit of 60s
+317,2026-10-02T18:33:04Z,ERROR,db_timeout,req-443994,Database query timed out after 30 seconds
+318,2026-10-02T15:14:36Z,ERROR,db_timeout,req-e60ec8,Query execution exceeded timeout limit of 60s
+319,2026-10-04T23:38:15Z,WARNING,db_timeout,req-a8cfe5,Database operation timed out while waiting for response
+320,2026-10-03T00:18:19Z,WARNING,db_timeout,req-23ef55,Database query timed out after 45 seconds
+321,2026-10-01T09:25:39Z,WARNING,auth_failure,req-44e831,Unauthorized access attempt from client 422
+322,2026-10-02T09:55:19Z,CRITICAL,null_pointer,req-cdbb6c,Null reference encountered in handler at UserHandler.py:156
+323,2026-10-03T17:38:08Z,WARNING,validation_error,req-680945,Request validation failed for field user_id
+324,2026-10-05T21:38:38Z,ERROR,validation_error,req-77746c,Value 3489 is outside the permitted range
+325,2026-10-02T01:57:49Z,ERROR,auth_failure,req-bd96bb,Unauthorized access attempt from client 489
+326,2026-10-03T20:55:11Z,ERROR,null_pointer,req-e658eb,Null reference encountered in handler at PaymentController.java:58
+327,2026-10-01T01:55:40Z,WARNING,request_timeout,req-a388ca,Request timed out while waiting for server response
+328,2026-10-01T15:17:01Z,WARNING,auth_failure,req-faf36a,Unauthorized access attempt from client 221
+329,2026-10-02T00:40:34Z,ERROR,db_connection_failure,req-8f1584,Failed to establish database connection after 2 attempts
+330,2026-10-07T15:12:29Z,ERROR,db_connection_failure,req-12e89d,Database connection refused by server db-02.internal
+331,2026-10-03T09:42:52Z,WARNING,db_timeout,req-c226ab,Query execution exceeded timeout limit of 10s
+332,2026-10-02T23:52:17Z,CRITICAL,db_connection_failure,req-3e7114,Failed to establish database connection after 5 attempts
+333,2026-10-05T22:05:10Z,CRITICAL,db_connection_failure,req-80a52e,Failed to establish database connection after 4 attempts
+334,2026-10-02T03:22:52Z,WARNING,validation_error,req-613dec,Invalid input for field email
+335,2026-10-05T09:07:51Z,ERROR,file_not_found,req-0deb08,File lookup failed for resource profile_image
+336,2026-10-02T14:39:05Z,CRITICAL,db_connection_failure,req-39e7a4,Could not connect to database at db-01.internal:3306
+337,2026-10-04T21:52:58Z,CRITICAL,db_connection_failure,req-40181c,Could not connect to database at db-01.internal:3306
+338,2026-10-01T22:56:30Z,CRITICAL,null_pointer,req-ed6cbe,Cannot invoke method because object reference is null
+339,2026-10-05T20:02:34Z,ERROR,db_timeout,req-b0c770,Database query timed out after 10 seconds
+340,2026-10-05T00:40:05Z,ERROR,db_timeout,req-5c5d3f,Database query timed out after 10 seconds
+341,2026-10-02T13:59:09Z,WARNING,validation_error,req-f5a98c,Invalid input for field user_id
+342,2026-10-01T12:51:47Z,ERROR,request_timeout,req-7fcc44,Connection request exceeded timeout limit of 30s
+343,2026-10-02T05:15:17Z,ERROR,null_pointer,req-cb5085,NullPointerException at OrderService.java:212
+344,2026-10-06T23:35:26Z,ERROR,request_timeout,req-c09ca1,Upstream request timed out after 45 seconds
+345,2026-10-02T02:40:34Z,WARNING,file_not_found,req-6ed714,No such file or directory: /documents/invoice_472.pdf
+346,2026-10-02T04:39:58Z,ERROR,db_connection_failure,req-671230,Could not connect to database at db-01.internal:5432
+347,2026-10-07T04:52:26Z,ERROR,validation_error,req-6ba571,Request validation failed for field email
+348,2026-10-03T11:08:02Z,CRITICAL,null_pointer,req-301db8,Cannot invoke method because object reference is null
+349,2026-10-01T13:01:46Z,ERROR,null_pointer,req-3c1517,NullPointerException at OrderService.java:123
+350,2026-10-06T07:52:13Z,ERROR,null_pointer,req-74d99f,Null reference encountered in handler at UserHandler.py:213
+351,2026-10-01T10:26:12Z,WARNING,db_timeout,req-8c91bd,Database query timed out after 45 seconds
+352,2026-10-04T14:09:12Z,WARNING,validation_error,req-3503ae,Value 9890 is outside the permitted range
+353,2026-10-02T05:50:02Z,ERROR,db_connection_failure,req-5037cd,Database connection refused by server db-01.internal
+354,2026-10-02T07:21:54Z,ERROR,auth_failure,req-529b20,Unauthorized access attempt from client 337
+355,2026-10-02T21:13:14Z,ERROR,payment_gateway_error,req-eb8510,Gateway response failed with status 502
+356,2026-10-05T07:20:39Z,ERROR,db_connection_failure,req-2d14e9,Failed to establish database connection after 4 attempts
+357,2026-10-03T07:39:28Z,ERROR,null_pointer,req-c17e3d,Cannot invoke method because object reference is null
+358,2026-10-04T12:00:18Z,ERROR,null_pointer,req-f82f2d,Cannot invoke method because object reference is null
+359,2026-10-02T14:41:00Z,ERROR,request_timeout,req-813834,Request timed out while waiting for server response
+360,2026-10-04T06:16:59Z,CRITICAL,db_connection_failure,req-e2ec13,Could not connect to database at db-02.internal:5433
+361,2026-10-01T07:06:38Z,ERROR,file_not_found,req-f69398,No such file or directory: /reports/daily_108.csv
+362,2026-10-04T22:23:37Z,WARNING,db_timeout,req-a6091a,Database operation timed out while waiting for response
+363,2026-10-02T01:47:10Z,ERROR,request_timeout,req-b50b9f,Connection request exceeded timeout limit of 60s
+364,2026-10-02T15:12:24Z,ERROR,null_pointer,req-2ef6a1,NullPointerException at OrderService.java:170
+365,2026-10-02T09:04:11Z,CRITICAL,null_pointer,req-b26c88,Null reference encountered in handler at OrderService.java:114
+366,2026-10-06T05:12:50Z,CRITICAL,db_connection_failure,req-9b4e2c,Database connection refused by server db-02.internal
+367,2026-10-07T07:00:23Z,ERROR,db_connection_failure,req-9f64ee,Failed to establish database connection after 3 attempts
+368,2026-10-07T17:32:22Z,ERROR,db_connection_failure,req-ee8790,Could not connect to database at db-02.internal:5432
+369,2026-10-07T01:25:55Z,CRITICAL,db_connection_failure,req-a79463,Database connection refused by server db-02.internal
+370,2026-10-03T17:42:20Z,ERROR,db_connection_failure,req-738792,Could not connect to database at db-02.internal:5432
+371,2026-10-05T17:53:05Z,WARNING,db_timeout,req-4b83b5,Query execution exceeded timeout limit of 10s
+372,2026-10-01T22:06:14Z,WARNING,request_timeout,req-e6c71f,Request timed out while waiting for server response
+373,2026-10-01T16:37:10Z,WARNING,auth_failure,req-ca6425,Unauthorized access attempt from client 262
+374,2026-10-06T06:36:31Z,ERROR,db_connection_failure,req-6bcd5c,Database connection refused by server db-01.internal
+375,2026-10-07T16:28:43Z,ERROR,request_timeout,req-4ede79,Request timed out while waiting for server response
+376,2026-10-04T23:53:54Z,ERROR,auth_failure,req-4d7ec4,Invalid credentials received for user 5906
+377,2026-10-01T02:23:22Z,ERROR,db_timeout,req-171726,Database query timed out after 45 seconds
+378,2026-10-06T19:37:31Z,ERROR,validation_error,req-f30b15,Value 9302 is outside the permitted range
+379,2026-10-01T23:24:39Z,ERROR,null_pointer,req-3c7686,Cannot invoke method because object reference is null
+380,2026-10-07T19:15:11Z,CRITICAL,payment_gateway_error,req-c1bbb7,Gateway response failed with status 502
+381,2026-10-05T18:38:56Z,WARNING,file_not_found,req-1c68a6,File lookup failed for resource invoice_472
+382,2026-10-07T22:04:16Z,ERROR,db_timeout,req-606cc2,Query execution exceeded timeout limit of 45s
+383,2026-10-02T03:14:05Z,ERROR,auth_failure,req-7743c1,Unauthorized access attempt from client 506
+384,2026-10-05T15:43:01Z,WARNING,db_timeout,req-96b31f,Database query timed out after 30 seconds
+385,2026-10-05T08:43:04Z,WARNING,validation_error,req-053f1a,Request validation failed for field quantity
+386,2026-10-06T20:28:39Z,ERROR,db_timeout,req-9ee410,Query execution exceeded timeout limit of 60s
+387,2026-10-05T00:42:01Z,ERROR,db_connection_failure,req-dfcaf0,Could not connect to database at db-02.internal:5432
+388,2026-10-06T10:50:23Z,WARNING,db_timeout,req-fe268e,Query execution exceeded timeout limit of 60s
+389,2026-10-04T16:04:38Z,ERROR,null_pointer,req-949002,NullPointerException at UserHandler.py:246
+390,2026-10-07T13:30:36Z,ERROR,db_timeout,req-80a237,Query execution exceeded timeout limit of 60s
+391,2026-10-04T11:54:59Z,CRITICAL,db_connection_failure,req-48603b,Could not connect to database at db-01.internal:5433
+392,2026-10-05T09:57:33Z,WARNING,file_not_found,req-79477a,No such file or directory: /documents/invoice_472.pdf
+393,2026-10-02T06:01:11Z,WARNING,auth_failure,req-baff36,Invalid credentials received for user 7574
+394,2026-10-02T13:15:59Z,WARNING,db_timeout,req-423701,Database operation timed out while waiting for response
+395,2026-10-04T19:14:37Z,ERROR,null_pointer,req-ef5448,Cannot invoke method because object reference is null
+396,2026-10-02T13:41:10Z,ERROR,request_timeout,req-83601f,Connection request exceeded timeout limit of 10s
+397,2026-10-07T17:46:41Z,ERROR,db_timeout,req-d7e452,Query execution exceeded timeout limit of 15s
+398,2026-10-03T03:41:20Z,ERROR,db_connection_failure,req-0f3f0f,Could not connect to database at db-01.internal:5432
+399,2026-10-05T16:30:02Z,CRITICAL,null_pointer,req-662c4f,Cannot invoke method because object reference is null
+400,2026-10-07T16:11:20Z,ERROR,db_timeout,req-81338b,Database operation timed out while waiting for response
+401,2026-10-03T02:19:22Z,ERROR,db_connection_failure,req-f45707,Could not connect to database at db-01.internal:5432
+402,2026-10-02T00:57:50Z,ERROR,auth_failure,req-1feb21,Invalid credentials received for user 8949
+403,2026-10-03T06:51:42Z,ERROR,validation_error,req-e3fb1c,Value 2020 is outside the permitted range
+404,2026-10-05T13:09:35Z,ERROR,payment_gateway_error,req-252d34,Payment request failed after 2 attempts
+405,2026-10-02T21:04:57Z,ERROR,db_timeout,req-a6cdae,Query execution exceeded timeout limit of 60s
+406,2026-10-01T07:43:44Z,CRITICAL,db_connection_failure,req-32e706,Could not connect to database at db-02.internal:3306
+407,2026-10-07T19:42:31Z,ERROR,null_pointer,req-f79f8f,NullPointerException at UserHandler.py:199
+408,2026-10-03T12:21:13Z,WARNING,request_timeout,req-b0d18d,Connection request exceeded timeout limit of 15s
+409,2026-10-07T22:27:32Z,ERROR,file_not_found,req-484fda,Unable to locate requested file /documents/invoice_472.pdf
+410,2026-10-03T17:24:15Z,ERROR,request_timeout,req-47269e,Connection request exceeded timeout limit of 45s
+411,2026-10-07T19:08:44Z,WARNING,request_timeout,req-00801e,Connection request exceeded timeout limit of 45s
+412,2026-10-05T04:12:42Z,CRITICAL,payment_gateway_error,req-f93c82,Gateway response failed with status 502
+413,2026-10-04T21:47:46Z,ERROR,db_timeout,req-18a440,Database query timed out after 15 seconds
+414,2026-10-05T19:59:44Z,ERROR,db_connection_failure,req-4a9c58,Failed to establish database connection after 5 attempts
+415,2026-10-05T22:21:25Z,ERROR,payment_gateway_error,req-fedb5a,Gateway response failed with status 502
+416,2026-10-02T05:16:37Z,WARNING,auth_failure,req-4b4d10,Unauthorized access attempt from client 257
+417,2026-10-04T10:41:59Z,ERROR,request_timeout,req-17c305,Connection request exceeded timeout limit of 10s
+418,2026-10-02T03:02:42Z,ERROR,payment_gateway_error,req-81b74f,Payment provider returned HTTP 502 for transaction TX432272
+419,2026-10-01T15:53:36Z,ERROR,db_timeout,req-a4b5c7,Database operation timed out while waiting for response
+420,2026-10-04T15:35:00Z,ERROR,payment_gateway_error,req-ffecc4,Payment request failed after 2 attempts
+421,2026-10-05T13:55:27Z,WARNING,request_timeout,req-e3dc87,Upstream request timed out after 30 seconds
+422,2026-10-07T21:28:01Z,ERROR,payment_gateway_error,req-698e09,Payment request failed after 5 attempts
+423,2026-10-02T13:05:08Z,ERROR,payment_gateway_error,req-593894,Gateway response failed with status 502
+424,2026-10-03T08:45:50Z,ERROR,auth_failure,req-c078bc,Unauthorized access attempt from client 859
+425,2026-10-01T12:47:18Z,ERROR,db_timeout,req-e98965,Database operation timed out while waiting for response
+426,2026-10-03T20:31:08Z,ERROR,db_timeout,req-b3c4d0,Database operation timed out while waiting for response
+427,2026-10-06T20:35:54Z,ERROR,null_pointer,req-178029,Cannot invoke method because object reference is null
+428,2026-10-07T20:52:46Z,ERROR,db_timeout,req-e5605c,Database operation timed out while waiting for response
+429,2026-10-07T00:34:25Z,ERROR,db_timeout,req-b02e21,Query execution exceeded timeout limit of 10s
+430,2026-10-04T08:11:38Z,WARNING,db_timeout,req-ea1af7,Database query timed out after 30 seconds
+431,2026-10-02T22:40:10Z,WARNING,request_timeout,req-a1a054,Connection request exceeded timeout limit of 10s
+432,2026-10-06T19:58:55Z,ERROR,db_connection_failure,req-8df661,Failed to establish database connection after 2 attempts
+433,2026-10-04T19:11:07Z,CRITICAL,db_connection_failure,req-6de593,Failed to establish database connection after 2 attempts
+434,2026-10-01T09:25:58Z,CRITICAL,db_connection_failure,req-2747b9,Database connection refused by server db-02.internal
+435,2026-10-06T03:31:17Z,ERROR,null_pointer,req-9df205,Cannot invoke method because object reference is null
+436,2026-10-01T03:55:00Z,ERROR,file_not_found,req-dec2c7,No such file or directory: /uploads/image_2931.png
+437,2026-10-01T21:33:11Z,ERROR,db_timeout,req-c6f06a,Query execution exceeded timeout limit of 30s
+438,2026-10-07T22:12:37Z,WARNING,db_timeout,req-b5caa9,Database operation timed out while waiting for response
+439,2026-10-07T06:30:37Z,WARNING,validation_error,req-2c85ef,Request validation failed for field email
+440,2026-10-05T20:38:24Z,CRITICAL,db_connection_failure,req-0964fb,Could not connect to database at db-02.internal:5433
+441,2026-10-04T05:11:17Z,ERROR,db_timeout,req-a4515a,Database query timed out after 15 seconds
+442,2026-10-05T16:18:13Z,ERROR,file_not_found,req-f31b38,No such file or directory: /uploads/image_2931.png
+443,2026-10-04T01:54:46Z,ERROR,null_pointer,req-ebeb9d,Null reference encountered in handler at PaymentController.java:104
+444,2026-10-03T18:06:51Z,ERROR,file_not_found,req-200196,No such file or directory: /documents/invoice_472.pdf
+445,2026-10-07T17:41:59Z,WARNING,request_timeout,req-0ab2e2,Request timed out while waiting for server response
+446,2026-10-01T08:43:54Z,ERROR,null_pointer,req-568a22,Cannot invoke method because object reference is null
+447,2026-10-06T12:31:50Z,ERROR,db_connection_failure,req-6c4a37,Could not connect to database at db-01.internal:5433
+448,2026-10-04T22:16:15Z,CRITICAL,db_connection_failure,req-4aea1b,Failed to establish database connection after 2 attempts
+449,2026-10-01T12:13:53Z,WARNING,db_timeout,req-c891d5,Database operation timed out while waiting for response
+450,2026-10-01T15:22:17Z,ERROR,db_timeout,req-88f7f0,Query execution exceeded timeout limit of 60s
+451,2026-10-04T06:41:38Z,ERROR,null_pointer,req-1b678e,Null reference encountered in handler at PaymentController.java:212
+452,2026-10-03T10:16:16Z,WARNING,file_not_found,req-f52d82,Unable to locate requested file /reports/daily_108.csv
+453,2026-10-03T15:49:41Z,ERROR,validation_error,req-a51f4e,Invalid input for field email
+454,2026-10-06T09:19:00Z,WARNING,auth_failure,req-b1fbb5,Authentication failed with HTTP status 401
+455,2026-10-04T03:12:06Z,CRITICAL,payment_gateway_error,req-ae2e69,Payment provider returned HTTP 502 for transaction TX391595
+456,2026-10-07T16:14:44Z,ERROR,db_timeout,req-12a850,Database operation timed out while waiting for response
+457,2026-10-01T14:29:39Z,CRITICAL,db_connection_failure,req-14e286,Database connection refused by server db-02.internal
+458,2026-10-05T08:34:39Z,ERROR,db_connection_failure,req-7c0f54,Could not connect to database at db-02.internal:3306
+459,2026-10-01T18:30:45Z,ERROR,db_connection_failure,req-72c22a,Failed to establish database connection after 3 attempts
+460,2026-10-06T13:24:40Z,ERROR,null_pointer,req-9e0383,Null reference encountered in handler at PaymentController.java:225
+461,2026-10-02T09:44:37Z,ERROR,validation_error,req-0a2d6f,Invalid input for field email
+462,2026-10-03T08:05:39Z,ERROR,db_connection_failure,req-1e9b23,Could not connect to database at db-01.internal:3306
+463,2026-10-05T14:45:57Z,WARNING,auth_failure,req-efbbd2,Authentication failed with HTTP status 401
+464,2026-10-07T13:23:38Z,CRITICAL,payment_gateway_error,req-13b8ec,Gateway response failed with status 502
+465,2026-10-01T12:33:29Z,ERROR,request_timeout,req-a51599,Request timed out while waiting for server response
+466,2026-10-04T16:52:50Z,ERROR,null_pointer,req-8aa2f7,NullPointerException at PaymentController.java:151
+467,2026-10-04T00:23:30Z,ERROR,auth_failure,req-73b0e7,Unauthorized access attempt from client 117
+468,2026-10-06T18:18:40Z,ERROR,request_timeout,req-3f1093,Upstream request timed out after 30 seconds
+469,2026-10-03T18:37:56Z,ERROR,auth_failure,req-a2b8fd,Authentication failed with HTTP status 401
+470,2026-10-03T20:22:00Z,CRITICAL,payment_gateway_error,req-ebd235,Gateway response failed with status 502
+471,2026-10-01T23:01:08Z,ERROR,db_connection_failure,req-ec8be5,Failed to establish database connection after 5 attempts
+472,2026-10-03T09:12:53Z,ERROR,db_timeout,req-bbc994,Database operation timed out while waiting for response
+473,2026-10-04T18:08:20Z,ERROR,db_connection_failure,req-e76adc,Database connection refused by server db-02.internal
+474,2026-10-07T05:58:35Z,ERROR,request_timeout,req-1223d9,Connection request exceeded timeout limit of 45s
+475,2026-10-02T17:47:36Z,WARNING,file_not_found,req-af2f5f,No such file or directory: /documents/invoice_472.pdf
+476,2026-10-01T11:56:55Z,ERROR,db_connection_failure,req-e8b77f,Database connection refused by server db-02.internal
+477,2026-10-04T21:49:02Z,ERROR,db_connection_failure,req-c2efee,Database connection refused by server db-01.internal
+478,2026-10-06T01:13:10Z,CRITICAL,db_connection_failure,req-989bc4,Failed to establish database connection after 5 attempts
+479,2026-10-03T01:38:58Z,WARNING,file_not_found,req-960f96,Unable to locate requested file /documents/invoice_472.pdf
+480,2026-10-06T05:08:33Z,ERROR,db_connection_failure,req-7ea5a3,Database connection refused by server db-02.internal
+481,2026-10-01T19:13:50Z,ERROR,file_not_found,req-9f8c1c,File lookup failed for resource invoice_472
+482,2026-10-01T05:03:55Z,ERROR,null_pointer,req-ae1782,NullPointerException at UserHandler.py:155
+483,2026-10-01T19:35:59Z,ERROR,db_connection_failure,req-980cb9,Database connection refused by server db-01.internal
+484,2026-10-06T09:34:13Z,ERROR,db_timeout,req-f833eb,Database operation timed out while waiting for response
+485,2026-10-04T06:25:24Z,ERROR,auth_failure,req-47d283,Unauthorized access attempt from client 141
+486,2026-10-02T14:44:54Z,CRITICAL,payment_gateway_error,req-1a873c,Payment request failed after 3 attempts
+487,2026-10-06T01:30:00Z,WARNING,request_timeout,req-1defd4,Connection request exceeded timeout limit of 10s
+488,2026-10-02T09:53:01Z,CRITICAL,payment_gateway_error,req-01368f,Payment request failed after 5 attempts
+489,2026-10-04T13:38:54Z,ERROR,db_timeout,req-d9e927,Query execution exceeded timeout limit of 45s
+490,2026-10-02T23:12:43Z,CRITICAL,null_pointer,req-d057ab,NullPointerException at OrderService.java:132
+491,2026-10-02T19:21:25Z,WARNING,db_timeout,req-a3ed03,Database query timed out after 30 seconds
+492,2026-10-05T16:14:11Z,ERROR,auth_failure,req-bc547d,Invalid credentials received for user 3422
+493,2026-10-03T20:03:31Z,ERROR,db_timeout,req-aefa82,Query execution exceeded timeout limit of 10s
+494,2026-10-06T01:48:47Z,WARNING,auth_failure,req-b62b9f,Unauthorized access attempt from client 169
+495,2026-10-03T01:30:40Z,ERROR,db_connection_failure,req-143745,Failed to establish database connection after 3 attempts
+496,2026-10-04T22:56:59Z,ERROR,db_connection_failure,req-752206,Database connection refused by server db-02.internal
+497,2026-10-07T02:41:23Z,WARNING,file_not_found,req-c4bfa4,File lookup failed for resource invoice_472
+498,2026-10-03T21:18:25Z,WARNING,db_timeout,req-70aff6,Database query timed out after 10 seconds
+499,2026-10-05T02:29:44Z,WARNING,file_not_found,req-69a2e4,No such file or directory: /uploads/image_2931.png
+500,2026-10-01T11:24:03Z,ERROR,db_connection_failure,req-b526b2,Database connection refused by server db-01.internal
+501,2026-10-03T21:03:37Z,WARNING,auth_failure,req-302598,Authentication failed with HTTP status 401
+502,2026-10-07T20:15:03Z,ERROR,db_connection_failure,req-8f0d55,Failed to establish database connection after 2 attempts
+503,2026-10-07T21:46:45Z,ERROR,request_timeout,req-361c23,Connection request exceeded timeout limit of 10s
+504,2026-10-04T16:34:01Z,WARNING,db_timeout,req-c8f72c,Database query timed out after 60 seconds
+505,2026-10-03T23:53:50Z,WARNING,auth_failure,req-54323b,Authentication failed with HTTP status 401
+506,2026-10-03T08:46:34Z,WARNING,db_timeout,req-566047,Query execution exceeded timeout limit of 10s
+507,2026-10-03T14:49:43Z,ERROR,auth_failure,req-4a9f6c,Invalid credentials received for user 1861
+508,2026-10-04T15:27:11Z,ERROR,file_not_found,req-503fe0,No such file or directory: /uploads/image_2931.png
+509,2026-10-06T17:59:16Z,CRITICAL,db_connection_failure,req-74fd33,Failed to establish database connection after 4 attempts
+510,2026-10-03T23:35:28Z,WARNING,validation_error,req-2cd64d,Value 6571 is outside the permitted range
+511,2026-10-01T20:15:33Z,ERROR,db_connection_failure,req-a9488d,Database connection refused by server db-01.internal
+512,2026-10-03T18:16:36Z,CRITICAL,db_connection_failure,req-0d259c,Could not connect to database at db-02.internal:5432
+513,2026-10-04T10:13:32Z,ERROR,payment_gateway_error,req-1af03c,Payment provider returned HTTP 502 for transaction TX719482
+514,2026-10-02T00:51:51Z,ERROR,db_connection_failure,req-6e8f75,Failed to establish database connection after 2 attempts
+515,2026-10-07T13:20:32Z,ERROR,db_connection_failure,req-965bef,Database connection refused by server db-01.internal
+516,2026-10-04T11:01:22Z,WARNING,auth_failure,req-a4c755,Authentication failed with HTTP status 401
+517,2026-10-01T23:18:47Z,WARNING,db_timeout,req-09aa55,Query execution exceeded timeout limit of 15s
+518,2026-10-04T11:33:34Z,ERROR,db_connection_failure,req-b231c6,Failed to establish database connection after 2 attempts
+519,2026-10-03T11:45:54Z,WARNING,db_timeout,req-095b81,Query execution exceeded timeout limit of 10s
+520,2026-10-04T10:18:07Z,CRITICAL,payment_gateway_error,req-22ae88,Payment provider returned HTTP 502 for transaction TX186391
+521,2026-10-07T09:09:16Z,ERROR,db_connection_failure,req-a1791e,Database connection refused by server db-02.internal
+522,2026-10-06T23:16:20Z,ERROR,request_timeout,req-a510af,Upstream request timed out after 10 seconds
+523,2026-10-06T14:27:25Z,CRITICAL,db_connection_failure,req-35ab84,Database connection refused by server db-01.internal
+524,2026-10-06T04:13:11Z,CRITICAL,null_pointer,req-24a0db,Cannot invoke method because object reference is null
+525,2026-10-01T09:33:55Z,CRITICAL,payment_gateway_error,req-a05be2,Gateway response failed with status 502
+526,2026-10-04T03:03:31Z,WARNING,db_timeout,req-d02a6c,Database operation timed out while waiting for response
+527,2026-10-03T02:15:08Z,CRITICAL,db_connection_failure,req-b4bba7,Failed to establish database connection after 3 attempts
+528,2026-10-04T07:15:20Z,ERROR,payment_gateway_error,req-61aa18,Payment provider returned HTTP 502 for transaction TX648236
+529,2026-10-07T14:14:51Z,CRITICAL,db_connection_failure,req-7e710b,Failed to establish database connection after 3 attempts
+530,2026-10-01T00:27:20Z,CRITICAL,db_connection_failure,req-5a5226,Failed to establish database connection after 2 attempts
+531,2026-10-07T16:41:18Z,CRITICAL,db_connection_failure,req-6d7ce3,Could not connect to database at db-01.internal:3306
+532,2026-10-04T16:11:48Z,ERROR,request_timeout,req-d02973,Connection request exceeded timeout limit of 15s
+533,2026-10-07T23:32:45Z,CRITICAL,payment_gateway_error,req-743c6d,Payment provider returned HTTP 502 for transaction TX108952
+534,2026-10-01T01:04:36Z,ERROR,request_timeout,req-39182c,Request timed out while waiting for server response
+535,2026-10-06T00:30:43Z,WARNING,auth_failure,req-7c8c65,Invalid credentials received for user 3639
+536,2026-10-04T21:57:57Z,WARNING,request_timeout,req-d3aa9b,Request timed out while waiting for server response
+537,2026-10-07T16:17:37Z,ERROR,db_connection_failure,req-0cf35b,Could not connect to database at db-01.internal:5432
+538,2026-10-05T12:25:21Z,CRITICAL,db_connection_failure,req-a15b2e,Failed to establish database connection after 2 attempts
+539,2026-10-07T18:13:14Z,ERROR,null_pointer,req-b6448d,NullPointerException at UserHandler.py:144
+540,2026-10-01T06:53:49Z,CRITICAL,payment_gateway_error,req-6d7088,Gateway response failed with status 502
+541,2026-10-06T00:34:12Z,WARNING,auth_failure,req-cb22eb,Invalid credentials received for user 9144
+542,2026-10-06T00:54:01Z,WARNING,auth_failure,req-4d0e39,Authentication failed with HTTP status 401
+543,2026-10-06T01:47:26Z,ERROR,db_connection_failure,req-f67294,Database connection refused by server db-02.internal
+544,2026-10-05T20:40:18Z,ERROR,db_timeout,req-cd04c0,Database query timed out after 10 seconds
+545,2026-10-05T02:26:06Z,CRITICAL,db_connection_failure,req-fc3b0d,Failed to establish database connection after 3 attempts
+546,2026-10-04T13:50:43Z,ERROR,null_pointer,req-74300c,NullPointerException at UserHandler.py:130
+547,2026-10-07T23:31:15Z,ERROR,null_pointer,req-507a61,Cannot invoke method because object reference is null
+548,2026-10-03T06:44:05Z,CRITICAL,null_pointer,req-1ac2c9,NullPointerException at OrderService.java:133
+549,2026-10-02T16:50:31Z,ERROR,payment_gateway_error,req-7845a5,Payment provider returned HTTP 502 for transaction TX265132
+550,2026-10-07T10:42:06Z,ERROR,db_connection_failure,req-0e8fa8,Could not connect to database at db-01.internal:3306
+551,2026-10-03T02:01:19Z,WARNING,request_timeout,req-3a0e61,Request timed out while waiting for server response
+552,2026-10-07T05:12:25Z,ERROR,request_timeout,req-561c9a,Request timed out while waiting for server response
+553,2026-10-03T08:59:19Z,WARNING,auth_failure,req-a6b788,Authentication failed with HTTP status 401
+554,2026-10-06T00:31:54Z,ERROR,db_connection_failure,req-d3d1bf,Database connection refused by server db-02.internal
+555,2026-10-04T05:05:01Z,CRITICAL,db_connection_failure,req-14c8b3,Could not connect to database at db-01.internal:3306
+556,2026-10-02T18:40:07Z,ERROR,null_pointer,req-2a3189,NullPointerException at UserHandler.py:210
+557,2026-10-07T20:10:21Z,WARNING,auth_failure,req-a5d453,Authentication failed with HTTP status 401
+558,2026-10-07T23:45:45Z,ERROR,request_timeout,req-232805,Upstream request timed out after 30 seconds
+559,2026-10-01T13:17:24Z,CRITICAL,null_pointer,req-72984b,NullPointerException at PaymentController.java:45
+560,2026-10-04T18:43:12Z,WARNING,auth_failure,req-b8bf9c,Invalid credentials received for user 5675
+561,2026-10-05T21:00:33Z,ERROR,db_timeout,req-6552ac,Database operation timed out while waiting for response
+562,2026-10-02T00:54:51Z,ERROR,null_pointer,req-c5767c,Cannot invoke method because object reference is null
+563,2026-10-06T10:45:17Z,ERROR,auth_failure,req-82d29b,Unauthorized access attempt from client 416
+564,2026-10-07T14:20:54Z,ERROR,null_pointer,req-7eb3ae,NullPointerException at OrderService.java:174
+565,2026-10-04T05:45:46Z,CRITICAL,db_connection_failure,req-efc898,Failed to establish database connection after 3 attempts
+566,2026-10-01T18:49:15Z,ERROR,auth_failure,req-11ea88,Invalid credentials received for user 3845
+567,2026-10-02T17:14:28Z,WARNING,request_timeout,req-a76180,Request timed out while waiting for server response
+568,2026-10-04T00:18:17Z,ERROR,db_timeout,req-65dace,Query execution exceeded timeout limit of 45s
+569,2026-10-07T04:59:21Z,WARNING,db_timeout,req-f76b97,Database operation timed out while waiting for response
+570,2026-10-05T23:57:45Z,CRITICAL,null_pointer,req-bd9223,NullPointerException at PaymentController.java:243
+571,2026-10-04T05:05:37Z,ERROR,payment_gateway_error,req-7c45d6,Gateway response failed with status 502
+572,2026-10-03T03:41:53Z,ERROR,payment_gateway_error,req-261b04,Payment provider returned HTTP 502 for transaction TX466009
+573,2026-10-02T00:20:56Z,ERROR,auth_failure,req-2483c4,Invalid credentials received for user 4314
+574,2026-10-06T08:03:16Z,ERROR,payment_gateway_error,req-d58b54,Payment provider returned HTTP 502 for transaction TX559849
+575,2026-10-04T13:53:40Z,ERROR,auth_failure,req-fc3a15,Unauthorized access attempt from client 362
+576,2026-10-01T10:17:14Z,WARNING,db_timeout,req-b54401,Query execution exceeded timeout limit of 30s
+577,2026-10-05T01:12:15Z,WARNING,auth_failure,req-5c494d,Invalid credentials received for user 6486
+578,2026-10-07T11:38:00Z,WARNING,auth_failure,req-5855e4,Unauthorized access attempt from client 330
+579,2026-10-02T03:59:40Z,WARNING,request_timeout,req-833d3d,Request timed out while waiting for server response
+580,2026-10-07T22:35:04Z,ERROR,db_connection_failure,req-9326df,Failed to establish database connection after 5 attempts
+581,2026-10-01T12:52:52Z,ERROR,request_timeout,req-fdc419,Connection request exceeded timeout limit of 45s
+582,2026-10-07T19:59:01Z,ERROR,db_connection_failure,req-12c136,Failed to establish database connection after 4 attempts
+583,2026-10-05T13:55:58Z,WARNING,file_not_found,req-098364,Unable to locate requested file /uploads/image_2931.png
+584,2026-10-03T22:06:13Z,ERROR,null_pointer,req-82f2a5,Cannot invoke method because object reference is null
+585,2026-10-07T10:32:41Z,WARNING,file_not_found,req-ad1abf,No such file or directory: /uploads/image_2931.png
+586,2026-10-05T16:02:56Z,WARNING,request_timeout,req-a3922a,Connection request exceeded timeout limit of 45s
+587,2026-10-01T03:27:48Z,ERROR,auth_failure,req-a77282,Authentication failed with HTTP status 401
+588,2026-10-05T19:05:37Z,ERROR,db_timeout,req-960959,Database operation timed out while waiting for response
+589,2026-10-05T19:11:18Z,ERROR,payment_gateway_error,req-b22d2b,Payment provider returned HTTP 502 for transaction TX612267
+590,2026-10-02T18:01:26Z,ERROR,request_timeout,req-2cd6e8,Request timed out while waiting for server response
+591,2026-10-06T07:08:49Z,ERROR,null_pointer,req-3cf8b9,NullPointerException at PaymentController.java:103
+592,2026-10-05T03:44:17Z,WARNING,auth_failure,req-7c7dd4,Unauthorized access attempt from client 658
+593,2026-10-07T04:11:46Z,WARNING,file_not_found,req-05e3d1,No such file or directory: /uploads/image_2931.png
+594,2026-10-01T08:44:35Z,ERROR,request_timeout,req-1d7d0b,Request timed out while waiting for server response
+595,2026-10-03T22:07:46Z,WARNING,file_not_found,req-a7a3bc,Unable to locate requested file /documents/invoice_472.pdf
+596,2026-10-06T12:52:44Z,ERROR,request_timeout,req-5ea0c5,Connection request exceeded timeout limit of 10s
+597,2026-10-02T19:17:32Z,ERROR,db_timeout,req-647ac5,Database operation timed out while waiting for response
+598,2026-10-05T06:32:04Z,ERROR,payment_gateway_error,req-6b0dd8,Gateway response failed with status 502
+599,2026-10-06T11:14:05Z,WARNING,auth_failure,req-a26107,Unauthorized access attempt from client 813
+600,2026-10-02T02:29:12Z,WARNING,auth_failure,req-615eca,Unauthorized access attempt from client 536
+601,2026-10-01T00:22:23Z,ERROR,db_connection_failure,req-62ccc6,Failed to establish database connection after 5 attempts
+602,2026-10-01T14:44:57Z,ERROR,db_connection_failure,req-ec93e5,Failed to establish database connection after 2 attempts
+603,2026-10-03T14:47:33Z,ERROR,request_timeout,req-d1b22e,Upstream request timed out after 10 seconds
+604,2026-10-06T17:26:01Z,ERROR,payment_gateway_error,req-e17f5e,Gateway response failed with status 502
+605,2026-10-01T21:51:26Z,CRITICAL,db_connection_failure,req-a33405,Database connection refused by server db-01.internal
+606,2026-10-06T23:40:55Z,CRITICAL,null_pointer,req-0c5c99,Cannot invoke method because object reference is null
+607,2026-10-05T16:34:58Z,ERROR,db_timeout,req-fad3b4,Database operation timed out while waiting for response
+608,2026-10-07T23:39:47Z,ERROR,payment_gateway_error,req-1e12bb,Gateway response failed with status 502
+609,2026-10-01T07:35:51Z,ERROR,db_timeout,req-145880,Database query timed out after 15 seconds
+610,2026-10-07T03:22:53Z,ERROR,db_timeout,req-cc8ceb,Database operation timed out while waiting for response
+611,2026-10-04T22:25:02Z,ERROR,db_connection_failure,req-04fc6d,Database connection refused by server db-02.internal
+612,2026-10-03T04:53:56Z,CRITICAL,payment_gateway_error,req-e10b37,Payment provider returned HTTP 502 for transaction TX491311
+613,2026-10-01T22:09:56Z,ERROR,file_not_found,req-6ae06e,Unable to locate requested file /uploads/image_2931.png
+614,2026-10-05T12:18:26Z,CRITICAL,db_connection_failure,req-e75f74,Could not connect to database at db-02.internal:3306
+615,2026-10-01T10:05:32Z,CRITICAL,db_connection_failure,req-9e825a,Failed to establish database connection after 5 attempts
+616,2026-10-01T01:55:18Z,WARNING,db_timeout,req-e1ccff,Query execution exceeded timeout limit of 60s
+617,2026-10-07T03:10:18Z,ERROR,request_timeout,req-bb6372,Request timed out while waiting for server response
+618,2026-10-05T07:02:00Z,WARNING,auth_failure,req-6f1803,Authentication failed with HTTP status 401
+619,2026-10-02T14:57:01Z,ERROR,request_timeout,req-ec1916,Connection request exceeded timeout limit of 15s
+620,2026-10-04T01:36:55Z,ERROR,db_timeout,req-b3ada2,Database query timed out after 10 seconds
+621,2026-10-03T20:12:16Z,CRITICAL,db_connection_failure,req-937bf7,Failed to establish database connection after 4 attempts
+622,2026-10-04T13:42:08Z,ERROR,db_connection_failure,req-6786d5,Database connection refused by server db-02.internal
+623,2026-10-05T17:42:56Z,WARNING,auth_failure,req-2c78bc,Authentication failed with HTTP status 401
+624,2026-10-01T08:13:27Z,ERROR,validation_error,req-71c629,Value 4248 is outside the permitted range
+625,2026-10-02T10:47:08Z,ERROR,null_pointer,req-718138,Cannot invoke method because object reference is null
+626,2026-10-05T01:45:38Z,ERROR,file_not_found,req-cd9afa,Unable to locate requested file /documents/invoice_472.pdf
+627,2026-10-01T06:25:07Z,ERROR,request_timeout,req-d5bf1e,Request timed out while waiting for server response
+628,2026-10-06T17:48:36Z,WARNING,db_timeout,req-a83c1c,Database operation timed out while waiting for response
+629,2026-10-04T06:57:56Z,ERROR,null_pointer,req-5287e5,Null reference encountered in handler at PaymentController.java:135
+630,2026-10-01T18:30:13Z,ERROR,db_connection_failure,req-61b1cd,Failed to establish database connection after 2 attempts
+631,2026-10-02T16:43:42Z,ERROR,db_connection_failure,req-46e75a,Could not connect to database at db-02.internal:3306
+632,2026-10-01T13:19:24Z,ERROR,payment_gateway_error,req-660f47,Payment request failed after 2 attempts
+633,2026-10-04T15:02:08Z,ERROR,db_timeout,req-5c44eb,Database operation timed out while waiting for response
+634,2026-10-06T04:33:33Z,WARNING,request_timeout,req-62d846,Upstream request timed out after 30 seconds
+635,2026-10-05T16:18:41Z,ERROR,auth_failure,req-9a0fb0,Unauthorized access attempt from client 687
+636,2026-10-04T19:24:49Z,ERROR,null_pointer,req-14dd93,Cannot invoke method because object reference is null
+637,2026-10-07T06:21:40Z,ERROR,request_timeout,req-93ac00,Upstream request timed out after 60 seconds
+638,2026-10-03T08:15:00Z,WARNING,db_timeout,req-a8290f,Database operation timed out while waiting for response
+639,2026-10-07T17:11:30Z,ERROR,request_timeout,req-704c19,Connection request exceeded timeout limit of 60s
+640,2026-10-03T14:47:17Z,WARNING,request_timeout,req-ba098a,Request timed out while waiting for server response
+641,2026-10-03T08:05:08Z,WARNING,request_timeout,req-744da2,Upstream request timed out after 10 seconds
+642,2026-10-05T21:10:18Z,ERROR,db_connection_failure,req-a3fa40,Database connection refused by server db-01.internal
+643,2026-10-06T23:19:19Z,ERROR,db_timeout,req-24d4d5,Database query timed out after 10 seconds
+644,2026-10-05T02:25:49Z,ERROR,db_timeout,req-c1d48a,Database query timed out after 60 seconds
+645,2026-10-06T21:42:05Z,CRITICAL,null_pointer,req-5d4210,NullPointerException at PaymentController.java:172
+646,2026-10-03T00:19:42Z,ERROR,db_connection_failure,req-9854ce,Database connection refused by server db-01.internal
+647,2026-10-04T18:36:43Z,CRITICAL,null_pointer,req-acdeaf,NullPointerException at OrderService.java:159
+648,2026-10-05T21:55:33Z,ERROR,db_timeout,req-9ba14c,Database operation timed out while waiting for response
+649,2026-10-07T20:14:06Z,ERROR,null_pointer,req-b3fdc2,Cannot invoke method because object reference is null
+650,2026-10-05T17:43:11Z,ERROR,null_pointer,req-5b9fac,NullPointerException at PaymentController.java:54
+651,2026-10-02T05:46:37Z,ERROR,db_connection_failure,req-16591c,Database connection refused by server db-02.internal
+652,2026-10-07T05:43:51Z,ERROR,db_timeout,req-34e241,Database operation timed out while waiting for response
+653,2026-10-01T01:43:02Z,ERROR,db_connection_failure,req-4c71e0,Database connection refused by server db-01.internal
+654,2026-10-07T07:03:30Z,CRITICAL,null_pointer,req-1bf384,Null reference encountered in handler at UserHandler.py:101
+655,2026-10-04T13:47:03Z,ERROR,db_connection_failure,req-2d7e4a,Failed to establish database connection after 2 attempts
+656,2026-10-05T04:14:17Z,ERROR,db_timeout,req-696929,Query execution exceeded timeout limit of 30s
+657,2026-10-05T08:18:37Z,WARNING,auth_failure,req-3d5e69,Authentication failed with HTTP status 401
+658,2026-10-03T21:28:47Z,WARNING,auth_failure,req-176519,Authentication failed with HTTP status 401
+659,2026-10-03T11:23:15Z,ERROR,db_connection_failure,req-80773e,Failed to establish database connection after 3 attempts
+660,2026-10-05T22:04:11Z,ERROR,request_timeout,req-ca342e,Connection request exceeded timeout limit of 10s
+661,2026-10-06T18:16:15Z,WARNING,request_timeout,req-b2b8d6,Request timed out while waiting for server response
+662,2026-10-06T09:41:35Z,WARNING,request_timeout,req-78b384,Request timed out while waiting for server response
+663,2026-10-01T10:52:58Z,ERROR,db_timeout,req-e06532,Database operation timed out while waiting for response
+664,2026-10-03T15:45:37Z,ERROR,auth_failure,req-ae133a,Invalid credentials received for user 6245
+665,2026-10-05T10:02:40Z,WARNING,db_timeout,req-3d211d,Database operation timed out while waiting for response
+666,2026-10-07T08:41:53Z,ERROR,db_timeout,req-3e085c,Query execution exceeded timeout limit of 10s
+667,2026-10-03T03:40:40Z,ERROR,db_timeout,req-e6cfcb,Database operation timed out while waiting for response
+668,2026-10-01T17:43:00Z,ERROR,db_connection_failure,req-d8e88e,Database connection refused by server db-01.internal
+669,2026-10-06T19:13:17Z,CRITICAL,payment_gateway_error,req-823c79,Gateway response failed with status 502
+670,2026-10-03T21:41:45Z,ERROR,db_connection_failure,req-0cfef6,Failed to establish database connection after 2 attempts
+671,2026-10-04T00:32:20Z,WARNING,validation_error,req-632655,Request validation failed for field amount
+672,2026-10-05T03:14:21Z,ERROR,null_pointer,req-aeaf39,NullPointerException at PaymentController.java:75
+673,2026-10-05T04:15:34Z,ERROR,payment_gateway_error,req-27e78b,Payment request failed after 5 attempts
+674,2026-10-05T10:32:25Z,ERROR,db_connection_failure,req-5dae12,Database connection refused by server db-01.internal
+675,2026-10-07T12:33:41Z,WARNING,auth_failure,req-67c3bd,Authentication failed with HTTP status 401
+676,2026-10-07T11:25:43Z,ERROR,db_connection_failure,req-f4427e,Failed to establish database connection after 2 attempts
+677,2026-10-01T12:06:50Z,CRITICAL,payment_gateway_error,req-0f01fe,Payment request failed after 2 attempts
+678,2026-10-04T21:02:57Z,ERROR,file_not_found,req-6334db,No such file or directory: /documents/invoice_472.pdf
+679,2026-10-05T19:32:53Z,ERROR,db_connection_failure,req-07958c,Database connection refused by server db-02.internal
+680,2026-10-07T03:18:19Z,ERROR,db_connection_failure,req-5f8a14,Failed to establish database connection after 5 attempts
+681,2026-10-04T04:14:59Z,ERROR,request_timeout,req-da1196,Upstream request timed out after 60 seconds
+682,2026-10-02T10:17:33Z,ERROR,db_timeout,req-1d2fed,Query execution exceeded timeout limit of 30s
+683,2026-10-06T13:10:44Z,ERROR,payment_gateway_error,req-e47172,Payment request failed after 3 attempts
+684,2026-10-02T00:21:37Z,ERROR,null_pointer,req-8f962f,NullPointerException at UserHandler.py:173
+685,2026-10-04T16:43:59Z,ERROR,payment_gateway_error,req-ece027,Gateway response failed with status 502
+686,2026-10-06T05:22:24Z,ERROR,db_timeout,req-98d53c,Database query timed out after 60 seconds
+687,2026-10-04T09:33:06Z,ERROR,null_pointer,req-434fe1,NullPointerException at OrderService.java:240
+688,2026-10-03T17:11:53Z,WARNING,file_not_found,req-496fe3,Unable to locate requested file /documents/invoice_472.pdf
+689,2026-10-05T09:24:41Z,ERROR,request_timeout,req-81ee30,Request timed out while waiting for server response
+690,2026-10-06T07:25:45Z,WARNING,auth_failure,req-4882f6,Invalid credentials received for user 7738
+691,2026-10-01T19:40:35Z,ERROR,db_timeout,req-a237a8,Database operation timed out while waiting for response
+692,2026-10-04T00:03:34Z,WARNING,db_timeout,req-48bfb6,Database operation timed out while waiting for response
+693,2026-10-05T18:37:38Z,CRITICAL,payment_gateway_error,req-0173c1,Payment provider returned HTTP 502 for transaction TX958294
+694,2026-10-04T09:41:23Z,ERROR,db_timeout,req-56d2b1,Database operation timed out while waiting for response
+695,2026-10-07T16:24:17Z,ERROR,request_timeout,req-a4f070,Connection request exceeded timeout limit of 10s
+696,2026-10-04T03:12:36Z,ERROR,null_pointer,req-77ba69,NullPointerException at UserHandler.py:135
+697,2026-10-06T05:21:06Z,CRITICAL,payment_gateway_error,req-7feb25,Payment provider returned HTTP 502 for transaction TX763756
+698,2026-10-07T05:51:22Z,CRITICAL,payment_gateway_error,req-565651,Gateway response failed with status 502
+699,2026-10-01T11:34:43Z,ERROR,db_timeout,req-ec19e4,Query execution exceeded timeout limit of 10s
+700,2026-10-06T07:34:19Z,ERROR,request_timeout,req-3080be,Upstream request timed out after 45 seconds
+701,2026-10-07T07:50:22Z,ERROR,db_connection_failure,req-a07295,Database connection refused by server db-02.internal
+702,2026-10-01T12:39:08Z,WARNING,db_timeout,req-87a20e,Database query timed out after 60 seconds
+703,2026-10-01T16:22:16Z,WARNING,db_timeout,req-ca9f1d,Database query timed out after 15 seconds
+704,2026-10-06T21:32:13Z,WARNING,auth_failure,req-c2ca55,Invalid credentials received for user 5606
+705,2026-10-06T11:59:19Z,WARNING,request_timeout,req-fba2a5,Connection request exceeded timeout limit of 30s
+706,2026-10-01T07:46:05Z,ERROR,db_connection_failure,req-0da23e,Failed to establish database connection after 5 attempts
+707,2026-10-06T09:29:33Z,ERROR,request_timeout,req-38b595,Request timed out while waiting for server response
+708,2026-10-05T20:46:55Z,ERROR,auth_failure,req-db646a,Authentication failed with HTTP status 401
+709,2026-10-06T00:31:51Z,ERROR,db_connection_failure,req-c777a0,Failed to establish database connection after 3 attempts
+710,2026-10-04T09:17:50Z,WARNING,db_timeout,req-43a534,Database query timed out after 45 seconds
+711,2026-10-01T06:09:39Z,WARNING,auth_failure,req-27d199,Unauthorized access attempt from client 539
+712,2026-10-06T06:44:57Z,WARNING,request_timeout,req-d3c724,Upstream request timed out after 15 seconds
+713,2026-10-04T23:09:49Z,CRITICAL,db_connection_failure,req-6a5e69,Could not connect to database at db-01.internal:3306
+714,2026-10-07T14:34:52Z,ERROR,db_connection_failure,req-882ccd,Could not connect to database at db-01.internal:5433
+715,2026-10-01T23:48:34Z,ERROR,file_not_found,req-e17710,File lookup failed for resource invoice_472
+716,2026-10-02T04:32:47Z,WARNING,validation_error,req-b04782,Value 1459 is outside the permitted range
+717,2026-10-04T01:00:29Z,ERROR,db_connection_failure,req-1c2422,Could not connect to database at db-01.internal:5433
+718,2026-10-05T03:52:37Z,WARNING,request_timeout,req-5e6ba4,Connection request exceeded timeout limit of 60s
+719,2026-10-05T17:40:03Z,ERROR,auth_failure,req-9b72a9,Invalid credentials received for user 4568
+720,2026-10-01T22:15:57Z,CRITICAL,null_pointer,req-a740a1,Null reference encountered in handler at UserHandler.py:212
+721,2026-10-05T18:39:26Z,CRITICAL,null_pointer,req-c34055,Cannot invoke method because object reference is null
+722,2026-10-03T06:49:00Z,WARNING,file_not_found,req-d93eeb,No such file or directory: /reports/daily_108.csv
+723,2026-10-06T11:40:01Z,ERROR,db_connection_failure,req-e60fd4,Could not connect to database at db-02.internal:3306
+724,2026-10-03T01:53:01Z,ERROR,request_timeout,req-441999,Connection request exceeded timeout limit of 15s
+725,2026-10-01T20:25:04Z,ERROR,request_timeout,req-39d119,Request timed out while waiting for server response
+726,2026-10-06T01:49:15Z,CRITICAL,db_connection_failure,req-234b45,Database connection refused by server db-01.internal
+727,2026-10-06T17:24:41Z,ERROR,db_connection_failure,req-620af1,Could not connect to database at db-01.internal:3306
+728,2026-10-07T11:37:25Z,ERROR,payment_gateway_error,req-0c15cb,Gateway response failed with status 502
+729,2026-10-02T13:33:17Z,ERROR,auth_failure,req-0ba24c,Unauthorized access attempt from client 991
+730,2026-10-06T13:54:31Z,CRITICAL,db_connection_failure,req-272a6d,Could not connect to database at db-02.internal:3306
+731,2026-10-05T01:04:37Z,CRITICAL,null_pointer,req-c44fc2,Null reference encountered in handler at PaymentController.java:141
+732,2026-10-02T14:07:39Z,ERROR,auth_failure,req-c09489,Unauthorized access attempt from client 552
+733,2026-10-02T11:15:35Z,CRITICAL,db_connection_failure,req-c85aca,Database connection refused by server db-02.internal
+734,2026-10-05T16:41:14Z,ERROR,db_connection_failure,req-40ef39,Database connection refused by server db-01.internal
+735,2026-10-07T04:48:42Z,ERROR,payment_gateway_error,req-244700,Payment provider returned HTTP 502 for transaction TX656334
+736,2026-10-06T13:50:27Z,ERROR,validation_error,req-2a678c,Invalid input for field user_id
+737,2026-10-07T18:49:09Z,ERROR,payment_gateway_error,req-0ebb51,Gateway response failed with status 502
+738,2026-10-07T01:54:05Z,ERROR,validation_error,req-e5141d,Request validation failed for field quantity
+739,2026-10-07T03:46:21Z,ERROR,db_connection_failure,req-4f76e3,Database connection refused by server db-01.internal
+740,2026-10-05T20:03:47Z,ERROR,auth_failure,req-9c5dfb,Authentication failed with HTTP status 401
+741,2026-10-06T10:38:04Z,WARNING,file_not_found,req-1d80f7,No such file or directory: /uploads/image_2931.png
+742,2026-10-05T01:04:32Z,ERROR,db_timeout,req-65637d,Database query timed out after 45 seconds
+743,2026-10-06T03:44:29Z,ERROR,null_pointer,req-072915,Cannot invoke method because object reference is null
+744,2026-10-02T17:15:13Z,CRITICAL,null_pointer,req-7f71ee,NullPointerException at OrderService.java:110
+745,2026-10-05T01:12:31Z,ERROR,null_pointer,req-70fbb2,Cannot invoke method because object reference is null
+746,2026-10-02T17:51:43Z,WARNING,db_timeout,req-420fbe,Query execution exceeded timeout limit of 30s
+747,2026-10-03T08:39:34Z,ERROR,db_timeout,req-ee01b9,Database operation timed out while waiting for response
+748,2026-10-02T14:46:20Z,WARNING,file_not_found,req-3efa52,File lookup failed for resource invoice_472
+749,2026-10-02T20:30:27Z,CRITICAL,db_connection_failure,req-36c59d,Database connection refused by server db-02.internal
+750,2026-10-04T09:02:20Z,CRITICAL,db_connection_failure,req-efb3b9,Database connection refused by server db-02.internal
+751,2026-10-02T06:53:42Z,WARNING,request_timeout,req-275dd4,Upstream request timed out after 45 seconds
+752,2026-10-02T03:00:51Z,ERROR,db_connection_failure,req-18c267,Database connection refused by server db-02.internal
+753,2026-10-07T07:58:13Z,CRITICAL,payment_gateway_error,req-e4cc70,Gateway response failed with status 502
+754,2026-10-06T19:27:58Z,WARNING,file_not_found,req-1c8525,No such file or directory: /documents/invoice_472.pdf
+755,2026-10-01T20:10:23Z,ERROR,auth_failure,req-67b291,Authentication failed with HTTP status 401
+756,2026-10-05T17:58:40Z,ERROR,file_not_found,req-273166,File lookup failed for resource daily_report
+757,2026-10-03T07:55:32Z,ERROR,db_connection_failure,req-fffe77,Could not connect to database at db-01.internal:5433
+758,2026-10-02T19:58:04Z,ERROR,request_timeout,req-0ecc9f,Request timed out while waiting for server response
+759,2026-10-06T02:11:32Z,ERROR,request_timeout,req-e97fb0,Upstream request timed out after 60 seconds
+760,2026-10-05T02:58:49Z,WARNING,auth_failure,req-6b4d3d,Unauthorized access attempt from client 681
+761,2026-10-07T12:02:42Z,ERROR,db_connection_failure,req-046375,Could not connect to database at db-01.internal:5432
+762,2026-10-06T12:09:23Z,ERROR,db_connection_failure,req-f42d47,Failed to establish database connection after 2 attempts
+763,2026-10-04T10:05:28Z,ERROR,null_pointer,req-6d2f45,Null reference encountered in handler at UserHandler.py:107
+764,2026-10-05T00:33:25Z,CRITICAL,null_pointer,req-37328d,NullPointerException at OrderService.java:80
+765,2026-10-07T13:46:51Z,ERROR,null_pointer,req-eb41ea,NullPointerException at OrderService.java:117
+766,2026-10-04T02:11:39Z,ERROR,validation_error,req-1271e2,Invalid input for field user_id
+767,2026-10-01T02:15:05Z,ERROR,db_connection_failure,req-bf3c51,Could not connect to database at db-01.internal:5433
+768,2026-10-01T02:09:50Z,WARNING,db_timeout,req-7f8736,Database operation timed out while waiting for response
+769,2026-10-07T15:43:26Z,ERROR,auth_failure,req-10e2b6,Unauthorized access attempt from client 989
+770,2026-10-01T03:24:41Z,ERROR,payment_gateway_error,req-7b1429,Gateway response failed with status 502
+771,2026-10-07T17:24:38Z,ERROR,auth_failure,req-ceefd2,Authentication failed with HTTP status 401
+772,2026-10-05T19:15:13Z,ERROR,db_connection_failure,req-d773f9,Database connection refused by server db-02.internal
+773,2026-10-03T10:27:25Z,WARNING,db_timeout,req-9e32f0,Database query timed out after 10 seconds
+774,2026-10-06T14:52:36Z,CRITICAL,db_connection_failure,req-96add4,Database connection refused by server db-01.internal
+775,2026-10-04T09:36:08Z,WARNING,auth_failure,req-19cb84,Invalid credentials received for user 5986
+776,2026-10-02T09:45:31Z,ERROR,db_timeout,req-d9eb40,Database query timed out after 30 seconds
+777,2026-10-07T17:37:46Z,ERROR,db_timeout,req-40f792,Database operation timed out while waiting for response
+778,2026-10-04T07:40:14Z,ERROR,db_timeout,req-c2dd90,Database operation timed out while waiting for response
+779,2026-10-02T05:49:52Z,ERROR,request_timeout,req-2790e9,Upstream request timed out after 10 seconds
+780,2026-10-04T23:08:05Z,ERROR,payment_gateway_error,req-752f52,Payment request failed after 3 attempts
+781,2026-10-07T17:23:48Z,CRITICAL,db_connection_failure,req-ecf264,Failed to establish database connection after 3 attempts
+782,2026-10-02T11:50:22Z,WARNING,auth_failure,req-20fa15,Unauthorized access attempt from client 227
+783,2026-10-01T18:37:44Z,ERROR,request_timeout,req-1d3ae1,Connection request exceeded timeout limit of 45s
+784,2026-10-07T06:20:28Z,ERROR,request_timeout,req-5c9d3e,Request timed out while waiting for server response
+785,2026-10-03T13:00:06Z,ERROR,request_timeout,req-0c0b6c,Request timed out while waiting for server response
+786,2026-10-07T11:28:31Z,ERROR,db_timeout,req-bb0c79,Database query timed out after 10 seconds
+787,2026-10-05T10:32:31Z,ERROR,db_timeout,req-4282b6,Query execution exceeded timeout limit of 30s
+788,2026-10-05T18:43:57Z,ERROR,db_connection_failure,req-cb7e62,Failed to establish database connection after 3 attempts
+789,2026-10-01T20:16:28Z,WARNING,db_timeout,req-1bd6b0,Query execution exceeded timeout limit of 10s
+790,2026-10-01T07:03:02Z,ERROR,db_timeout,req-2b5450,Database operation timed out while waiting for response
+791,2026-10-02T11:20:53Z,ERROR,db_connection_failure,req-222282,Failed to establish database connection after 5 attempts
+792,2026-10-02T01:58:40Z,ERROR,request_timeout,req-da3356,Upstream request timed out after 15 seconds
+793,2026-10-02T19:05:41Z,WARNING,request_timeout,req-26870a,Connection request exceeded timeout limit of 60s
+794,2026-10-02T03:50:25Z,ERROR,file_not_found,req-c00c9a,File lookup failed for resource invoice_472
+795,2026-10-02T13:55:43Z,ERROR,request_timeout,req-6cc006,Upstream request timed out after 10 seconds
+796,2026-10-06T13:34:14Z,WARNING,request_timeout,req-2bd3d9,Upstream request timed out after 60 seconds
+797,2026-10-02T08:07:54Z,ERROR,request_timeout,req-22cb27,Request timed out while waiting for server response
+798,2026-10-03T21:33:25Z,CRITICAL,db_connection_failure,req-620a60,Database connection refused by server db-01.internal
+799,2026-10-01T09:45:38Z,ERROR,db_timeout,req-75f942,Database operation timed out while waiting for response
+800,2026-10-02T06:28:14Z,ERROR,null_pointer,req-5bdfd4,NullPointerException at UserHandler.py:81
+801,2026-10-05T00:38:27Z,ERROR,payment_gateway_error,req-181af6,Payment request failed after 5 attempts
+802,2026-10-06T20:56:57Z,WARNING,auth_failure,req-999921,Invalid credentials received for user 1484
+803,2026-10-06T20:08:07Z,ERROR,request_timeout,req-2528d3,Request timed out while waiting for server response
+804,2026-10-02T21:00:18Z,WARNING,auth_failure,req-0e4ddb,Unauthorized access attempt from client 403
+805,2026-10-06T19:35:14Z,CRITICAL,db_connection_failure,req-669b29,Failed to establish database connection after 2 attempts
+806,2026-10-02T05:30:10Z,ERROR,db_timeout,req-a4f341,Query execution exceeded timeout limit of 10s
+807,2026-10-06T21:44:31Z,CRITICAL,db_connection_failure,req-aac933,Could not connect to database at db-01.internal:5433
+808,2026-10-05T10:20:12Z,ERROR,db_timeout,req-4795cd,Database query timed out after 10 seconds
+809,2026-10-04T21:48:45Z,WARNING,validation_error,req-7fc092,Request validation failed for field amount
+810,2026-10-05T15:29:42Z,WARNING,auth_failure,req-4ed7b3,Unauthorized access attempt from client 866
+811,2026-10-07T03:47:36Z,WARNING,request_timeout,req-a5b1c7,Request timed out while waiting for server response
+812,2026-10-01T10:57:28Z,ERROR,request_timeout,req-2e1482,Connection request exceeded timeout limit of 30s
+813,2026-10-07T14:16:50Z,CRITICAL,null_pointer,req-4ba076,NullPointerException at UserHandler.py:69
+814,2026-10-03T17:39:48Z,WARNING,request_timeout,req-5a4b4f,Connection request exceeded timeout limit of 10s
+815,2026-10-03T13:07:19Z,ERROR,db_timeout,req-33579b,Query execution exceeded timeout limit of 45s
+816,2026-10-05T21:01:55Z,ERROR,request_timeout,req-0b840c,Upstream request timed out after 45 seconds
+817,2026-10-07T17:02:44Z,WARNING,auth_failure,req-083507,Invalid credentials received for user 5650
+818,2026-10-05T21:50:09Z,CRITICAL,null_pointer,req-fb91fb,NullPointerException at PaymentController.java:45
+819,2026-10-04T15:42:59Z,ERROR,db_connection_failure,req-0c394e,Database connection refused by server db-02.internal
+820,2026-10-04T09:39:52Z,CRITICAL,db_connection_failure,req-90422e,Could not connect to database at db-02.internal:5432
+821,2026-10-06T13:26:59Z,ERROR,request_timeout,req-02a458,Upstream request timed out after 15 seconds
+822,2026-10-05T14:17:10Z,ERROR,db_timeout,req-d12dae,Database query timed out after 10 seconds
+823,2026-10-05T08:22:36Z,ERROR,payment_gateway_error,req-1ea391,Payment request failed after 5 attempts
+824,2026-10-02T05:32:10Z,ERROR,null_pointer,req-dcca9a,NullPointerException at UserHandler.py:42
+825,2026-10-02T04:36:28Z,ERROR,db_timeout,req-226716,Database operation timed out while waiting for response
+826,2026-10-07T12:10:27Z,WARNING,auth_failure,req-2be4be,Invalid credentials received for user 6440
+827,2026-10-07T13:54:31Z,CRITICAL,db_connection_failure,req-f50d7a,Failed to establish database connection after 2 attempts
+828,2026-10-03T06:11:25Z,ERROR,db_connection_failure,req-848af4,Failed to establish database connection after 4 attempts
+829,2026-10-04T11:28:58Z,WARNING,db_timeout,req-4024c4,Database query timed out after 30 seconds
+830,2026-10-02T01:45:10Z,ERROR,file_not_found,req-74cd4a,File lookup failed for resource daily_report
+831,2026-10-04T06:27:48Z,ERROR,payment_gateway_error,req-eeced5,Gateway response failed with status 502
+832,2026-10-04T03:55:36Z,ERROR,auth_failure,req-a65741,Authentication failed with HTTP status 401
+833,2026-10-05T21:01:36Z,ERROR,file_not_found,req-77ad0a,Unable to locate requested file /reports/daily_108.csv
+834,2026-10-02T15:43:50Z,WARNING,request_timeout,req-b84634,Connection request exceeded timeout limit of 30s
+835,2026-10-01T14:26:28Z,ERROR,null_pointer,req-1d4c5e,NullPointerException at UserHandler.py:105
+836,2026-10-07T09:16:58Z,WARNING,request_timeout,req-9696dc,Request timed out while waiting for server response
+837,2026-10-02T19:33:32Z,ERROR,db_timeout,req-ce4048,Database query timed out after 60 seconds
+838,2026-10-05T16:58:18Z,ERROR,validation_error,req-a22646,Invalid input for field amount
+839,2026-10-06T22:13:14Z,WARNING,db_timeout,req-b3edd6,Database operation timed out while waiting for response
+840,2026-10-02T15:07:09Z,WARNING,db_timeout,req-bba41a,Query execution exceeded timeout limit of 30s
+841,2026-10-01T05:56:31Z,ERROR,payment_gateway_error,req-0f9733,Payment request failed after 3 attempts
+842,2026-10-05T05:18:53Z,WARNING,request_timeout,req-291a49,Connection request exceeded timeout limit of 60s
+843,2026-10-04T17:47:12Z,ERROR,db_connection_failure,req-e623a6,Database connection refused by server db-01.internal
+844,2026-10-05T03:21:53Z,CRITICAL,payment_gateway_error,req-ad8716,Payment request failed after 3 attempts
+845,2026-10-06T09:56:13Z,ERROR,db_timeout,req-f5e4a9,Database operation timed out while waiting for response
+846,2026-10-06T20:35:21Z,WARNING,db_timeout,req-adab2c,Database query timed out after 15 seconds
+847,2026-10-05T01:02:10Z,ERROR,null_pointer,req-f8673a,Cannot invoke method because object reference is null
+848,2026-10-05T14:17:04Z,WARNING,auth_failure,req-c8613a,Invalid credentials received for user 9666
+849,2026-10-07T20:08:33Z,CRITICAL,payment_gateway_error,req-b6bbcd,Gateway response failed with status 502
+850,2026-10-03T19:05:35Z,ERROR,db_timeout,req-cfa902,Database operation timed out while waiting for response
+851,2026-10-01T19:19:07Z,ERROR,payment_gateway_error,req-f7feb7,Gateway response failed with status 502
+852,2026-10-01T21:40:56Z,ERROR,request_timeout,req-326684,Request timed out while waiting for server response
+853,2026-10-04T00:20:00Z,ERROR,auth_failure,req-0bd18d,Unauthorized access attempt from client 460
+854,2026-10-07T02:38:20Z,ERROR,null_pointer,req-0dd2c8,Cannot invoke method because object reference is null
+855,2026-10-01T08:18:01Z,CRITICAL,payment_gateway_error,req-08c2d2,Gateway response failed with status 502
+856,2026-10-01T00:54:17Z,ERROR,null_pointer,req-2f6153,Null reference encountered in handler at OrderService.java:87
+857,2026-10-03T14:40:36Z,WARNING,auth_failure,req-5f2521,Invalid credentials received for user 1178
+858,2026-10-03T23:47:01Z,CRITICAL,db_connection_failure,req-12d155,Database connection refused by server db-01.internal
+859,2026-10-06T18:33:53Z,ERROR,request_timeout,req-b11c7d,Connection request exceeded timeout limit of 60s
+860,2026-10-04T22:48:18Z,ERROR,file_not_found,req-8c6743,File lookup failed for resource invoice_472
+861,2026-10-06T07:00:44Z,WARNING,auth_failure,req-f243b5,Invalid credentials received for user 7436
+862,2026-10-02T17:40:26Z,ERROR,auth_failure,req-bbab3b,Unauthorized access attempt from client 588
+863,2026-10-03T15:01:55Z,ERROR,file_not_found,req-7d91db,Unable to locate requested file /documents/invoice_472.pdf
+864,2026-10-04T04:37:32Z,ERROR,null_pointer,req-615ab3,Null reference encountered in handler at PaymentController.java:164
+865,2026-10-06T12:53:37Z,ERROR,payment_gateway_error,req-40728a,Payment request failed after 3 attempts
+866,2026-10-07T21:35:46Z,WARNING,file_not_found,req-e21d4d,File lookup failed for resource profile_image
+867,2026-10-04T12:01:07Z,WARNING,auth_failure,req-3aa066,Authentication failed with HTTP status 401
+868,2026-10-03T17:11:17Z,WARNING,auth_failure,req-c42eaf,Unauthorized access attempt from client 927
+869,2026-10-07T04:49:00Z,WARNING,db_timeout,req-49a2af,Query execution exceeded timeout limit of 60s
+870,2026-10-05T07:50:38Z,ERROR,request_timeout,req-8f9429,Request timed out while waiting for server response
+871,2026-10-03T16:29:02Z,ERROR,payment_gateway_error,req-6f0b5b,Payment provider returned HTTP 502 for transaction TX799984
+872,2026-10-01T02:21:53Z,WARNING,db_timeout,req-fc8621,Database query timed out after 60 seconds
+873,2026-10-07T02:39:13Z,ERROR,null_pointer,req-a15cf0,Null reference encountered in handler at PaymentController.java:152
+874,2026-10-06T13:25:39Z,WARNING,file_not_found,req-553a2b,No such file or directory: /documents/invoice_472.pdf
+875,2026-10-05T23:47:08Z,ERROR,db_timeout,req-7168bd,Database query timed out after 15 seconds
+876,2026-10-01T17:43:41Z,ERROR,payment_gateway_error,req-3a4317,Payment request failed after 2 attempts
+877,2026-10-04T16:59:49Z,WARNING,request_timeout,req-93683d,Upstream request timed out after 60 seconds
+878,2026-10-03T09:24:58Z,WARNING,auth_failure,req-cd7f65,Authentication failed with HTTP status 401
+879,2026-10-01T08:55:46Z,ERROR,db_connection_failure,req-bf012e,Database connection refused by server db-02.internal
+880,2026-10-05T22:16:58Z,ERROR,db_connection_failure,req-741b77,Failed to establish database connection after 5 attempts
+881,2026-10-03T11:44:58Z,ERROR,request_timeout,req-9fd609,Connection request exceeded timeout limit of 15s
+882,2026-10-02T11:21:50Z,ERROR,auth_failure,req-f00d5a,Invalid credentials received for user 2722
+883,2026-10-05T09:14:47Z,WARNING,validation_error,req-0a813e,Request validation failed for field email
+884,2026-10-06T08:09:22Z,ERROR,request_timeout,req-305d0e,Upstream request timed out after 45 seconds
+885,2026-10-03T00:41:24Z,ERROR,db_timeout,req-cef748,Database query timed out after 45 seconds
+886,2026-10-06T21:00:20Z,ERROR,payment_gateway_error,req-6388f6,Gateway response failed with status 502
+887,2026-10-05T11:33:55Z,CRITICAL,null_pointer,req-6cfad7,Null reference encountered in handler at OrderService.java:154
+888,2026-10-07T17:27:10Z,WARNING,request_timeout,req-0979f5,Request timed out while waiting for server response
+889,2026-10-01T07:26:15Z,ERROR,null_pointer,req-9be9ec,Cannot invoke method because object reference is null
+890,2026-10-02T20:47:03Z,ERROR,db_timeout,req-758fc8,Database query timed out after 15 seconds
+891,2026-10-02T09:21:36Z,ERROR,db_connection_failure,req-f6f7f0,Could not connect to database at db-01.internal:5433
+892,2026-10-03T15:46:52Z,ERROR,payment_gateway_error,req-e008e8,Gateway response failed with status 502
+893,2026-10-05T20:23:49Z,ERROR,db_connection_failure,req-f73936,Could not connect to database at db-01.internal:5432
+894,2026-10-02T09:32:44Z,ERROR,db_connection_failure,req-f6802c,Could not connect to database at db-01.internal:3306
+895,2026-10-02T08:25:39Z,ERROR,db_connection_failure,req-bdd640,Could not connect to database at db-01.internal:5432
+896,2026-10-01T22:39:46Z,ERROR,db_connection_failure,req-58c88c,Could not connect to database at db-01.internal:3306
+897,2026-10-03T10:30:47Z,ERROR,db_timeout,req-9fc972,Database operation timed out while waiting for response
+898,2026-10-01T00:27:35Z,WARNING,auth_failure,req-11e121,Unauthorized access attempt from client 280
+899,2026-10-04T13:01:08Z,WARNING,auth_failure,req-ea9265,Unauthorized access attempt from client 477
+900,2026-10-05T12:42:10Z,ERROR,request_timeout,req-bba316,Request timed out while waiting for server response
+901,2026-10-03T01:55:08Z,ERROR,db_connection_failure,req-7ff6b8,Failed to establish database connection after 2 attempts
+902,2026-10-02T22:05:09Z,ERROR,payment_gateway_error,req-d8a712,Payment request failed after 3 attempts
+903,2026-10-01T08:27:31Z,ERROR,payment_gateway_error,req-3964af,Payment request failed after 5 attempts
+904,2026-10-02T20:42:20Z,ERROR,request_timeout,req-3ce75d,Upstream request timed out after 45 seconds
+905,2026-10-01T23:53:00Z,WARNING,validation_error,req-b6617c,Request validation failed for field user_id
+906,2026-10-07T02:23:48Z,WARNING,auth_failure,req-735e81,Invalid credentials received for user 5249
+907,2026-10-05T12:37:09Z,WARNING,request_timeout,req-8a34b2,Connection request exceeded timeout limit of 45s
+908,2026-10-01T06:57:51Z,ERROR,db_connection_failure,req-8aa2b4,Failed to establish database connection after 2 attempts
+909,2026-10-07T15:58:34Z,ERROR,db_connection_failure,req-c1e1b9,Could not connect to database at db-01.internal:3306
+910,2026-10-03T14:24:03Z,CRITICAL,db_connection_failure,req-21df30,Could not connect to database at db-02.internal:5433
+911,2026-10-04T11:27:21Z,ERROR,db_timeout,req-a1b7e3,Database query timed out after 10 seconds
+912,2026-10-04T16:02:30Z,ERROR,db_connection_failure,req-b540b3,Database connection refused by server db-01.internal
+913,2026-10-04T08:28:08Z,CRITICAL,db_connection_failure,req-029943,Could not connect to database at db-01.internal:3306
+914,2026-10-02T01:20:54Z,ERROR,db_timeout,req-8e6de2,Database operation timed out while waiting for response
+915,2026-10-01T04:46:55Z,ERROR,request_timeout,req-56db63,Request timed out while waiting for server response
+916,2026-10-01T12:28:07Z,WARNING,db_timeout,req-34ef25,Query execution exceeded timeout limit of 10s
+917,2026-10-02T04:21:33Z,WARNING,db_timeout,req-a32e3a,Query execution exceeded timeout limit of 30s
+918,2026-10-07T08:56:19Z,ERROR,auth_failure,req-4dac49,Authentication failed with HTTP status 401
+919,2026-10-02T20:55:45Z,ERROR,db_connection_failure,req-2e4beb,Failed to establish database connection after 5 attempts
+920,2026-10-01T18:08:28Z,ERROR,db_connection_failure,req-a995ec,Could not connect to database at db-02.internal:5433
+921,2026-10-02T10:09:54Z,ERROR,null_pointer,req-8f65ab,Cannot invoke method because object reference is null
+922,2026-10-07T12:40:58Z,ERROR,db_connection_failure,req-3db017,Database connection refused by server db-01.internal
+923,2026-10-07T18:46:37Z,ERROR,db_connection_failure,req-7ab994,Database connection refused by server db-02.internal
+924,2026-10-02T06:54:51Z,ERROR,db_timeout,req-c971bf,Database operation timed out while waiting for response
+925,2026-10-03T15:45:40Z,ERROR,auth_failure,req-2f068e,Unauthorized access attempt from client 268
+926,2026-10-04T21:29:41Z,CRITICAL,null_pointer,req-d8fbd5,Cannot invoke method because object reference is null
+927,2026-10-06T16:51:24Z,ERROR,null_pointer,req-19dad5,NullPointerException at UserHandler.py:148
+928,2026-10-06T22:31:51Z,WARNING,request_timeout,req-3b1723,Upstream request timed out after 10 seconds
+929,2026-10-06T07:44:19Z,ERROR,null_pointer,req-485835,Cannot invoke method because object reference is null
+930,2026-10-02T06:07:22Z,WARNING,auth_failure,req-758964,Invalid credentials received for user 2520
+931,2026-10-05T18:26:07Z,ERROR,db_timeout,req-c0ba22,Database query timed out after 15 seconds
+932,2026-10-01T23:19:12Z,ERROR,db_timeout,req-baed6f,Query execution exceeded timeout limit of 15s
+933,2026-10-07T05:12:25Z,CRITICAL,payment_gateway_error,req-0425c4,Payment provider returned HTTP 502 for transaction TX170369
+934,2026-10-07T20:15:53Z,ERROR,db_connection_failure,req-9112fb,Failed to establish database connection after 3 attempts
+935,2026-10-05T11:21:30Z,CRITICAL,db_connection_failure,req-bfbf39,Failed to establish database connection after 4 attempts
+936,2026-10-02T08:27:24Z,WARNING,validation_error,req-fa11f0,Request validation failed for field email
+937,2026-10-02T23:01:08Z,WARNING,auth_failure,req-1de20f,Unauthorized access attempt from client 997
+938,2026-10-04T00:02:02Z,ERROR,null_pointer,req-45bfd2,Cannot invoke method because object reference is null
+939,2026-10-04T13:21:41Z,ERROR,null_pointer,req-5424aa,Cannot invoke method because object reference is null
+940,2026-10-04T01:37:25Z,WARNING,auth_failure,req-818d72,Authentication failed with HTTP status 401
+941,2026-10-05T18:46:28Z,ERROR,null_pointer,req-3665de,Null reference encountered in handler at OrderService.java:142
+942,2026-10-07T04:56:36Z,ERROR,auth_failure,req-963d10,Authentication failed with HTTP status 401
+943,2026-10-01T05:56:09Z,CRITICAL,db_connection_failure,req-270287,Could not connect to database at db-02.internal:3306
+944,2026-10-01T22:34:48Z,ERROR,request_timeout,req-07ec2d,Connection request exceeded timeout limit of 60s
+945,2026-10-04T08:53:48Z,ERROR,null_pointer,req-24940b,Null reference encountered in handler at OrderService.java:46
+946,2026-10-01T12:36:23Z,ERROR,request_timeout,req-4d38a8,Upstream request timed out after 60 seconds
+947,2026-10-02T11:09:10Z,ERROR,request_timeout,req-395e54,Request timed out while waiting for server response
+948,2026-10-02T03:20:06Z,ERROR,null_pointer,req-756663,NullPointerException at PaymentController.java:183
+949,2026-10-02T00:45:35Z,ERROR,request_timeout,req-24b3bc,Request timed out while waiting for server response
+950,2026-10-07T09:57:11Z,ERROR,file_not_found,req-8e8ded,No such file or directory: /reports/daily_108.csv
+951,2026-10-07T11:17:04Z,ERROR,db_connection_failure,req-8bd88f,Failed to establish database connection after 5 attempts
+952,2026-10-05T13:20:05Z,WARNING,auth_failure,req-fdbceb,Authentication failed with HTTP status 401
+953,2026-10-07T20:36:32Z,ERROR,request_timeout,req-10bb79,Connection request exceeded timeout limit of 60s
+954,2026-10-06T14:19:41Z,CRITICAL,payment_gateway_error,req-3ebb65,Payment provider returned HTTP 502 for transaction TX267003
+955,2026-10-06T06:57:38Z,CRITICAL,db_connection_failure,req-d0725b,Could not connect to database at db-02.internal:5433
+956,2026-10-03T01:44:58Z,ERROR,db_timeout,req-c497d0,Database operation timed out while waiting for response
+957,2026-10-07T14:22:23Z,ERROR,db_timeout,req-41ff81,Database query timed out after 60 seconds
+958,2026-10-01T01:54:47Z,ERROR,db_timeout,req-fc0145,Database query timed out after 60 seconds
+959,2026-10-01T20:59:08Z,ERROR,auth_failure,req-3ec8f4,Unauthorized access attempt from client 486
+960,2026-10-06T11:33:59Z,ERROR,db_timeout,req-b8ff61,Database query timed out after 30 seconds
+961,2026-10-04T23:24:52Z,WARNING,request_timeout,req-32dba0,Request timed out while waiting for server response
+962,2026-10-03T07:28:04Z,WARNING,auth_failure,req-b46499,Invalid credentials received for user 8769
+963,2026-10-06T10:54:48Z,ERROR,payment_gateway_error,req-ec8566,Gateway response failed with status 502
+964,2026-10-02T08:43:50Z,WARNING,db_timeout,req-0df634,Database operation timed out while waiting for response
+965,2026-10-03T21:03:56Z,ERROR,request_timeout,req-699fdb,Request timed out while waiting for server response
+966,2026-10-01T22:19:45Z,ERROR,request_timeout,req-d2e08e,Connection request exceeded timeout limit of 15s
+967,2026-10-03T18:17:31Z,ERROR,db_connection_failure,req-060edf,Database connection refused by server db-02.internal
+968,2026-10-06T11:56:18Z,WARNING,db_timeout,req-4a9ff5,Database operation timed out while waiting for response
+969,2026-10-06T17:56:20Z,ERROR,request_timeout,req-f57417,Upstream request timed out after 10 seconds
+970,2026-10-05T05:45:17Z,ERROR,auth_failure,req-d947c7,Authentication failed with HTTP status 401
+971,2026-10-07T22:48:54Z,ERROR,db_timeout,req-79ec53,Database query timed out after 60 seconds
+972,2026-10-02T05:34:00Z,ERROR,request_timeout,req-c3528b,Request timed out while waiting for server response
+973,2026-10-03T04:00:41Z,CRITICAL,db_connection_failure,req-f668a6,Could not connect to database at db-01.internal:3306
+974,2026-10-02T05:16:29Z,ERROR,db_connection_failure,req-2a96e1,Could not connect to database at db-01.internal:5433
+975,2026-10-01T19:37:14Z,ERROR,db_timeout,req-1923ca,Database operation timed out while waiting for response
+976,2026-10-02T20:30:21Z,WARNING,auth_failure,req-ba059e,Authentication failed with HTTP status 401
+977,2026-10-03T17:36:26Z,ERROR,null_pointer,req-59aa7c,Cannot invoke method because object reference is null
+978,2026-10-01T17:42:36Z,ERROR,null_pointer,req-c59498,Cannot invoke method because object reference is null
+979,2026-10-04T19:08:42Z,ERROR,db_connection_failure,req-0bb401,Failed to establish database connection after 4 attempts
+980,2026-10-06T19:22:56Z,CRITICAL,db_connection_failure,req-2ea9c5,Could not connect to database at db-02.internal:5432
+981,2026-10-01T18:38:56Z,ERROR,db_connection_failure,req-056280,Failed to establish database connection after 2 attempts
+982,2026-10-03T12:15:16Z,CRITICAL,db_connection_failure,req-7ba109,Database connection refused by server db-01.internal
+983,2026-10-07T13:48:16Z,ERROR,request_timeout,req-490ccf,Upstream request timed out after 30 seconds
+984,2026-10-01T02:04:59Z,ERROR,file_not_found,req-b3aac0,File lookup failed for resource profile_image
+985,2026-10-01T23:04:17Z,ERROR,db_timeout,req-a0152b,Database operation timed out while waiting for response
+986,2026-10-06T13:02:13Z,ERROR,db_connection_failure,req-5e717f,Database connection refused by server db-02.internal
+987,2026-10-02T00:46:51Z,ERROR,db_timeout,req-80777a,Database operation timed out while waiting for response
+988,2026-10-04T14:55:38Z,ERROR,db_timeout,req-eb9e54,Database query timed out after 15 seconds
+989,2026-10-06T15:13:39Z,CRITICAL,db_connection_failure,req-4d5c55,Could not connect to database at db-01.internal:5432
+990,2026-10-04T03:31:54Z,ERROR,request_timeout,req-1b387c,Connection request exceeded timeout limit of 10s
+991,2026-10-05T06:03:48Z,ERROR,payment_gateway_error,req-39ef20,Payment provider returned HTTP 502 for transaction TX804892
+992,2026-10-05T13:10:44Z,ERROR,payment_gateway_error,req-f4a985,Payment provider returned HTTP 502 for transaction TX816367
+993,2026-10-06T15:53:38Z,ERROR,file_not_found,req-c0f2b3,No such file or directory: /documents/invoice_472.pdf
+994,2026-10-06T11:18:20Z,ERROR,db_connection_failure,req-c01f36,Failed to establish database connection after 2 attempts
+995,2026-10-02T03:31:14Z,WARNING,request_timeout,req-a92dcf,Request timed out while waiting for server response
+996,2026-10-03T14:57:47Z,ERROR,auth_failure,req-b25db5,Unauthorized access attempt from client 712
+997,2026-10-07T03:02:22Z,WARNING,request_timeout,req-e24957,Connection request exceeded timeout limit of 30s
+998,2026-10-05T17:36:50Z,ERROR,payment_gateway_error,req-f5b0fa,Payment provider returned HTTP 502 for transaction TX770699
+999,2026-10-07T00:35:09Z,WARNING,db_timeout,req-baabd9,Query execution exceeded timeout limit of 30s

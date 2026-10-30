@@ -1,0 +1,23 @@
+{
+  "seed": 42,
+  "size": 1000,
+  "generated_at": "2026-10-14T16:35:09Z",
+  "log_start": "2026-10-01T00:00:00Z",
+  "log_window_days": 7,
+  "category_counts": {
+    "db_connection_failure": 220,
+    "request_timeout": 180,
+    "db_timeout": 150,
+    "auth_failure": 130,
+    "null_pointer": 120,
+    "validation_error": 110,
+    "payment_gateway_error": 60,
+    "file_not_found": 30
+  },
+  "level_counts": {
+    "ERROR": 654,
+    "WARNING": 266,
+    "FATAL": 80
+  },
+  "note": "Synthetic data. ground_truth.csv is the answer key for evaluating clustering; labels are intentionally absent from synthetic_logs.log."
+}
