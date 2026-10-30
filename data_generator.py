@@ -10,7 +10,7 @@ Two output streams, kept deliberately separate:
 The label is never written into the log message, otherwise clustering could
 "cheat" by reading the answer, and our evaluation would be meaningless.
 
-Run:  python data_generator.py
+Run:  python data_generator.py [--force]   (refuses to overwrite existing data)
 """
 
 from __future__ import annotations
@@ -285,7 +285,42 @@ def generate_dataset(
     return df
 
 
-def main() -> None:
+def main(argv: list[str] | None = None) -> int:
+    """CLI entry point. Returns 0 on success, 1 if generation was refused.
+
+    The guard lives here and not in generate_dataset() so that callers passing an
+    explicit base_dir (the tests, into tmp_path) are never restricted.
+    """
+    # Imported inside main() to keep every line number above it fixed: the
+    # published MANIFEST.md section 9 cites this file by line as evidence.
+    import argparse
+
+    parser = argparse.ArgumentParser(
+        description=(
+            "Generate a fresh synthetic dataset. This is NOT the preserved historical "
+            "baseline and cannot reproduce it."
+        ),
+    )
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help="authorize overwriting existing files at the canonical output paths",
+    )
+    args = parser.parse_args(argv)
+
+    targets = (config.RAW_LOG_PATH, config.GROUND_TRUTH_PATH, config.GENERATION_META_PATH)
+    existing = [path for path in targets if path.exists()]
+    if existing and not args.force:
+        print("Refusing to generate: these canonical output files already exist:")
+        for path in existing:
+            print(f"  {path}")
+        print("\nNothing was written, overwritten or deleted.")
+        print("These paths may hold the authoritative historical dataset, which this")
+        print("generator cannot reproduce. To provision them from the preserved baseline,")
+        print("copy the files out of data/baseline/7126c46/ instead (see README).")
+        print("To deliberately replace them with a fresh dataset, re-run with --force.")
+        return 1
+
     df = generate_dataset()
     print(f"Generated {len(df)} log lines (seed={config.RANDOM_SEED}).")
     print(f"  Raw log:      {config.RAW_LOG_PATH}")
@@ -294,7 +329,8 @@ def main() -> None:
     print("\nCategory distribution:")
     for category, count in df["category"].value_counts().items():
         print(f"  {category:<24} {count}")
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

@@ -16,10 +16,7 @@ from src.clusterer import (
 from src.feature_extractor import vectorize_messages
 from src.log_normalizer import NORMALIZED_COLUMN, normalize_dataframe
 from src.log_parser import parse_file
-
-needs_generated_data = pytest.mark.skipif(
-    not config.RAW_LOG_PATH.exists(), reason="run `python data_generator.py` first"
-)
+from tests.conftest import needs_generated_data, needs_ground_truth
 
 # --- Small deterministic fixtures ---------------------------------------------
 # Two messages that share most vocabulary (should group) and one clearly
@@ -311,7 +308,7 @@ def test_full_dataset_clustering_alignment_and_counts():
     assert 1 < n_clusters <= len(clustered)
 
 
-@needs_generated_data
+@needs_ground_truth
 def test_full_dataset_ground_truth_alignment_preserved():
     df = normalize_dataframe(parse_file(config.RAW_LOG_PATH))
     clustered = cluster_dataframe(df)

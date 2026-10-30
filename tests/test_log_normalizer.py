@@ -3,17 +3,13 @@
 from pathlib import Path
 
 import pandas as pd
-import pytest
 
 from src import config
 from src.log_normalizer import NORMALIZED_COLUMN, normalize_dataframe, normalize_message
 from src.log_parser import COLUMNS, parse_file
+from tests.conftest import needs_ground_truth
 
 FIXTURE = Path(__file__).parent / "fixtures" / "sample.log"
-
-needs_generated_data = pytest.mark.skipif(
-    not config.RAW_LOG_PATH.exists(), reason="run `python data_generator.py` first"
-)
 
 
 # --- Individual token rules ---------------------------------------------------
@@ -120,7 +116,7 @@ def test_unparsed_rows_pass_through():
     assert (unparsed[NORMALIZED_COLUMN] == unparsed["message"]).all()
 
 
-@needs_generated_data
+@needs_ground_truth
 def test_all_1000_normalized_and_aligned_with_ground_truth():
     parsed = parse_file(config.RAW_LOG_PATH)
     out = normalize_dataframe(parsed)

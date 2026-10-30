@@ -15,10 +15,7 @@ from src.ranking_evaluation import (
     evaluate_ranking,
     per_cluster_purity,
 )
-
-needs_generated_data = pytest.mark.skipif(
-    not config.RAW_LOG_PATH.exists(), reason="run `python data_generator.py` first"
-)
+from tests.conftest import needs_ground_truth
 
 
 # --- Fixtures -----------------------------------------------------------------
@@ -301,7 +298,7 @@ def test_ranking_required_columns_constant():
 
 
 # --- Integration with the real 1,000-row generated dataset --------------------
-@needs_generated_data
+@needs_ground_truth
 def test_real_dataset_purity_and_ranking_are_consistent():
     result = run_pipeline(config.RAW_LOG_PATH)
     truth = pd.read_csv(config.GROUND_TRUTH_PATH)

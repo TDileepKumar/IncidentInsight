@@ -26,6 +26,7 @@ from src.workflow import (
     WorkflowResult,
     run_workflow,
 )
+from tests.conftest import needs_generated_data
 
 # Ranking columns produced by src/ranker.py (OUTPUT_COLUMNS).
 _RANKING_COLUMNS = [
@@ -392,11 +393,6 @@ def test_no_second_pipeline_or_explanation_pass(tmp_path):
 
 
 # --- Real end-to-end smoke test on the generated dataset (optional) ----------
-needs_generated_data = pytest.mark.skipif(
-    not config.RAW_LOG_PATH.exists(), reason="run `python data_generator.py` first"
-)
-
-
 @needs_generated_data
 def test_smoke_real_pipeline_offline_no_persistence():
     # Real pipeline + real deterministic explanations, LLM and persistence off.

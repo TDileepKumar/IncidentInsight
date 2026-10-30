@@ -13,10 +13,7 @@ from src.ranker import (
     OUTPUT_COLUMNS,
     rank_clusters,
 )
-
-needs_generated_data = pytest.mark.skipif(
-    not config.RAW_LOG_PATH.exists(), reason="run `python data_generator.py` first"
-)
+from tests.conftest import needs_generated_data
 
 
 def _make_df(rows):

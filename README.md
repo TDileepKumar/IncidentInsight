@@ -250,19 +250,39 @@ Both destinations are ignored by Git, so these copies never enter a commit. The 
 
 The preserved `generation_meta.json` is provenance metadata only. No pipeline stage or test reads it, so it does not need to be copied.
 
-**Do not run `data_generator.py` to populate these paths.** It generates a different dataset and can overwrite existing files at the canonical locations.
+**Do not run `data_generator.py` to populate these paths.** It generates a different dataset, not the historical one. The command now refuses to run when any canonical output file already exists — see [Generating a fresh dataset](#generating-a-fresh-dataset).
 
 ### Generating a fresh dataset
 
-The repository includes a data generator:
+The repository includes a data generator that writes a **new** synthetic dataset to the canonical paths:
 
 ```powershell
 python data_generator.py
 ```
 
-**Warning:** Review the generator's implementation and output paths before running this command. It can write to the canonical data locations and overwrite existing files. It generates a different dataset from the preserved historical baseline.
+This is not the preserved historical baseline and cannot reproduce it. Use it only when you deliberately want fresh synthetic data.
 
-Do not run it over historical data you want to retain. Back up important files and verify the generator's configured output paths first.
+#### Overwrite protection
+
+Before writing anything, the command checks its three canonical output targets:
+
+- `data/raw/synthetic_logs.log`
+- `data/processed/ground_truth.csv`
+- `data/processed/generation_meta.json`
+
+If **any** of them already exists, the command refuses to generate. It lists the existing files, states that nothing was written, overwritten or deleted, and exits with status **1**. The existing files are left byte-for-byte untouched.
+
+To restore the authoritative historical data, copy it from the baseline as described above — do not regenerate it.
+
+To deliberately replace existing files with a fresh dataset, pass `--force`:
+
+```powershell
+python data_generator.py --force
+```
+
+`--force` is the only way to authorize an overwrite, and it restores the previous unrestricted behavior. When none of the three targets exists, the command generates normally without `--force`.
+
+The protection applies to the command-line entry point only. Calling `generate_dataset(seed, size, base_dir)` directly is unchanged and unrestricted, which is how the test suite writes into temporary directories.
 
 The historical baseline under `data/baseline/7126c46/` is preserved separately and is not automatically used by the default workflow or the data-dependent test gates.
 
@@ -369,9 +389,14 @@ python -m pytest -v
 
 ### Fresh-clone test limitations
 
-Fourteen existing tests depend on generated data files that are ignored by Git. On a fresh clone, these tests are expected to skip when the required raw log is absent.
+Fourteen tests depend on data files that are ignored by Git, so they skip on a fresh clone. Both skip conditions are defined once in `tests/conftest.py` and imported by the test modules:
 
-Seven of these tests also require the ground-truth CSV. Their existing skip condition checks only the raw log, so supplying the raw log without the CSV causes those seven tests to fail. Measured in the clean copy with only the raw log present: **7 failed, 675 passed** (exit code 1). All seven failures are caused by the missing `data/processed/ground_truth.csv`. Provision both files, as described above, to avoid this state.
+- `needs_generated_data` — the seven tests that need only `data/raw/synthetic_logs.log`.
+- `needs_ground_truth` — the seven tests that need that raw log **and** `data/processed/ground_truth.csv`.
+
+Each skip reason names the missing file and points at the baseline copy instructions above. No skip reason suggests running the generator, because it cannot recreate the historical data.
+
+Supplying only the raw log now **skips** the seven ground-truth tests instead of failing them. An earlier revision gated those seven on the raw log alone, which produced **7 failed, 675 passed** (exit code 1) in that state. The corrected gate removes that failure mode; provisioning both files is still what makes all 682 tests run.
 
 Measured result for this release preparation, run from the repository root with the canonical data files present:
 
@@ -388,6 +413,16 @@ Fresh-clone behavior has since been measured in an isolated clean copy of the re
 - **Pristine copy, no input data present:** 668 passed, 14 skipped, 0 failed, in 18.49 seconds (exit code 0). The 14 data-dependent tests skipped, so a fresh clone passes without any dataset.
 - **Both baseline input files provisioned as described above:** 682 passed, 0 skipped, 0 failed, in 15.68 seconds (exit code 0).
 
+Those two runs predate the test-gate correction. The corrected gates were then re-measured across all three provisioning states in isolated copies of the working tree, using the project virtual environment (Python 3.13.7, pandas 3.0.6):
+
+| Canonical data present | Result | Exit code |
+|---|---|---|
+| Neither file | 668 passed, 14 skipped, 0 failed (33.92s) | 0 |
+| Raw log only | 675 passed, 7 skipped, 0 failed (16.63s) | 0 |
+| Both files | 682 passed, 0 skipped, 0 failed (18.85s) | 0 |
+
+The raw-log-only row is the state the correction fixes: it previously produced 7 failures and exit code 1. No canonical data was regenerated or overwritten to obtain these results.
+
 These are automated test results, not a manual browser test. The Streamlit application was confirmed to start successfully in the clean copy, and its interface behavior is exercised by the automated `AppTest` suite. No manual browser walkthrough was performed, and no screenshots were captured.
 
 Run the tests in your own environment and record the actual output when validating a release.
@@ -397,7 +432,7 @@ Run the tests in your own environment and record the actual output when validati
 - The default workflow requires input data at the configured canonical path.
 - The current generator does not reproduce the preserved historical dataset.
 - Historical generation metadata contains counts inconsistent with the accompanying data.
-- Fourteen data-dependent tests require local data files and skip on a fresh clone when the raw log is missing.
+- Fourteen data-dependent tests require local data files and skip on a fresh clone: seven need the raw log, and seven need both the raw log and the ground-truth CSV.
 - Clustering quality depends on text normalization, the dataset, and clustering parameters.
 - Cluster IDs are not guaranteed to remain stable across independent runs.
 - LLM-assisted behavior depends on external service configuration and availability; fallback behavior is available where implemented.

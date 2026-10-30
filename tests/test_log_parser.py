@@ -9,18 +9,13 @@ import re
 from pathlib import Path
 
 import pandas as pd
-import pytest
 
 from src import config
 from src.log_parser import COLUMNS, VALID_LEVELS, parse_file, parse_line, parse_logs
+from tests.conftest import needs_generated_data, needs_ground_truth
 
 FIXTURE = Path(__file__).parent / "fixtures" / "sample.log"
 ISO_RE = re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$")
-
-# The two big-file tests need data_generator.py's output; skip if it is absent.
-needs_generated_data = pytest.mark.skipif(
-    not config.RAW_LOG_PATH.exists(), reason="run `python data_generator.py` first"
-)
 
 
 def test_parse_known_line():
@@ -151,7 +146,7 @@ def test_all_1000_generated_lines_parse():
     assert df["timestamp"].str.match(ISO_RE).all()
 
 
-@needs_generated_data
+@needs_ground_truth
 def test_roundtrip_against_ground_truth():
     """Parsed fields must line up with the generated answer key by line_id."""
     parsed = parse_file(config.RAW_LOG_PATH)

@@ -14,10 +14,7 @@ from src.incident_explainer import (
     explain_ranked_incidents,
 )
 from src.pipeline import run_pipeline
-
-needs_generated_data = pytest.mark.skipif(
-    not config.RAW_LOG_PATH.exists(), reason="run `python data_generator.py` first"
-)
+from tests.conftest import needs_generated_data
 
 RESULT_KEYS = {
     "cluster_id",

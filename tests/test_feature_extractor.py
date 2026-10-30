@@ -15,10 +15,7 @@ from src.feature_extractor import (
 )
 from src.log_normalizer import NORMALIZED_COLUMN, normalize_dataframe
 from src.log_parser import parse_file
-
-needs_generated_data = pytest.mark.skipif(
-    not config.RAW_LOG_PATH.exists(), reason="run `python data_generator.py` first"
-)
+from tests.conftest import needs_generated_data, needs_ground_truth
 
 # Two real, clearly-distinct templates from our data (NPE vs payment gateway).
 NPE = "NullPointerException at <LOC> - null reference for user <NUM>"
@@ -185,7 +182,7 @@ def test_full_1000_rows_aligned_and_normalized():
     assert any(tok in row0_template.lower() for tok in top0)
 
 
-@needs_generated_data
+@needs_ground_truth
 def test_ground_truth_alignment_through_line_id():
     import pandas as pd
 

@@ -12,10 +12,7 @@ from src.clusterer import CLUSTER_COLUMN
 from src.log_normalizer import NORMALIZED_COLUMN
 from src.pipeline import PipelineResult, run_pipeline
 from src.ranker import OUTPUT_COLUMNS, rank_clusters
-
-needs_generated_data = pytest.mark.skipif(
-    not config.RAW_LOG_PATH.exists(), reason="run `python data_generator.py` first"
-)
+from tests.conftest import needs_generated_data
 
 # Valid, parseable log lines in the format src/log_parser.py expects.
 GOOD_LOG = """\

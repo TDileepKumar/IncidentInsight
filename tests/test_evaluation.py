@@ -15,10 +15,7 @@ from src.evaluation import (
 )
 from src.log_normalizer import NORMALIZED_COLUMN, normalize_dataframe
 from src.log_parser import parse_file
-
-needs_generated_data = pytest.mark.skipif(
-    not config.RAW_LOG_PATH.exists(), reason="run `python data_generator.py` first"
-)
+from tests.conftest import needs_ground_truth
 
 # A controlled fixture with DISJOINT vocabulary groups: identical strings within
 # a group (cosine distance 0) and no shared tokens across groups (cosine
@@ -248,7 +245,7 @@ def test_compare_thresholds_does_not_mutate_inputs():
 
 
 # --- Integration with the 1,000-row dataset -----------------------------------
-@needs_generated_data
+@needs_ground_truth
 def test_real_dataset_crosstab_and_scores_are_meaningful():
     df = normalize_dataframe(parse_file(config.RAW_LOG_PATH))
     clustered = cluster_dataframe(df)
@@ -267,7 +264,7 @@ def test_real_dataset_crosstab_and_scores_are_meaningful():
     assert 0.0 <= scores["ami"] <= 1.0
 
 
-@needs_generated_data
+@needs_ground_truth
 def test_real_dataset_threshold_comparison_shape():
     df = normalize_dataframe(parse_file(config.RAW_LOG_PATH))
     truth = pd.read_csv(config.GROUND_TRUTH_PATH)
