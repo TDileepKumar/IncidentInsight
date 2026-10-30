@@ -1,4 +1,4 @@
-"""Command-line entry point for IncidentInsight (Day 9).
+"""Command-line entry point for IncidentInsight.
 
 Runs the log-analysis pipeline and prints the highest-ranked incident clusters.
 

@@ -1,4 +1,4 @@
-"""Day 10 / Day 11 / Day 16 tests for the Streamlit support helpers (src/ui_support.py).
+"""Tests for the Streamlit support helpers (src/ui_support.py).
 
 These cover the pieces of logic the UI depends on but must not implement inline:
 turning a user's log input into a path the existing workflow accepts, turning the
@@ -382,7 +382,7 @@ def test_g2_end_to_end_input_helpers_feed_the_pipeline(tmp_path):
     assert not os.path.exists(path)
 
 
-# --- H. Cluster detail view (Day 16) ------------------------------------------
+# --- H. Cluster detail view -----------------------------------------------------
 def _clustered():
     """A tiny stand-in for ``PipelineResult.clustered``.
 

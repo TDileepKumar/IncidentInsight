@@ -1,4 +1,4 @@
-"""Day 3 focused tests for the log parser.
+"""Focused tests for the log parser.
 
 Covers: happy-path parsing, the fixture file, malformed / unknown-level
 handling, empty input, and (when the generated data is present) that all 1,000
@@ -17,7 +17,7 @@ from src.log_parser import COLUMNS, VALID_LEVELS, parse_file, parse_line, parse_
 FIXTURE = Path(__file__).parent / "fixtures" / "sample.log"
 ISO_RE = re.compile(r"^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$")
 
-# The two big-file tests need the Day 2 output; skip cleanly if it is absent.
+# The two big-file tests need data_generator.py's output; skip if it is absent.
 needs_generated_data = pytest.mark.skipif(
     not config.RAW_LOG_PATH.exists(), reason="run `python data_generator.py` first"
 )
@@ -153,7 +153,7 @@ def test_all_1000_generated_lines_parse():
 
 @needs_generated_data
 def test_roundtrip_against_ground_truth():
-    """Parsed fields must line up with the Day 2 answer key by line_id."""
+    """Parsed fields must line up with the generated answer key by line_id."""
     parsed = parse_file(config.RAW_LOG_PATH)
     truth = pd.read_csv(config.GROUND_TRUTH_PATH)
     merged = parsed.merge(truth, on="line_id", suffixes=("_p", "_t"))

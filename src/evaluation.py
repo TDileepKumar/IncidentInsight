@@ -1,10 +1,11 @@
-"""Day 7 - Clustering evaluation for IncidentInsight.
+"""Clustering evaluation for IncidentInsight.
 
-Stage 5 of the pipeline: MEASURE how good the Day-6 clusters are, using the
-ground-truth `category` labels from data/processed/ground_truth.csv. This module
-is PURE evaluation - it does not cluster, tune, persist, or visualize anything.
+Stage 5 of the pipeline: MEASURE how good the src/clusterer.py clusters are, using
+the ground-truth `category` labels from data/processed/ground_truth.csv. This
+module is PURE evaluation - it does not cluster, tune, persist, or visualize
+anything.
 
-Design notes (approved Day 7):
+Design notes:
   * Quality is measured with two chance-adjusted, label-permutation-invariant
     metrics from scikit-learn: Adjusted Rand Index (ARI) and Adjusted Mutual
     Information (AMI). Cluster IDs are ARBITRARY identifiers - they are never
@@ -166,7 +167,7 @@ def build_cluster_crosstab(
     return pd.crosstab(merged[category_column], merged[cluster_column])
 
 
-# --- C. Cluster composition (reuses Day-6 summary) ----------------------------
+# --- C. Cluster composition (reuses src.clusterer summary) --------------------
 def cluster_composition(
     clustered_df: pd.DataFrame,
     message_column: str = NORMALIZED_COLUMN,

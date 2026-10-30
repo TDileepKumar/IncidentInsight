@@ -1,4 +1,4 @@
-"""Day 2 - Synthetic log generator for IncidentInsight.
+"""Synthetic log generator for IncidentInsight.
 
 Produces realistic-looking application error logs PLUS a ground-truth "answer
 key" so we can later measure whether clustering groups the right things.
@@ -25,7 +25,7 @@ import pandas as pd
 from src import config
 
 # --- Value pools for the variable tokens -------------------------------------
-# These are the "noise" fields the Day-4 normalizer will later strip out and
+# These are the "noise" fields src/log_normalizer.py will later strip out and
 # replace with placeholders like <ID>, <NUM>, <LOC>, <HOST>.
 HOSTS = ["db-primary.internal", "db-replica-2.internal", "cache-01.internal"]
 PORTS = [5432, 5433, 3306]

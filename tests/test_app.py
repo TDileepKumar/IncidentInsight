@@ -1,4 +1,4 @@
-"""Day 10 / Day 11 / Day 16 UI tests for app.py.
+"""UI tests for app.py.
 
 Covers the log input modes, the dashboard charts, and the cluster detail view.
 
@@ -293,7 +293,7 @@ def test_c5_switching_input_mode_does_not_rerun_the_analysis(tmp_path):
         assert any(s.value == "Analysis summary" for s in at.subheader)
 
 
-# --- D. Charts (Day 11) -------------------------------------------------------
+# --- D. Charts -----------------------------------------------------------------
 @needs_streamlit
 def test_d1_no_charts_before_an_analysis_exists():
     at = _new_app()
@@ -358,7 +358,7 @@ def test_d5_a_failed_analysis_shows_no_charts(tmp_path):
     assert _charts(at) == []
 
 
-# --- E. Cluster detail view (Day 16) ------------------------------------------
+# --- E. Cluster detail view -----------------------------------------------------
 _DETAIL_HEADING = "Cluster detail"
 _EXPLANATION_HEADING = "**Explanation for this cluster**"
 

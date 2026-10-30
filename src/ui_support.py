@@ -5,8 +5,8 @@ Three concerns live here instead of in ``app.py``:
   1. Turning the user's log input (an uploaded file, pasted text, or a path) into
      something ``run_workflow()`` can consume, with honest validation.
   2. Turning the real ranking output into the small tables the dashboard charts.
-  3. Resolving the cluster-detail view (Day 16) against an analysis result that is
-     already in memory: which clusters are selectable, which log rows belong to
+  3. Resolving the cluster-detail view (``app.py``) against an analysis result that
+     is already in memory: which clusters are selectable, which log rows belong to
      the selected cluster, and which explanation goes with it.
 
 This module deliberately imports NO Streamlit. ``app.py`` only renders what is
@@ -43,7 +43,7 @@ DEFAULT_CHART_TOP_N = 10
 _COUNT_COLUMN = "log_count"
 _SEVERITY_COLUMN = "incident_clusters"
 
-# Cluster detail view (Day 16): the log-row columns shown for a selected cluster,
+# Cluster detail view (app.py): the log-row columns shown for a selected cluster,
 # in display order. Only the ones that actually exist are used, so an older or
 # trimmed DataFrame degrades instead of raising.
 CLUSTER_DETAIL_COLUMNS = (

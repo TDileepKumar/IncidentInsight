@@ -1,10 +1,10 @@
-"""Day 9 - End-to-end pipeline orchestration for IncidentInsight.
+"""End-to-end pipeline orchestration for IncidentInsight.
 
 Composes the existing, already-tested stages into ONE runnable workflow:
 
     parse_file() -> normalize_dataframe() -> cluster_dataframe() -> rank_clusters()
 
-Design notes (approved Day 9):
+Design notes:
   * This module only ORCHESTRATES. Every algorithm lives in its own stage module
     and is reused as-is - nothing is reimplemented here.
   * Clustering happens EXACTLY ONCE: cluster_dataframe() already vectorizes

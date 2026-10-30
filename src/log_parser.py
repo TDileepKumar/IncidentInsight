@@ -1,8 +1,8 @@
-"""Day 3 - Log parser for IncidentInsight.
+"""Log parser for IncidentInsight.
 
 Stage 1 of the pipeline. Turns raw, unstructured log text into a structured
 Pandas DataFrame. This is a PURE function: text in, table out. No database,
-no UI, no network, no normalization (that is Day 4).
+no UI, no network, no normalization (that is src/log_normalizer.py).
 
 Expected raw line formats:
     <TIMESTAMP> <LEVEL> [<request_id>] [<service>] <message>
@@ -14,7 +14,7 @@ TIMESTAMP accepts ISO-8601 with either a 'T' or a space before the time, optiona
 fractional seconds, and an optional UTC suffix ('Z' or a numeric offset). Fields
 the line does not carry are left as None - never invented.
 
-Design decisions (approved Day 3):
+Design decisions:
   * Columns: line_id, timestamp, level, service, request_id, message, parsed
   * timestamps stay ISO-format STRINGS (nothing needs datetime yet)
   * malformed / unrecognized lines are KEPT with parsed=False and the original

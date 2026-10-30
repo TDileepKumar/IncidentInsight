@@ -1,4 +1,4 @@
-"""Day 4 focused tests for the log normalizer."""
+"""Focused tests for the log normalizer."""
 
 from pathlib import Path
 
@@ -128,7 +128,7 @@ def test_all_1000_normalized_and_aligned_with_ground_truth():
     assert len(out) == config.TARGET_DATASET_SIZE
     assert out[NORMALIZED_COLUMN].notna().all()
 
-    # Alignment with the Day 2 answer key is preserved after normalization.
+    # Alignment with the generated answer key is preserved after normalization.
     truth = pd.read_csv(config.GROUND_TRUTH_PATH)
     merged = out.merge(truth, on="line_id", suffixes=("_p", "_t"))
     assert len(merged) == len(truth)

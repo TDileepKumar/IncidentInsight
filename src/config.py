@@ -1,8 +1,8 @@
 """Central configuration for IncidentInsight.
 
 Everything tunable lives here so no other module hardcodes magic numbers.
-For Day 2 this holds the synthetic-data generator settings; later days add
-clustering thresholds, DB path, and LLM provider settings.
+It holds the project paths, the synthetic-data generator settings, and the
+clustering thresholds.
 """
 
 from pathlib import Path
@@ -16,12 +16,12 @@ DATA_DIR = PROJECT_ROOT / "data"
 RAW_DIR = DATA_DIR / "raw"
 PROCESSED_DIR = DATA_DIR / "processed"
 
-# Generator outputs (Day 2)
+# Generator outputs (data_generator.py)
 RAW_LOG_PATH = RAW_DIR / "synthetic_logs.log"
 GROUND_TRUTH_PATH = PROCESSED_DIR / "ground_truth.csv"
 GENERATION_META_PATH = PROCESSED_DIR / "generation_meta.json"
 
-# --- Synthetic log generator settings (Day 2) --------------------------------
+# --- Synthetic log generator settings (data_generator.py) ---------------------
 # A fixed seed makes every run produce the exact same data. This is what lets us
 # measure clustering quality reproducibly and lets tests be deterministic.
 RANDOM_SEED = 42
@@ -53,7 +53,7 @@ CATEGORY_WEIGHTS = {
     "file_not_found": 3,
 }
 
-# --- Clustering settings (Day 6) ---------------------------------------------
+# --- Clustering settings (src/clusterer.py) -----------------------------------
 # Agglomerative clustering on the TF-IDF vectors. We use a DISTANCE THRESHOLD
 # (not a fixed n_clusters) so the number of incident groups is discovered from
 # the data instead of hard-coded.
@@ -64,7 +64,8 @@ CATEGORY_WEIGHTS = {
 #
 # CLUSTER_DISTANCE_THRESHOLD = 0.5 is an INITIAL EXPERIMENTAL value, NOT a proven
 # optimum. Cosine distance runs 0 (identical) to 2 (opposite); 0.5 means "merge
-# messages that are at least ~50% similar". Day 7 sweeps this to tune quality.
+# messages that are at least ~50% similar". src/evaluation.py sweeps this to tune
+# quality.
 CLUSTER_DISTANCE_THRESHOLD = 0.5
 CLUSTER_METRIC = "cosine"
 CLUSTER_LINKAGE = "average"

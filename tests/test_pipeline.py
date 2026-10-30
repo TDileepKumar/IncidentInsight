@@ -1,4 +1,4 @@
-"""Day 9 tests for pipeline orchestration and the CLI entry point."""
+"""Tests for pipeline orchestration and the CLI entry point."""
 
 from pathlib import Path
 from unittest import mock
@@ -17,7 +17,7 @@ needs_generated_data = pytest.mark.skipif(
     not config.RAW_LOG_PATH.exists(), reason="run `python data_generator.py` first"
 )
 
-# Valid, parseable log lines in the format the Day-3 parser expects.
+# Valid, parseable log lines in the format src/log_parser.py expects.
 GOOD_LOG = """\
 2026-10-01T00:00:00Z ERROR [req-1] [DatabaseService] Database connection failed after 3s
 2026-10-01T00:00:01Z ERROR [req-2] [DatabaseService] Database connection failed after 7s

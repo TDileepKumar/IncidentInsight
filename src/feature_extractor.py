@@ -1,10 +1,10 @@
-"""Day 5 - TF-IDF feature extraction for IncidentInsight.
+"""TF-IDF feature extraction for IncidentInsight.
 
 Stage 3 of the pipeline. Converts normalized message text into numeric vectors
-so that cosine similarity (Day 6) and agglomerative clustering (Day 6) can
+so that cosine similarity and agglomerative clustering (src/clusterer.py) can
 operate on them.
 
-Approved Day 5 decisions:
+Design decisions:
   * vectorize ALL rows in their original DataFrame order (row i <-> line_id i)
   * unigrams, stop_words=None, L2 normalization
   * return BOTH the sparse matrix and the FITTED vectorizer
@@ -33,11 +33,11 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 
 from src.log_normalizer import NORMALIZED_COLUMN
 
-# Single source of truth for vectorizer settings, so Day 6 tuning is one place.
+# Single source of truth for vectorizer settings, so clustering tuning is one place.
 DEFAULT_PARAMS = {
     "lowercase": True,        # <HOST> -> host, tokens are case-insensitive
     "norm": "l2",             # unit-length rows -> cosine == dot product
-    "ngram_range": (1, 1),    # unigrams to start; bigrams are a Day-6 lever
+    "ngram_range": (1, 1),    # unigrams to start; bigrams are a clustering lever
     "stop_words": None,       # IDF already suppresses filler; keep log words
 }
 

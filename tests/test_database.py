@@ -1,4 +1,4 @@
-"""Day 12 focused tests for the SQLite persistence layer.
+"""Focused tests for the SQLite persistence layer.
 
 Every test uses pytest's `tmp_path`, so the real project database (if any) is
 never touched. Tests exercise initialization, saving, retrieval, and the
@@ -15,7 +15,7 @@ from src.incident_explainer import explain_incident
 
 
 def _explanation(**overrides):
-    """A valid Day 11-shaped incident explanation mapping."""
+    """A valid src.incident_explainer-shaped incident explanation mapping."""
     base = {
         "cluster_id": 15,
         "rank": 1,
@@ -304,7 +304,7 @@ def test_importing_module_has_no_side_effects(monkeypatch, tmp_path):
 
 
 # --- Integration smoke test (read-only, no project data written) --------------
-def test_day11_output_persists_without_modifying_explainer(tmp_path):
+def test_explainer_output_persists_without_modifying_explainer(tmp_path):
     db = _db(tmp_path)
     incident = {
         "cluster_id": 15,
@@ -315,7 +315,7 @@ def test_day11_output_persists_without_modifying_explainer(tmp_path):
         "frequency_score": 0.95,
         "risk_score": 0.97,
     }
-    explanation = explain_incident(incident)          # real Day 11 output shape
+    explanation = explain_incident(incident)          # real explainer output shape
     assert database.save_incidents([explanation], db) == 1
 
     saved = database.get_incidents(db)[0]

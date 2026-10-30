@@ -1,4 +1,4 @@
-"""Day 11 focused tests for the deterministic incident explainer."""
+"""Focused tests for the deterministic incident explainer."""
 
 import pandas as pd
 import pytest

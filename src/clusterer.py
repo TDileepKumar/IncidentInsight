@@ -1,10 +1,10 @@
-"""Day 6 - Agglomerative clustering for IncidentInsight.
+"""Agglomerative clustering for IncidentInsight.
 
 Stage 4 of the pipeline. Groups the TF-IDF vectors of normalized log messages
 into incident clusters so that "the same underlying error" lands in the same
 group. This module is PURE: no DB, no UI, no network, no evaluation metrics.
 
-Approved Day 6 decisions:
+Design decisions:
   * AgglomerativeClustering with cosine distance + average linkage
   * a DISTANCE THRESHOLD (n_clusters=None) so the cluster count is discovered
     from the data instead of hard-coded

@@ -1,11 +1,11 @@
-"""Day 11 - Deterministic, template-based incident explanations.
+"""Deterministic, template-based incident explanations.
 
 Turns an ALREADY-RANKED incident record (a row of ranker.rank_clusters() output)
 into a structured, developer-friendly explanation. This module is PURE and
 OFFLINE: no LLM, no network, no clustering, no ranking, no persistence. It only
 reformats supplied data and applies fixed keyword rules.
 
-Core honesty rules (approved Day 11):
+Core honesty rules:
   * Evidence before interpretation. Observations (message, count, scores) are
     kept separate from the pattern label and from investigation suggestions.
   * Nothing is invented. A missing rank stays None; a missing count is simply

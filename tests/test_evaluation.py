@@ -1,4 +1,4 @@
-"""Day 7 focused tests for clustering evaluation."""
+"""Focused tests for clustering evaluation."""
 
 import numpy as np
 import pandas as pd

@@ -1,11 +1,12 @@
-"""Day 4 - Log normalizer for IncidentInsight.
+"""Log normalizer for IncidentInsight.
 
 Stage 2 of the pipeline. Takes the parsed `message` text and replaces the
 VARIABLE tokens (ids, numbers, hosts, paths, quoted strings, ...) with fixed
 placeholders, so that the same underlying error produces the SAME string.
-This is what makes TF-IDF + clustering (Days 5-6) viable.
+This is what makes TF-IDF + clustering viable (src/feature_extractor.py,
+src/clusterer.py).
 
-Approved Day 4 decisions:
+Design decisions:
   * add a NEW column `message_normalized`; the original `message` is preserved
   * only `message_normalized` is fed to later TF-IDF/clustering
   * host+port collapses to a single `<HOST>`

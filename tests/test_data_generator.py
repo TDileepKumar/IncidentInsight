@@ -1,7 +1,7 @@
-"""Day 2 focused tests for the synthetic log generator.
+"""Focused tests for the synthetic log generator.
 
 These verify the generator only (reproducibility, mapping, no label leakage,
-skew). The full test suite across the whole pipeline comes on Day 15.
+skew). The other tests/ modules cover the rest of the pipeline.
 """
 
 import json

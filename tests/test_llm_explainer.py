@@ -1,8 +1,8 @@
-"""Day 13 focused tests for the optional OpenAI incident explainer.
+"""Focused tests for the optional OpenAI incident explainer.
 
 ALL tests run offline: no OpenAI API key, no real HTTP, no network, no cost.
 The single network boundary (`urllib.request.urlopen`) is mocked, and fixtures
-are shaped like real Day 11 incident records.
+are shaped like real src.incident_explainer incident records.
 """
 
 import importlib
@@ -130,7 +130,7 @@ def test_result_field_types():
     assert all(isinstance(s, str) for s in result["suggested_checks"])
     assert isinstance(result["limitations"], list)
     assert all(isinstance(s, str) for s in result["limitations"])
-    # Day 11 limitations are retained alongside LLM ones.
+    # src.incident_explainer limitations are retained alongside LLM ones.
     assert any("root cause" in lim.lower() for lim in result["limitations"])
 
 
@@ -181,7 +181,7 @@ def test_missing_key_returns_deterministic_fallback(monkeypatch):
     result = explain_incident_with_llm(_incident())
     assert result["explanation_source"] == SOURCE_FALLBACK
     assert result["fallback_reason"] == REASON_MISSING_KEY
-    # The deterministic Day 11 explanation is returned intact.
+    # The deterministic src.incident_explainer explanation is returned intact.
     assert result["cluster_id"] == 15
     assert result["evidence"]["occurrence_count"] == 76
     assert "fallback_reason" in result
@@ -317,7 +317,7 @@ def test_invalid_input_types_raise(bad):
         explain_incident_with_llm(bad, api_key=TEST_KEY)
 
 
-def test_missing_required_field_follows_day11_policy():
+def test_missing_required_field_follows_explainer_policy():
     incident = _incident()
     del incident["cluster_id"]
     with pytest.raises(ValueError):
@@ -397,7 +397,7 @@ def test_message_content_is_bounded():
     assert forwarded.count("A") <= llm_explainer.MAX_MESSAGE_CHARS
 
 
-# --- Redaction (Day 13) -------------------------------------------------------
+# --- Redaction -----------------------------------------------------------------
 # Synthetic secrets only. Each case is (log text containing a secret, the secret
 # value that must never leave this process).
 SECRET_CASES = [
@@ -550,7 +550,7 @@ def test_local_evidence_is_not_redacted():
     assert result["evidence"]["representative_message"] == text
 
 
-# --- Bounded explanation cache (Day 13) ---------------------------------------
+# --- Bounded explanation cache -------------------------------------------------
 def test_successful_explanation_is_cached_and_reused():
     incident = _incident()
     with mock.patch("urllib.request.urlopen") as m:

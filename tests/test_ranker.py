@@ -1,4 +1,4 @@
-"""Day 8 focused tests for deterministic incident-cluster ranking."""
+"""Focused tests for deterministic incident-cluster ranking."""
 
 import numpy as np
 import pandas as pd

@@ -1,4 +1,4 @@
-"""Day 6 focused tests for agglomerative clustering."""
+"""Focused tests for agglomerative clustering."""
 
 import numpy as np
 import pandas as pd

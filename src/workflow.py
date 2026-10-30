@@ -1,4 +1,4 @@
-"""Day 14 - End-to-end workflow orchestration and consistent error handling.
+"""End-to-end workflow orchestration and consistent error handling.
 
 A THIN coordination layer over the existing, already-tested modules. It runs the
 analysis pipeline once and wires its output through the downstream stages, so a
@@ -11,7 +11,7 @@ Stages, in order:
     3. Optional LLM enh.   -> src.llm_explainer.explain_incident_with_llm()      [optional]
     4. Optional persistence-> src.database.save_incidents()                       [optional]
 
-Design rules (approved Day 14):
+Design rules:
   * ORCHESTRATE ONLY. Every algorithm stays in its own module and is reused
     as-is; nothing is reimplemented here. No second clustering, ranking,
     explanation engine, database layer, or LLM client is introduced.

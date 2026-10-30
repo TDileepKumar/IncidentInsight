@@ -1,9 +1,9 @@
-"""Day 12 - SQLite persistence for IncidentInsight incident explanations.
+"""SQLite persistence for IncidentInsight incident explanations.
 
 A small, standalone module that saves the explanation dictionaries produced by
-Day 11 (`src/incident_explainer.py`) and reads them back across program runs.
+`src/incident_explainer.py` and reads them back across program runs.
 
-Design rules (approved Day 12):
+Design rules:
   * Built-in `sqlite3` only - no new dependencies, no ORM, no migrations.
   * Importing this module has NO side effects: it never creates or opens a
     database until a function is called with an explicit `db_path`.
@@ -36,7 +36,8 @@ from pathlib import Path
 # --- Schema -------------------------------------------------------------------
 TABLE_NAME = "incidents"
 
-# Fields an incident mapping (Day 11 explain_incident output) must carry.
+# Fields an incident mapping (src.incident_explainer.explain_incident output)
+# must carry.
 REQUIRED_INCIDENT_KEYS = (
     "cluster_id",
     "rank",
@@ -48,8 +49,8 @@ REQUIRED_INCIDENT_KEYS = (
 
 # `cluster_id` is declared without a type affinity so an integer ID stays an
 # integer and a string ID stays a string on round-trip. `rank` is nullable
-# because Day 11 uses None when no ranking position was supplied. `rank` is a
-# SQLite keyword (window functions), so it is always quoted.
+# because src.incident_explainer uses None when no ranking position was supplied.
+# `rank` is a SQLite keyword (window functions), so it is always quoted.
 _CREATE_TABLE_SQL = f"""
 CREATE TABLE IF NOT EXISTS {TABLE_NAME} (
     id                     INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -257,7 +258,7 @@ def initialize_database(db_path) -> None:
 
 
 def save_incidents(incidents, db_path) -> int:
-    """Persist a collection of Day 11 explanation mappings; return the count.
+    """Persist a collection of src.incident_explainer mappings; return the count.
 
     Args:
         incidents: an iterable of mappings, each shaped like the dict returned by

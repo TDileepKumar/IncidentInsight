@@ -1,4 +1,4 @@
-"""Day 14 integration tests for the workflow orchestrator.
+"""Integration tests for the workflow orchestrator.
 
 These tests exercise the wiring between the existing stages without depending on
 a live LLM provider, a real network, or the project's generated dataset. The
@@ -90,7 +90,8 @@ def test_normal_workflow_succeeds():
     assert result.persistence_status == STATUS_SKIPPED
     assert result.persisted_count is None
     assert len(result.explanations) == 2
-    # Explanations carry the Day 11 contract (no explanation_source when no LLM).
+    # Explanations carry the src.incident_explainer contract (no
+    # explanation_source when no LLM).
     assert set(result.explanations[0]) == {
         "cluster_id",
         "rank",

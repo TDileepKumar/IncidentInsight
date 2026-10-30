@@ -1,4 +1,4 @@
-"""Day 5 focused tests for TF-IDF feature extraction."""
+"""Focused tests for TF-IDF feature extraction."""
 
 import numpy as np
 import pytest

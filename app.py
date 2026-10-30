@@ -1,4 +1,4 @@
-"""IncidentInsight - Streamlit application (Day 16).
+"""IncidentInsight - Streamlit application.
 
 Launch with:
 
@@ -14,7 +14,7 @@ What this UI does:
   * Provides an incident-aware chatbot (src.chatbot) that answers questions about
     the analysis that is already in memory.
 
-Design notes (approved Day 16):
+Design notes:
   * The pipeline runs ONLY when the "Run analysis" button is pressed. The result
     is kept in `st.session_state`, so Streamlit's automatic reruns (every widget
     interaction, including each chat message and each cluster selection) never

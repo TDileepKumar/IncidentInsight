@@ -1,11 +1,11 @@
-"""Day 8 - Deterministic incident-cluster ranking for IncidentInsight.
+"""Deterministic incident-cluster ranking for IncidentInsight.
 
-Stage 6 of the pipeline: turn the Day-6 clusters into a prioritized incident
-list so the loudest AND most severe problems surface first. This module is PURE
-and READ-ONLY - it does not cluster, evaluate, persist, or call anything
+Stage 6 of the pipeline: turn the src/clusterer.py clusters into a prioritized
+incident list so the loudest AND most severe problems surface first. This module
+is PURE and READ-ONLY - it does not cluster, evaluate, persist, or call anything
 external, and it never mutates its inputs.
 
-Design notes (approved Day 8):
+Design notes:
   * Ranking blends FREQUENCY (how often a cluster occurs) and MAX SEVERITY (the
     worst log level in the cluster). Both are normalized to [0, 1]-ish scores and
     combined with caller weights (default 60% frequency / 40% severity).

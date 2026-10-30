@@ -1,9 +1,10 @@
-"""Day 13 - OPTIONAL OpenAI-powered incident explanations, with a safe fallback.
+"""OPTIONAL OpenAI-powered incident explanations, with a safe fallback.
 
 This module wraps the OpenAI Chat Completions API to produce a richer incident
 explanation, but it is designed to be completely OPTIONAL and OFFLINE-SAFE:
 
-  * The trusted baseline is always Day 11's deterministic `explain_incident()`.
+  * The trusted baseline is always src.incident_explainer's deterministic
+    `explain_incident()`.
     If anything about the LLM path is unavailable (no API key, network failure,
     timeout, HTTP error, malformed/invalid model output), we return that
     deterministic explanation unchanged plus `explanation_source="deterministic_fallback"`
@@ -12,7 +13,7 @@ explanation, but it is designed to be completely OPTIONAL and OFFLINE-SAFE:
     an API key is available. Importing this module does nothing (no requests, no
     file/database access, no env reads at import time).
   * It is never called from `run_pipeline()` or `run.py`, and it never writes to
-    the Day 12 database. Persistence stays an explicit, separate operation.
+    the src.database store. Persistence stays an explicit, separate operation.
 
 Design decisions (kept simple for a beginner reader):
   * Standard library only (`urllib.request`, `json`, `os`) - no new dependency.
@@ -458,12 +459,13 @@ _HYPOTHESIS_NOTE = (
 
 
 def _success(baseline: dict, validated: dict) -> dict:
-    """Merge a validated LLM explanation onto the preserved Day 11 identity.
+    """Merge a validated LLM explanation onto the preserved deterministic identity.
 
     cluster_id, rank and the original evidence are preserved. The LLM's observed
     facts and possible interpretations are added under NEW, prefixed evidence
-    keys so existing evidence is never overwritten. Day 11 limitations are
-    retained and extended with the LLM's own plus an explicit hypothesis caveat.
+    keys so existing evidence is never overwritten. src.incident_explainer's
+    limitations are retained and extended with the LLM's own plus an explicit
+    hypothesis caveat.
     """
     evidence = dict(baseline.get("evidence", {}))
     evidence["llm_observed_facts"] = list(validated["observed_facts"])
@@ -498,24 +500,25 @@ def explain_incident_with_llm(
     """Explain one incident with OpenAI, falling back to the deterministic result.
 
     Args:
-        incident: a mapping or pandas Series - the same input Day 11's
-            `explain_incident()` accepts. It is validated by that function, so
-            invalid input raises TypeError/ValueError (never silently masked).
+        incident: a mapping or pandas Series - the same input
+            src.incident_explainer's `explain_incident()` accepts. It is validated
+            by that function, so invalid input raises TypeError/ValueError (never
+            silently masked).
         api_key: optional explicit OpenAI key for THIS call only. If omitted,
             `OPENAI_API_KEY` is read from the environment. Never logged/returned.
         model: optional model name; else `OPENAI_MODEL`; else `gpt-4o-mini`.
         timeout: finite positive seconds for the HTTP request (default 15.0).
 
     Returns:
-        A dict preserving the Day 11 contract (cluster_id, rank, summary,
-        evidence, suggested_checks, limitations) plus `explanation_source`
+        A dict preserving the src.incident_explainer contract (cluster_id, rank,
+        summary, evidence, suggested_checks, limitations) plus `explanation_source`
         ("openai" or "deterministic_fallback"). Fallback results also carry a
         non-sensitive `fallback_reason`.
 
     Raises:
-        TypeError/ValueError: invalid caller input (per Day 11) or an invalid
-            timeout/model configuration. Provider/network/response problems do
-            NOT raise - they return the deterministic fallback instead.
+        TypeError/ValueError: invalid caller input (per src.incident_explainer)
+            or an invalid timeout/model configuration. Provider/network/response
+            problems do NOT raise - they return the deterministic fallback instead.
 
     No network call is made when a key is unavailable, and this function never
     recomputes clustering/ranking/scores, reads env at import time, or writes
@@ -528,7 +531,8 @@ def explain_incident_with_llm(
     resolved_timeout = _validate_timeout(timeout)
     resolved_model = _resolve_model(model)
 
-    # Reuse Day 11 as the trusted baseline; this also validates `incident`.
+    # Reuse src.incident_explainer as the trusted baseline; this also validates
+    # `incident`.
     baseline = explain_incident(incident)
 
     key = _resolve_api_key(api_key)

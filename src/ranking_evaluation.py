@@ -1,4 +1,4 @@
-"""Day 10 - Cluster purity and ranking evaluation for IncidentInsight.
+"""Cluster purity and ranking evaluation for IncidentInsight.
 
 An OFFLINE, READ-ONLY evaluation module. It measures two things about a
 clustering + ranking that ALREADY happened elsewhere:
@@ -12,7 +12,7 @@ clustering + ranking that ALREADY happened elsewhere:
      COVERAGE of the top-K ranked clusters. This describes what the ranking
      surfaces; it is NOT a claim that the ranking is "correct" or predictive.
 
-Design rules (approved Day 10):
+Design rules:
   * Both functions REUSE evaluation.build_cluster_crosstab() to align ground
     truth to predictions by `line_id` (never by row position) - no alignment or
     contingency logic is duplicated here.

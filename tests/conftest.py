@@ -1,6 +1,6 @@
 """Shared pytest configuration for the IncidentInsight test suite.
 
-The Day 13 explanation cache in `src/llm_explainer.py` is module-level state that
+The explanation cache in `src/llm_explainer.py` is module-level state that
 survives between tests in one process. It is emptied before and after every test
 so a successful mocked explanation from one test can never be replayed in another
 (which would silently skip the HTTP call the other test is asserting on). This is

@@ -1,4 +1,4 @@
-"""Day 15 - Incident-aware conversational chatbot for IncidentInsight.
+"""Incident-aware conversational chatbot for IncidentInsight.
 
 Lets a developer ask natural-language questions about the incidents that were
 ALREADY analysed ("What are the most frequent incidents?", "Explain the top
@@ -11,7 +11,7 @@ Design decisions (kept explicit because this is a learning project):
     It reuses `src/llm_explainer.py` for the endpoint, the HTTPS transport
     (`_post_chat` -> `urllib.request.urlopen`), the bearer-token auth header, the
     API-key/model/timeout resolution conventions, the response-envelope parsing
-    (`_extract_model_text`) and the non-sensitive fallback reason codes. Day 13's
+    (`_extract_model_text`) and the non-sensitive fallback reason codes. Its
     public `explain_incident_with_llm()` is incident-shaped (it builds its own
     single-incident prompt and enforces an explanation schema), so it cannot carry
     a free-form conversation; the smallest compatible adapter lives here and only
@@ -28,12 +28,13 @@ Design decisions (kept explicit because this is a learning project):
   * UNTRUSTED DATA. Log text and incident fields are framed to the model as data
     to analyse, not instructions to obey.
   * REDACTED OUTBOUND. Every string in the request - the incident context, the
-    question, and the prior turns - passes through Day 13's `redact_payload` /
+    question, and the prior turns - passes through `redact_payload` /
     `redact_text`, so recognizable credentials in log text are removed before
     anything leaves the process. Chat answers are deliberately NOT cached: a
     cached answer could be replayed for a materially different question, history,
     or analysis, and the benefit does not justify that risk. (Successful incident
-    explanations from Day 13 ARE cached, under a key that includes their context.)
+    explanations from `src/llm_explainer.py` ARE cached, under a key that includes
+    their context.)
   * SECRETS NEVER LEAK. The API key is only ever handed to the reused transport
     for the Authorization header; it is never printed, returned, stored, or
     included in an answer or an error message.
@@ -48,9 +49,9 @@ Result contract (`ChatResponse`):
 
 Caller errors (an empty question, a non-string question, malformed history, an
 unsupported context object, an invalid timeout/model) RAISE TypeError/ValueError,
-matching the convention used by Day 11/Day 13. Runtime conditions that are not
-programmer errors (no analysis yet, no API key, a provider failure) are RETURNED
-as a structured result so the UI never crashes.
+matching the convention used by src.incident_explainer / src.llm_explainer.
+Runtime conditions that are not programmer errors (no analysis yet, no API key,
+a provider failure) are RETURNED as a structured result so the UI never crashes.
 """
 
 from __future__ import annotations
@@ -84,8 +85,9 @@ STATUS_SUCCESS = "success"
 STATUS_FALLBACK = "fallback"
 STATUS_FAILURE = "failure"
 
-# `response_source` reuses Day 13's values for AI / deterministic answers, plus an
-# explicit "none" for the case where no grounded answer could be produced at all.
+# `response_source` reuses llm_explainer's values for AI / deterministic answers,
+# plus an explicit "none" for the case where no grounded answer could be produced
+# at all.
 SOURCE_NONE = "none"
 
 # Non-sensitive reason codes produced by THIS module (provider reasons are reused
@@ -106,7 +108,8 @@ MAX_ANSWER_CHARS = 4000
 ALLOWED_ROLES = ("user", "assistant")
 
 # Fields pulled from an explanation dict when building the model context. Only
-# fields that genuinely exist are included - nothing is invented (Day 11 rule).
+# fields that genuinely exist are included - nothing is invented
+# (src.incident_explainer rule).
 _INCIDENT_TEXT_FIELDS = ("cluster_id", "rank", "summary")
 _INCIDENT_LIST_FIELDS = ("suggested_checks", "limitations")
 
@@ -229,7 +232,7 @@ def _extract_incidents(context):
     Supported shapes (chosen to match what the app already has in hand):
       * None                          -> no analysis available yet
       * an object with `.explanations`-> e.g. src.workflow.WorkflowResult
-      * a list/tuple of Mappings      -> the Day 11/Day 13 explanation dicts
+      * a list/tuple of Mappings      -> incident_explainer / llm_explainer dicts
 
     Anything else raises TypeError, so an unsupported shape is a clear caller
     error instead of a silently empty answer.
@@ -296,8 +299,8 @@ def _build_context_block(incidents: list) -> str:
     """The bounded, untrusted-data context block appended to the system prompt.
 
     The incident fields are log-derived, so the whole payload is redacted before
-    it is serialized (Day 13): credentials that appear in a log message never
-    reach the provider.
+    it is serialized (llm_explainer.redact_text): credentials that appear in a
+    log message never reach the provider.
     """
     payload = {
         "incident_count": len(incidents),
@@ -446,10 +449,10 @@ def _resolve_focus(question: str, history: list, incidents: list) -> Mapping | N
 def _describe_incident(incident: Mapping) -> str:
     """One-line factual description of an incident, using only present fields.
 
-    A Day 11 summary already names the cluster, its rank, the matched pattern and
-    the occurrence count, so it is used verbatim instead of being re-assembled
-    (which would repeat itself). The synthetic form is only needed for the rare
-    incident that carries no summary.
+    A src.incident_explainer summary already names the cluster, its rank, the
+    matched pattern and the occurrence count, so it is used verbatim instead of
+    being re-assembled (which would repeat itself). The synthetic form is only
+    needed for the rare incident that carries no summary.
     """
     summary = incident.get("summary")
     if isinstance(summary, str) and summary.strip():
@@ -537,9 +540,10 @@ def _deterministic_answer(question: str, history: list, incidents: list, reason:
         )
 
     elif focus is not None and intent in ("checks", "evidence", "explain"):
-        # `_describe_incident` already renders the Day 11 summary verbatim, so the
-        # branches below ADD detail rather than repeat it. 'explain' is the fuller
-        # answer (summary + evidence + checks); 'evidence' and 'checks' narrow it.
+        # `_describe_incident` already renders the incident summary verbatim, so
+        # the branches below ADD detail rather than repeat it. 'explain' is the
+        # fuller answer (summary + evidence + checks); 'evidence' and 'checks'
+        # narrow it.
         lines.append(_describe_incident(focus))
         evidence = focus.get("evidence") if isinstance(focus.get("evidence"), Mapping) else {}
         if intent in ("evidence", "explain"):
@@ -599,9 +603,9 @@ def _deterministic_answer(question: str, history: list, incidents: list, reason:
 def _build_messages(question: str, history: list, incidents: list) -> list:
     """System prompt + bounded context, then history, then the question.
 
-    Every outbound string is redacted (Day 13). The question and our own earlier
-    answers can quote log text, so history content is redacted as well; roles are
-    left untouched.
+    Every outbound string is redacted (llm_explainer.redact_text). The question
+    and our own earlier answers can quote log text, so history content is
+    redacted as well; roles are left untouched.
     """
     return [
         {"role": "system", "content": CHAT_SYSTEM_PROMPT + "\n\n" + _build_context_block(incidents)},
@@ -686,8 +690,9 @@ def chat_with_incidentinsight(
         question: the user's question (non-empty string).
         context: the analysis to ground the answer in. Accepts a workflow result
             (anything with an `explanations` attribute, e.g.
-            `src.workflow.WorkflowResult`), a plain list of Day 11/Day 13
-            explanation mappings, or None when no analysis has been run yet.
+            `src.workflow.WorkflowResult`), a plain list of incident_explainer /
+            llm_explainer explanation mappings, or None when no analysis has been
+            run yet.
         history: prior conversation messages as {"role", "content"} mappings with
             role "user" or "assistant". Bounded to the most recent
             MAX_HISTORY_MESSAGES entries. Pass None for a first question.

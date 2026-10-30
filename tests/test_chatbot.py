@@ -1,13 +1,15 @@
-"""Day 15 tests for the incident-aware chatbot.
+"""Tests for the incident-aware chatbot.
 
 ALL tests are deterministic and offline: no OpenAI API key, no real HTTP, no
 network, no cost. The single provider boundary is the reused
 `urllib.request.urlopen` inside `src/llm_explainer._post_chat`, which is mocked
-here. Fixtures are shaped like real Day 11/Day 13 explanation dicts.
+here. Fixtures are shaped like real src.incident_explainer / src.llm_explainer
+explanation dicts.
 
 UI tests use Streamlit's own `AppTest` facility. Streamlit is a declared project
-dependency (Day 15), but it is not installed in every interpreter, so the UI tests
-are individually skipped where it is missing rather than skipping the whole module.
+dependency (requirements.txt), but it is not installed in every interpreter, so
+the UI tests are individually skipped where it is missing rather than skipping
+the whole module.
 """
 
 import importlib
@@ -43,7 +45,7 @@ from src.llm_explainer import (
     SOURCE_OPENAI,
 )
 
-# Streamlit is a declared dependency (Day 15 requirements.txt) but is not
+# Streamlit is a declared dependency (requirements.txt) but is not
 # installed in every interpreter, so the UI tests are skipped individually where
 # it is missing rather than skipping the whole module.
 try:
@@ -348,8 +350,9 @@ def test_b8_fallback_ranks_by_actual_rank_order():
 def test_b9_explain_answer_does_not_repeat_the_summary():
     result = chat_with_incidentinsight("Explain the top incident.", context=_incidents())
     summary = _incident()["summary"]
-    # The Day 11 summary is shown once (as the description), not echoed twice,
-    # and the fuller 'explain' answer still carries evidence and checks.
+    # The src.incident_explainer summary is shown once (as the description), not
+    # echoed twice, and the fuller 'explain' answer still carries evidence and
+    # checks.
     assert result.answer.count(summary) == 1
     assert "Database connection failed after 3s" in result.answer
     assert "Verify database server availability" in result.answer
@@ -817,8 +820,8 @@ def test_s6_secret_in_conversation_history_is_redacted():
 
 
 def test_s7_chat_answers_are_never_cached():
-    # Deliberate design decision (Day 13): a cached chat answer could be replayed
-    # for a materially different question, history, or analysis.
+    # Deliberate design decision (src.llm_explainer): a cached chat answer could
+    # be replayed for a materially different question, history, or analysis.
     for _ in range(2):
         with mock.patch("urllib.request.urlopen") as m:
             _mock_success(m)
@@ -888,7 +891,8 @@ def test_g5_llm_explainer_reused_not_reimplemented():
     for node in ast.walk(tree):
         if isinstance(node, ast.ImportFrom) and node.module == "src.llm_explainer":
             imported.update(alias.name for alias in node.names)
-    # The transport and configuration helpers come from Day 13 - no second client.
+    # The transport and configuration helpers come from src.llm_explainer - no
+    # second client.
     assert {"_post_chat", "_extract_model_text", "_resolve_api_key", "_resolve_model"} <= imported
 
     # Prove there is no independent HTTP client: `urllib.request` is never

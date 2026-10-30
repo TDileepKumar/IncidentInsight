@@ -1,4 +1,4 @@
-"""Day 10 focused tests for cluster purity and ranking evaluation."""
+"""Focused tests for cluster purity and ranking evaluation."""
 
 from unittest import mock
 
