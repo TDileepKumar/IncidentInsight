@@ -213,7 +213,9 @@ Git **blob IDs** are a different identifier again: they are SHA-1 hashes of blob
 
 A hash that differs after cloning is expected, not corruption. Log content is unaffected: the parser reads lines with `splitlines()`, which treats CRLF and LF identically.
 
-For the recorded values and read-only verification commands, see sections 2 and 3 of [`data/baseline/7126c46/MANIFEST.md`](data/baseline/7126c46/MANIFEST.md), which remains the provenance reference.
+For the recorded hash values, see sections 2 and 3 of [`data/baseline/7126c46/MANIFEST.md`](data/baseline/7126c46/MANIFEST.md); the read-only verification commands are in **section 10** of that file, which remains the provenance reference.
+
+The manifest is a historical provenance artifact and is preserved byte-for-byte, so parts of it describe the repository as it stood at the baseline commit. In particular, its section 9 says running the generator "will **overwrite** the original files" and describes `data_generator.py` as unchanged since `e29cf6a`. Both statements predate the later overwrite guard: the command now **refuses** to write when any canonical target already exists, and `data_generator.py` was modified to add that guard. The current command-line behavior is documented under [Overwrite protection](#overwrite-protection) below. The manifest's measured hashes, record counts and baseline-versus-generator differences remain accurate.
 
 ### Running the default workflow
 
@@ -310,10 +312,12 @@ The supported arguments, as defined by `build_parser()` in `run.py`:
 
 | Argument | Type | Default | Purpose |
 |---|---|---|---|
-| `log_path` (positional, optional) | path | `data/raw/synthetic_logs.log` | Log file to analyze |
+| `log_path` (positional, optional) | path | `data/raw/synthetic_logs.log` (absolute — see below) | Log file to analyze |
 | `--threshold` | float | `0.5` | Clustering distance threshold |
 | `--top` | int | `10` | Number of top-ranked clusters to display |
 | `-h`, `--help` | flag | — | Show usage help (provided by `argparse`) |
+
+The `log_path` default comes from `config.RAW_LOG_PATH`, which is an **absolute** path built from the repository root (`<repository root>/data/raw/synthetic_logs.log`). The table shows the relative form for readability; the value actually passed to the pipeline is absolute and therefore does not depend on the current working directory.
 
 Examples:
 
@@ -324,7 +328,7 @@ python run.py --threshold 0.4 --top 15
 python run.py --help
 ```
 
-Exit codes: `0` on success, `1` when the log file is missing or the input is unusable, and `2` when `--top` is less than 1.
+Exit codes: `0` on success; `1` when the log file is missing, the input is unusable, or the clustering threshold is invalid (for example `--threshold -0.5`, which `src/clusterer.py` rejects with a `ValueError`); and `2` when `--top` is less than 1 or `argparse` cannot convert an argument to its declared type (for example `--threshold abc`).
 
 The CLI runs the analysis pipeline only. Incident explanations, optional LLM enhancement, and the chatbot are part of the Streamlit workflow, not `run.py`.
 
@@ -396,32 +400,32 @@ Fourteen tests depend on data files that are ignored by Git, so they skip on a f
 
 Each skip reason names the missing file and points at the baseline copy instructions above. No skip reason suggests running the generator, because it cannot recreate the historical data.
 
-Supplying only the raw log now **skips** the seven ground-truth tests instead of failing them. An earlier revision gated those seven on the raw log alone, which produced **7 failed, 675 passed** (exit code 1) in that state. The corrected gate removes that failure mode; provisioning both files is still what makes all 682 tests run.
+Supplying only the raw log now **skips** the seven ground-truth tests instead of failing them. An earlier revision gated those seven on the raw log alone, which produced **7 failed, 675 passed** (exit code 1) in that state — a historical measurement from when the suite collected 682 cases. The corrected gate removes that failure mode; provisioning both files is what makes all **704** tests run.
 
-Measured result for this release preparation, run from the repository root with the canonical data files present:
+Measured result for this release preparation (commit `321ab7b`), run from the repository root with the canonical data files present:
 
 ```powershell
 python -m pytest -q
 ```
 
-**682 passed, 0 failed, 0 skipped, in 18.27 seconds** (exit code 0). With the data present, the 14 data-dependent tests ran and passed instead of skipping.
+**704 passed, 0 failed, 0 skipped, in 12.10 seconds** (exit code 0). With the data present, the 14 data-dependent tests ran and passed instead of skipping.
 
-An earlier report of "682 passed and 14 skipped" is internally inconsistent and was not reproduced: the suite collects 682 cases in total, so 14 skips would leave 668 passing.
+An earlier report of "682 passed and 14 skipped" was internally inconsistent and was not reproduced: a suite that collects *N* cases cannot both pass *N* and skip 14. The suite now collects **704** cases, so 14 skips leave **690** passing — which is what the pristine measurement below shows.
 
-Fresh-clone behavior has since been measured in an isolated clean copy of the release content, using a fresh virtual environment on Python 3.13.7 with `requirements.txt` installed unchanged:
+Fresh-clone behavior was also measured earlier in an isolated clean copy of the release content, using a fresh virtual environment on Python 3.13.7 with `requirements.txt` installed unchanged. Those runs predate the chatbot comparison regression tests, so their totals are historical rather than current: at that revision the suite collected 682 cases.
 
 - **Pristine copy, no input data present:** 668 passed, 14 skipped, 0 failed, in 18.49 seconds (exit code 0). The 14 data-dependent tests skipped, so a fresh clone passes without any dataset.
 - **Both baseline input files provisioned as described above:** 682 passed, 0 skipped, 0 failed, in 15.68 seconds (exit code 0).
 
-Those two runs predate the test-gate correction. The corrected gates were then re-measured across all three provisioning states in isolated copies of the working tree, using the project virtual environment (Python 3.13.7, pandas 3.0.6):
+Those two runs also predate the test-gate correction. All three provisioning states were re-measured for this release in an isolated temporary copy of the published tree (commit `321ab7b`), using the project virtual environment — Python 3.13.7, pytest 9.1.1, pandas 3.0.6, scikit-learn 1.8.0, Streamlit 1.65.0. The copy was created with `git archive HEAD`, so it started with no canonical data, no virtual environment and no caches; the preserved baseline files were copied **into the copy** to provision each state. No canonical dataset was deleted, overwritten, moved or regenerated.
 
 | Canonical data present | Result | Exit code |
 |---|---|---|
-| Neither file | 668 passed, 14 skipped, 0 failed (33.92s) | 0 |
-| Raw log only | 675 passed, 7 skipped, 0 failed (16.63s) | 0 |
-| Both files | 682 passed, 0 skipped, 0 failed (18.85s) | 0 |
+| Neither file | 690 passed, 14 skipped, 0 failed (12.90s) | 0 |
+| Raw log only | 697 passed, 7 skipped, 0 failed (12.23s) | 0 |
+| Both files | 704 passed, 0 skipped, 0 failed (22.68s) | 0 |
 
-The raw-log-only row is the state the correction fixes: it previously produced 7 failures and exit code 1. No canonical data was regenerated or overwritten to obtain these results.
+The raw-log-only row is the state the correction fixes: it previously produced 7 failures and exit code 1. The suite now collects **704** cases — 690 that need no data files and 14 that do — so a fresh clone still passes without any dataset.
 
 These are automated test results, not a manual browser test. The Streamlit application was confirmed to start successfully in the clean copy, and its interface behavior is exercised by the automated `AppTest` suite. No manual browser walkthrough was performed, and no screenshots were captured.
 
