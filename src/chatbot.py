@@ -389,6 +389,25 @@ def _cluster_references(text: str) -> list:
     return found
 
 
+def _names_cluster_without_id(text: str) -> bool:
+    """Whether `text` names a cluster but gives no readable numeric ID.
+
+    Only consulted when `_cluster_references` found NOTHING, so a well-formed
+    'cluster id 3' can never be misreported as malformed. It separates an
+    unreadable request ('compare cluster abc', 'compare clusters 3 and 7') from
+    one that simply named no cluster ('compare the worst incidents').
+    """
+    lowered = text.lower()
+    for marker in ("cluster", "#"):
+        position = lowered.find(marker)
+        while position != -1:
+            rest = lowered[position + len(marker):].lstrip(" :=#")
+            if not rest[:1].isdigit():
+                return True
+            position = lowered.find(marker, position + len(marker))
+    return False
+
+
 def _by_cluster_id(incidents: list, wanted):
     """Find the incident whose cluster_id matches `wanted` (string compare)."""
     target = str(wanted)
@@ -444,6 +463,60 @@ def _resolve_focus(question: str, history: list, incidents: list) -> Mapping | N
 
     return highest
 
+
+
+def _comparison_targets(question: str, incidents: list) -> tuple:
+    """Resolve which incidents a 'compare' question is actually about.
+
+    Returns ``(selected, problem)``:
+      * ``(list, None)``    - the incidents to compare, in the order requested;
+      * ``(list, message)`` - the request cannot be honoured; `message` is
+        grounded in the real cluster IDs and states what is missing.
+
+    Explicit references take precedence over the ranked defaults, and a
+    requested ID that is absent from the analysis is reported rather than
+    silently replaced by another cluster. With no readable reference the
+    previous behaviour is kept (the two highest-ranked incidents), unless the
+    question names a cluster without a usable ID, which is reported as
+    malformed instead of being guessed at.
+    """
+    ordered = sorted(incidents, key=_rank_sort_key)
+    available = ", ".join(str(i.get("cluster_id")) for i in ordered)
+    references = _cluster_references(question)
+
+    if not references:
+        if _names_cluster_without_id(question):
+            return [], (
+                "I could not read a numeric cluster ID from your question, so nothing "
+                "was compared and no incident was substituted. A cluster reference "
+                "looks like 'cluster 3', 'cluster id 3' or '#3'. "
+                f"Available cluster IDs: {available}."
+            )
+        return ordered[:2], None
+
+    # `_cluster_references` already returns first-seen, de-duplicated IDs.
+    resolved: list = []
+    missing: list = []
+    for reference in references:
+        match = _by_cluster_id(incidents, reference)
+        if match is None:
+            missing.append(reference)
+        else:
+            resolved.append(match)
+
+    if missing:
+        return [], (
+            f"The comparison could not be completed: cluster ID(s) {', '.join(missing)} "
+            "are not available in the current analysis. No other incident was substituted. "
+            f"Available cluster IDs: {available}."
+        )
+    if len(resolved) < 2:
+        return resolved, (
+            "A comparison needs two incidents, but only cluster "
+            f"{resolved[0].get('cluster_id')} was named and found. Name a second "
+            f"cluster ID. Available cluster IDs: {available}."
+        )
+    return resolved, None
 
 
 def _describe_incident(incident: Mapping) -> str:
@@ -520,24 +593,37 @@ def _deterministic_answer(question: str, history: list, incidents: list, reason:
             )
 
     elif intent == "compare" and len(ordered) >= 2:
-        first, second = ordered[0], ordered[1]
-        lines.append("Comparing the two highest-ranked incidents:")
-        lines.append(f"- A: {_describe_incident(first)}")
-        lines.append(f"- B: {_describe_incident(second)}")
-        for label, incident in (("A", first), ("B", second)):
-            evidence = incident.get("evidence") if isinstance(incident.get("evidence"), Mapping) else {}
-            scores = {
-                key: evidence[key]
-                for key in ("severity_score", "frequency_score", "risk_score")
-                if key in evidence
-            }
+        selected, problem = _comparison_targets(question, usable)
+        if problem:
+            lines.append(problem)
+        else:
+            first, second = selected[0], selected[1]
+            if _cluster_references(question):
+                lines.append("Comparing the incidents you named, in the order you asked:")
+            else:
+                lines.append("Comparing the two highest-ranked incidents:")
+            lines.append(f"- A: {_describe_incident(first)}")
+            lines.append(f"- B: {_describe_incident(second)}")
+            for label, incident in (("A", first), ("B", second)):
+                evidence = incident.get("evidence") if isinstance(incident.get("evidence"), Mapping) else {}
+                scores = {
+                    key: evidence[key]
+                    for key in ("severity_score", "frequency_score", "risk_score")
+                    if key in evidence
+                }
+                lines.append(
+                    f"- {label} scores: " + (", ".join(f"{k}={v}" for k, v in scores.items()) if scores
+                                             else "not available")
+                )
             lines.append(
-                f"- {label} scores: " + (", ".join(f"{k}={v}" for k, v in scores.items()) if scores
-                                         else "not available")
+                "Differences beyond these stored fields are not available in the analysis context."
             )
-        lines.append(
-            "Differences beyond these stored fields are not available in the analysis context."
-        )
+            if len(selected) > 2:
+                omitted = ", ".join(str(i.get("cluster_id")) for i in selected[2:])
+                lines.append(
+                    f"Only the first two clusters you named are compared; cluster ID(s) "
+                    f"{omitted} were not included."
+                )
 
     elif focus is not None and intent in ("checks", "evidence", "explain"):
         # `_describe_incident` already renders the incident summary verbatim, so

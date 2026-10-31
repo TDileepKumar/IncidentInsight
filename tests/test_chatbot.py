@@ -1066,3 +1066,247 @@ def test_f9_api_key_value_never_rendered(tmp_path, monkeypatch):
     )
     assert TEST_KEY not in rendered
     assert any("OpenAI API key: configured" in c.value for c in at.caption)
+
+
+# ===========================================================================
+# H. Comparison cluster references (CHAT-1 regression)
+#
+# The offline 'compare' intent used to answer about ordered[0] and ordered[1]
+# whatever the user named. These tests pin the corrected contract: explicit
+# references win, are honoured in the order asked, and an unavailable or
+# unreadable reference is reported instead of being silently substituted.
+# ===========================================================================
+def _compare_incident(cluster_id, rank, pattern, count, risk):
+    """A distinct, fully-populated incident so A/B lines can be told apart."""
+    return _incident(
+        cluster_id=cluster_id,
+        rank=rank,
+        summary=(
+            f"Cluster {cluster_id} (rank {rank}) matched a '{pattern}' pattern; "
+            f"observed {count} time(s)."
+        ),
+        evidence={
+            "representative_message": f"{pattern} observed in production",
+            "occurrence_count": count,
+            "severity_score": 0.9,
+            "frequency_score": 0.5,
+            "risk_score": risk,
+        },
+    )
+
+
+def _ranked_incidents():
+    """Ranked 15 > 3 > 7, so naming 3 and 7 differs from the default top two."""
+    return [
+        _compare_incident(15, 1, "database connection failure", 76, 0.95),
+        _compare_incident(3, 2, "payment gateway error", 21, 0.6),
+        _compare_incident(7, 3, "upstream request timeout", 12, 0.35),
+    ]
+
+
+def _ab_lines(answer):
+    """The '- A: ...' / '- B: ...' description lines, in the order rendered."""
+    return [line for line in answer.splitlines() if line.startswith(("- A: ", "- B: "))]
+
+
+def test_h1_compare_uses_explicit_references_not_top_two():
+    result = chat_with_incidentinsight(
+        "Compare cluster 3 and cluster 7.", context=_ranked_incidents()
+    )
+    assert result.status == STATUS_FALLBACK
+    assert result.response_source == SOURCE_FALLBACK
+    ab = _ab_lines(result.answer)
+    assert len(ab) == 2
+    assert ab[0].startswith("- A: Cluster 3 ")
+    assert ab[1].startswith("- B: Cluster 7 ")
+    # The scores must come from the SELECTED incidents, not the ranked defaults.
+    scores = [line for line in result.answer.splitlines() if line.endswith(("=0.6", "=0.35"))]
+    assert any(line.startswith("- A scores:") for line in scores)
+    assert any(line.startswith("- B scores:") for line in scores)
+
+
+def test_h2_compare_preserves_requested_order():
+    result = chat_with_incidentinsight(
+        "Compare cluster 7 and cluster 3.", context=_ranked_incidents()
+    )
+    ab = _ab_lines(result.answer)
+    assert ab[0].startswith("- A: Cluster 7 ")
+    assert ab[1].startswith("- B: Cluster 3 ")
+
+
+def test_h3_compare_accepts_hash_references():
+    result = chat_with_incidentinsight("Compare #3 and #7.", context=_ranked_incidents())
+    ab = _ab_lines(result.answer)
+    assert ab[0].startswith("- A: Cluster 3 ")
+    assert ab[1].startswith("- B: Cluster 7 ")
+
+
+@pytest.mark.parametrize(
+    "question",
+    [
+        "Compare cluster 3 and cluster 7.",
+        "Compare cluster id 3 and cluster id 7.",
+        "What is the difference between #3 and #7?",
+        "cluster=3 versus cluster=7",
+    ],
+)
+def test_h4_compare_reference_phrasings(question):
+    result = chat_with_incidentinsight(question, context=_ranked_incidents())
+    ab = _ab_lines(result.answer)
+    assert len(ab) == 2
+    assert ab[0].startswith("- A: Cluster 3 ")
+    assert ab[1].startswith("- B: Cluster 7 ")
+
+
+def test_h5_compare_selects_requested_pair_from_five():
+    incidents = _ranked_incidents() + [
+        _compare_incident(9, 4, "cache miss storm", 8, 0.2),
+        _compare_incident(11, 5, "disk write failure", 5, 0.1),
+    ]
+    result = chat_with_incidentinsight("Compare cluster 9 and cluster 11.", context=incidents)
+    ab = _ab_lines(result.answer)
+    assert ab[0].startswith("- A: Cluster 9 ")
+    assert ab[1].startswith("- B: Cluster 11 ")
+
+
+def test_h6_compare_missing_id_is_reported_without_substitution():
+    result = chat_with_incidentinsight(
+        "Compare cluster 3 and cluster 99.", context=_ranked_incidents()
+    )
+    assert result.status == STATUS_FALLBACK
+    assert result.response_source == SOURCE_FALLBACK
+    assert "99" in result.answer
+    assert "not available" in result.answer.lower()
+    assert "substitut" in result.answer.lower()
+    # The available IDs are offered so the user can correct the question.
+    assert "15" in result.answer and "7" in result.answer
+    # No comparison was rendered, and cluster 3 was not paired with a stand-in.
+    assert _ab_lines(result.answer) == []
+    assert "Comparing" not in result.answer
+
+
+def test_h7_compare_reports_every_missing_id():
+    result = chat_with_incidentinsight(
+        "Compare cluster 98 and cluster 99.", context=_ranked_incidents()
+    )
+    assert "98" in result.answer and "99" in result.answer
+    assert _ab_lines(result.answer) == []
+
+
+def test_h8_compare_single_reference_asks_for_a_second():
+    result = chat_with_incidentinsight("Compare cluster 3.", context=_ranked_incidents())
+    assert _ab_lines(result.answer) == []
+    assert "3" in result.answer
+    assert "two" in result.answer.lower()
+
+
+def test_h9_compare_duplicate_reference_is_not_a_self_comparison():
+    result = chat_with_incidentinsight(
+        "Compare cluster 3 and cluster 3.", context=_ranked_incidents()
+    )
+    assert _ab_lines(result.answer) == []
+    assert "two" in result.answer.lower()
+
+
+def test_h10_compare_malformed_reference_does_not_compare_top_two():
+    result = chat_with_incidentinsight(
+        "Compare cluster abc and cluster def.", context=_ranked_incidents()
+    )
+    assert _ab_lines(result.answer) == []
+    assert "cluster id" in result.answer.lower()
+    assert "15" in result.answer and "3" in result.answer and "7" in result.answer
+
+
+def test_h11_compare_without_references_keeps_top_two_default():
+    result = chat_with_incidentinsight(
+        "Compare the two highest-ranked incidents.", context=_ranked_incidents()
+    )
+    assert "Comparing the two highest-ranked incidents:" in result.answer
+    ab = _ab_lines(result.answer)
+    assert ab[0].startswith("- A: Cluster 15 ")
+    assert ab[1].startswith("- B: Cluster 3 ")
+    assert "Differences beyond these stored fields are not available" in result.answer
+
+
+def test_h12_compare_rank_phrasing_without_ids_keeps_default():
+    result = chat_with_incidentinsight(
+        "What is the difference between the worst incidents?", context=_ranked_incidents()
+    )
+    ab = _ab_lines(result.answer)
+    assert ab[0].startswith("- A: Cluster 15 ")
+    assert ab[1].startswith("- B: Cluster 3 ")
+
+
+def test_h13_compare_handles_non_contiguous_ids():
+    incidents = [
+        _compare_incident(0, 1, "database connection failure", 90, 0.95),
+        _compare_incident(4, 2, "payment gateway error", 40, 0.6),
+        _compare_incident(19, 3, "upstream request timeout", 19, 0.4),
+        _compare_incident(42, 4, "disk write failure", 4, 0.1),
+    ]
+    result = chat_with_incidentinsight("Compare cluster 42 and cluster 4.", context=incidents)
+    ab = _ab_lines(result.answer)
+    assert ab[0].startswith("- A: Cluster 42 ")
+    assert ab[1].startswith("- B: Cluster 4 ")
+
+
+def test_h14_compare_three_references_states_only_first_two():
+    incidents = _ranked_incidents() + [_compare_incident(9, 4, "cache miss storm", 8, 0.2)]
+    result = chat_with_incidentinsight(
+        "Compare cluster 3, cluster 7 and cluster 9.", context=incidents
+    )
+    ab = _ab_lines(result.answer)
+    assert ab[0].startswith("- A: Cluster 3 ")
+    assert ab[1].startswith("- B: Cluster 7 ")
+    # The third request is acknowledged, not silently dropped.
+    assert "9" in result.answer
+    assert "first two" in result.answer.lower()
+
+
+def test_h15_compare_references_honored_on_provider_failure():
+    with mock.patch("urllib.request.urlopen", side_effect=urllib.error.URLError("dns failure")):
+        result = chat_with_incidentinsight(
+            "Compare cluster 3 and cluster 7.", context=_ranked_incidents(), api_key=TEST_KEY
+        )
+    assert result.status == STATUS_FALLBACK
+    assert result.error == REASON_NETWORK_ERROR
+    ab = _ab_lines(result.answer)
+    assert ab[0].startswith("- A: Cluster 3 ")
+    assert ab[1].startswith("- B: Cluster 7 ")
+
+
+def test_h16_compare_unavailable_reference_makes_no_network_call():
+    with mock.patch("urllib.request.urlopen") as m:
+        result = chat_with_incidentinsight(
+            "Compare cluster 3 and cluster 99.", context=_ranked_incidents()
+        )
+    m.assert_not_called()
+    assert result.error == REASON_MISSING_KEY
+    assert _ab_lines(result.answer) == []
+
+
+def test_h17_compare_with_api_key_still_uses_validated_ai_answer():
+    with mock.patch("urllib.request.urlopen") as m:
+        _mock_success(m)
+        result = chat_with_incidentinsight(
+            "Compare cluster 3 and cluster 7.", context=_ranked_incidents(), api_key=TEST_KEY
+        )
+    assert result.status == STATUS_SUCCESS
+    assert result.response_source == SOURCE_OPENAI
+    assert result.answer == _answer_content()["answer"]
+
+
+def test_h18_compare_with_one_incident_keeps_existing_behavior():
+    incidents = [_compare_incident(15, 1, "database connection failure", 76, 0.95)]
+    result = chat_with_incidentinsight("Compare the incidents.", context=incidents)
+    assert _ab_lines(result.answer) == []
+    assert "could not map that question" in result.answer.lower()
+
+
+def test_h19_compare_partial_overlap_with_default_pair():
+    result = chat_with_incidentinsight(
+        "Compare cluster 15 and cluster 7.", context=_ranked_incidents()
+    )
+    ab = _ab_lines(result.answer)
+    assert ab[0].startswith("- A: Cluster 15 ")
+    assert ab[1].startswith("- B: Cluster 7 ")
